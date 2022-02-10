@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.SignUpClass{
+  background-color: #FFEEEE;
+  text-align: center
+}
+
+.FirstNameLabel{
+  float: left;
+  margin-left: 35%;
+}
+
+.FirstNameBox{
+  float: left;
+  margin-left: 35%;
+}
+
+.LastNameBox{
+  float: right;
+  margin-right: 35%;
+}
+.LastNameLabel{
+  float: right;
+  margin-right: 41.3%;
+}
+
+.EmailBox{
+  margin: auto;
+  width: 29.5%;
+}
+
+.EmailLabel{
+  margin-left: -27.5%;
+}
+
+.PasswordLabel{
+  margin-left: -25.5%;
+}
+
+.PasswordBox{
+  margin: auto;
+  width: 29.5%; 
+}
+
+.SignUpButton{
+  margin: auto;
+  width: 29.5%;
+  padding: .35%;
+}
+
+.SignInWithGoogleButton{
+  margin: auto;
+  width: 29.5%;
+  padding: .35%;
+  background-color: #5B99FF;
+}
