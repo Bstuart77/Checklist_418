@@ -25,11 +25,13 @@ code {
 .FirstNameBox{
   float: left;
   margin-left: 35%;
+  padding: .15%;
 }
 
 .LastNameBox{
   float: right;
   margin-right: 35%;
+  padding: ..15%;
 }
 .LastNameLabel{
   float: right;
@@ -39,6 +41,7 @@ code {
 .EmailBox{
   margin: auto;
   width: 29.5%;
+  padding: .15%;
 }
 
 .EmailLabel{
@@ -51,6 +54,7 @@ code {
 
 .PasswordBox{
   margin: auto;
+  padding: .15%;
   width: 29.5%; 
 }
 
