@@ -26,12 +26,14 @@ code {
   float: left;
   margin-left: 35%;
   padding: .15%;
+  background-color: #FFF8E7;
 }
 
 .LastNameBox{
   float: right;
   margin-right: 35%;
   padding: .15%;
+  background-color: #FFF8E7;
 }
 .LastNameLabel{
   float: right;
@@ -42,6 +44,7 @@ code {
   margin: auto;
   width: 29.5%;
   padding: .15%;
+  background-color: #FFF8E7;
 }
 
 .EmailLabel{
@@ -56,12 +59,14 @@ code {
   margin: auto;
   padding: .15%;
   width: 29.5%; 
+  background-color: #FFF8E7;
 }
 
 .SignUpButton{
   margin: auto;
   width: 29.5%;
   padding: .35%;
+  background-color: #FFBF60;
 }
 
 .SignInWithGoogleButton{
