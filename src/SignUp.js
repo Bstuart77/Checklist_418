@@ -1,14 +1,29 @@
+import {useState} from 'react';
+
 function SignUp() {
-    return (
+
+    const [firstName, setFName] = useState('');
+    const [lastName, setLName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+
+    const submitSignUp = (e) =>{
+        e.preventDefault();
+
+        const signUpInfo = {firstName, lastName, email, password}
+        console.log(signUpInfo);
+    } 
+
+       return (
         <div className="SignUpClass">
-        <h2>Sign Up!</h2>
         <form>
             <label className="FirstNameLabel"> First Name</label>
             <label className="LastNameLabel"> Last Name</label>
         <br/>
         
-            <input className="FirstNameBox" type="text" required/>
-            <input className="LastNameBox" type="text" required/>
+            <input className="FirstNameBox" type="text" required onChange={(e) => setFName(e.target.value)}/>
+            <input className="LastNameBox" type="text" required onChange={(e) => setLName(e.target.value)}/>
 
             <br/>
             <br/>
@@ -16,7 +31,7 @@ function SignUp() {
 
             <label className="EmailLabel "> Email</label>
             <br/>
-            <input className="EmailBox" type="text" required/>
+            <input className="EmailBox" type="text" required onChange = {(e) => setEmail(e.target.value)}/>
 
             <br/>
             <br/>
@@ -25,14 +40,14 @@ function SignUp() {
 
             <label className="PasswordLabel"> Password</label>
             <br/>
-            <input className="PasswordBox" type="text" required/>
+            <input className="PasswordBox" type="text" required onChange={(e) => setPassword(e.target.value)}/>
 
             <br/>
             <br/>
             <br/>
 
 
-            <button className="SignUpButton">Sign Up</button>
+            <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
         </form>
         <br/>
         <br/>
