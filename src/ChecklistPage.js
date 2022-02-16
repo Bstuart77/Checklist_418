@@ -1,9 +1,7 @@
-import {useState} from 'react'
-
 function ChecklistPage() {
     return (
 
-        <h1>header</h1>
+        <h1 className="h1tag">header</h1>
     )
 }
 
