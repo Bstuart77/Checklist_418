@@ -1,5 +1,6 @@
 import './App.css';
 import SignUp from './SignUp';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <SignUp/>
+    <Profile/>
   );
 }
 
