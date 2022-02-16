@@ -14,77 +14,90 @@ code {
 
 .App{
   background-color: #FEFFE2;
-  padding: 11%;
-  margin: auto;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-left: 11%;
+  padding-right: 11%;
   text-align: center;
 }
 
 .SignUpClass{
-  background-color: #FFEEEE;
-  border: 3px grey;
+  background-color: #FFE4B2;
   padding-top: 4%;
   padding-bottom: 4%;
-  border: 2px solid grey;
-  width: 100%;
-  text-align: center;
-
+  margin-left: 18%;
+  margin-right: 18%;
 }
 
 .FirstNameLabel{
   float: left;
-  margin-left: 35%;
+  margin-left: 26.9%;
 }
 
 .FirstNameBox{
   float: left;
-  margin-left: 35%;
-  padding: .15%;
+  margin-left: 27%;
+  width: 17%;
+  padding: .55%;
   background-color: #FFF8E7;
+  border: none;
+
 }
 
 .LastNameBox{
   float: right;
-  margin-right: 35%;
-  padding: .15%;
+  margin-right: 27%;
+  width: 17%;
+  padding: .55%;
   background-color: #FFF8E7;
+  border: none;
+
+
 }
+
 .LastNameLabel{
   float: right;
-  margin-right: 41.3%;
+  margin-right: 35.5%;
 }
 
 .EmailBox{
-  margin: auto;
-  width: 29.5%;
-  padding: .15%;
+  width: 44.5%;
+  padding: .55%;
   background-color: #FFF8E7;
+  border: none;
+
 }
 
 .EmailLabel{
-  margin-left: -27.5%;
+  margin-left: -41.2%;
 }
 
 .PasswordLabel{
-  margin-left: -25.5%;
+  margin-left: -37.7%;
 }
 
 .PasswordBox{
-  margin: auto;
-  padding: .15%;
-  width: 29.5%; 
+  padding: .55%;
+  width: 44.5%;
   background-color: #FFF8E7;
+  border: none;
+
 }
 
 .SignUpButton{
   margin: auto;
-  width: 29.5%;
-  padding: .55%;
+  width: 44.5%;
+  padding: .85%;
   background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F
 }
 
 .SignInWithGoogleButton{
   margin: auto;
-  width: 29.5%;
-  padding: .55%;
-  background-color: #5B99FF;
+  width: 44.5%;
+  padding: .85%;
+  color: #243D66;
+  background-color: #5b99ff;
+  border: 2px solid #8CB7FF;
 }
