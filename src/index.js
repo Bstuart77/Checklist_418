@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './CheckList.css';
+import './SignUp.css';
+import './Profile.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
