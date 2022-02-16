@@ -27,13 +27,11 @@ function SignUp() {
 
             <br/>
             <br/>
-            <br/>
 
             <label className="EmailLabel "> Email</label>
             <br/>
             <input className="EmailBox" type="text" required onChange = {(e) => setEmail(e.target.value)}/>
 
-            <br/>
             <br/>
             <br/>
 
@@ -45,12 +43,13 @@ function SignUp() {
             <br/>
             <br/>
             <br/>
+            <br/>
 
 
             <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
         </form>
         <br/>
-        <br/>
+
 
 
         <button className="SignInWithGoogleButton">Log in with Google</button>
