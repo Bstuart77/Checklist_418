@@ -1,4 +1,3 @@
-import './App.css';
 import SignUp from './SignUp';
 import Profile from './Profile';
 
@@ -19,8 +18,9 @@ function App() {
     //       Learn React
     //     </a>
     //   </header>
+    <SignUp/>
     // </div>
-    <Profile/>
+    //<Profile/>
   );
 }
 
