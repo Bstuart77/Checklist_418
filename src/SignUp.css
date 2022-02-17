@@ -14,9 +14,9 @@ code {
 
 .App{
   background-color: #FEFFE2;
-  padding-bottom: 10%;
-  padding-top: 5%;
+  padding-top: 10%;
   padding-left: 11%;
+  padding-bottom: 11%;
   padding-right: 11%;
   text-align: center;
 }
@@ -36,7 +36,7 @@ code {
 
 .FirstNameBox{
   float: left;
-  margin-left: 27%;
+  margin-left: 26.9%;
   width: 17%;
   padding: .55%;
   background-color: #FFF8E7;
@@ -46,7 +46,7 @@ code {
 
 .LastNameBox{
   float: right;
-  margin-right: 27%;
+  margin-right: 26.9%;
   width: 17%;
   padding: .55%;
   background-color: #FFF8E7;
@@ -61,7 +61,7 @@ code {
 }
 
 .EmailBox{
-  width: 44.5%;
+  width: 45%;
   padding: .55%;
   background-color: #FFF8E7;
   border: none;
@@ -78,7 +78,7 @@ code {
 
 .PasswordBox{
   padding: .55%;
-  width: 44.5%;
+  width: 45%;
   background-color: #FFF8E7;
   border: none;
 
