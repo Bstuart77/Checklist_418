@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  background-color: #FEFFE2;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-left: 11%;
+  padding-right: 11%;
+  text-align: center;
+}
+
+.SignUpClass{
+  background-color: #FFE4B2;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.FirstNameLabel{
+  float: left;
+  margin-left: 26.9%;
+}
+
+.FirstNameBox{
+  float: left;
+  margin-left: 27%;
+  width: 17%;
+  padding: .55%;
+  background-color: #FFF8E7;
+  border: none;
+
+}
+
+.LastNameBox{
+  float: right;
+  margin-right: 27%;
+  width: 17%;
+  padding: .55%;
+  background-color: #FFF8E7;
+  border: none;
+
+
+}
+
+.LastNameLabel{
+  float: right;
+  margin-right: 35.5%;
+}
+
+.EmailBox{
+  width: 44.5%;
+  padding: .55%;
+  background-color: #FFF8E7;
+  border: none;
+
+}
+
+.EmailLabel{
+  margin-left: -41.2%;
+}
+
+.PasswordLabel{
+  margin-left: -37.7%;
+}
+
+.PasswordBox{
+  padding: .55%;
+  width: 44.5%;
+  background-color: #FFF8E7;
+  border: none;
+
+}
+
+.SignUpButton{
+  margin: auto;
+  width: 44.5%;
+  padding: .85%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F
+}
+
+.SignInWithGoogleButton{
+  margin: auto;
+  width: 44.5%;
+  padding: .85%;
+  color: #243D66;
+  background-color: #5b99ff;
+  border: 2px solid #8CB7FF;
+}
