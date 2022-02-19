@@ -1,11 +1,31 @@
-.ProfilePage{
-    background-image: linear-gradient(to right, red , yellow);
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #282c34;
-    color: white;
+    /* .. denotes one step backwards from the folder*/
+    background: url(../public/images/mountain.jpg) no-repeat center;
+    background-size: cover;
+
     padding: 40px;
+
     font-family: Arial;
     text-align: center;
+
+    display: flex;
+    
+    justify-content: center;
+  }
+
+  .ProfileCard {
+    background: #60A361;
+
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
   }

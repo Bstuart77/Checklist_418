@@ -4,6 +4,7 @@ import './Profile.css'
 
 function ProfilePage(){
     return(
+        // <button id = "SettingsButton"> settings </button>
         // body is implicit
         <div className = 'ProfileCard'>
             <div className = 'ProfileHeader'> 
@@ -12,15 +13,17 @@ function ProfilePage(){
                 </div>
 
                 <div className = 'ProfileGreeting'> 
-                    <h3> Welcome back, () </h3>
-
+                    Welcome back, ()
                 </div>
 
 
             </div>
             
             <div className = 'ProfileFooter'>
-                <button id = "SettingsButton"> settings </button>
+                <a href = "#" className = "ChangeProfilePicture"> Your Checklist</a>
+                <a href = "#" className = "ChangeProfilePicture"> Edit Profile Picture</a>
+                <a href = "#" className = "ChangeProfilePicture"> Edit Background </a>
+                <a href = "#" className = "ChangeProfilePicture"> Log Out </a>
 
             </div>
 
