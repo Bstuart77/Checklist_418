@@ -22,11 +22,12 @@ code {
 }
 
 .SignUpClass{
-  background-color: #FFE4B2;
+  background-color: #ffd1b2;
   padding-top: 4%;
   padding-bottom: 4%;
   margin-left: 18%;
   margin-right: 18%;
+  border: 3px solid grey;
 }
 
 .FirstNameLabel{
@@ -88,16 +89,16 @@ code {
   margin: auto;
   width: 44.5%;
   padding: .85%;
-  background-color: #FFBF60;
-  color: #664C26;
-  border: 2px solid #FFD28F
+  background-color: #f8c272;
+  color: #000000;
+  border: 2px solid #CC984C
 }
 
 .SignInWithGoogleButton{
   margin: auto;
   width: 44.5%;
   padding: .85%;
-  color: #243D66;
+  color: #000000;
   background-color: #5b99ff;
   border: 2px solid #8CB7FF;
 }
