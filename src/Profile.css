@@ -29,3 +29,24 @@ body {
     overflow: hidden;
 
   }
+
+  .ProfileHeader {
+      padding: 60px 40px;
+  }
+
+  .ProfilePicture {
+    display: inline-block;
+    padding: 4px;
+    margin: auto;
+    border-radius: 50%;
+
+    background: white;
+
+  }
+
+  .ProfilePicture img{
+      display: block;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+  }
