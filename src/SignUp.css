@@ -12,17 +12,14 @@ code {
     monospace;
 }
 
-.App{
+.App1 {
   background-color: #FEFFE2;
-  padding-top: 6%;
-  padding-left: 11%;
-  padding-bottom: 9.5%;
-  padding-right: 11%;
+  padding: 10.5%;
   text-align: center;
 }
 
 .SignUpClass{
-  background-color: #ffd1b2;
+  background-color: #FFE4B2;
   padding-top: 4%;
   padding-bottom: 4%;
   margin-left: 18%;
@@ -89,16 +86,16 @@ code {
   margin: auto;
   width: 44.5%;
   padding: .85%;
-  background-color: #f8c272;
-  color: #000000;
-  border: 2px solid #CC984C
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F
 }
 
 .SignInWithGoogleButton{
   margin: auto;
   width: 44.5%;
   padding: .85%;
-  color: #000000;
+  color: #243D66;
   background-color: #5b99ff;
   border: 2px solid #8CB7FF;
 }
