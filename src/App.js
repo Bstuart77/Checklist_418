@@ -18,9 +18,9 @@ function App() {
     //       Learn React
     //     </a>
     //   </header>
-    <SignUp/>
+    // <SignUp/>
     // </div>
-    //<Profile/>
+    <Profile/>
   );
 }
 
