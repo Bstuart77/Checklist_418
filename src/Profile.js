@@ -6,28 +6,30 @@ function ProfilePage(){
     return(
         // <button id = "SettingsButton"> settings </button>
         // body is implicit
-        <div className = 'ProfileCard'>
-            <div className = 'ProfileHeader'> 
-                <div className = 'ProfilePicture'>
-                    <img src = "./images/doggy.jpg" alt ="you" />
-                </div>
+        <div className = 'Grid'>
+            <div className = 'ProfileCard'>
+                <div className = 'ProfileHeader'> 
+                    <div className = 'ProfilePicture'>
+                        <img src = "./images/doggy.jpg" alt ="you" />
+                    </div>
 
-                <div className = 'ProfileGreeting'> 
-                    Welcome back, ()
+                    <div className = 'ProfileGreeting'> 
+                        Welcome back, ()
+                    </div>
+
+
+                </div>
+                
+                <div className = 'ProfileFooter'>
+                    <button className = "Checklist"> Your Checklist </button>
+                    <button className = "ChangeProfile"> Change Profile Picture </button>
+                    <button className = "ChangeBackground"> Change Background </button>
+                    <button className = "Logout"> Log Out </button>
+
                 </div>
 
 
             </div>
-            
-            <div className = 'ProfileFooter'>
-                <a href = "#" className = "ChangeProfilePicture"> Your Checklist</a>
-                <a href = "#" className = "ChangeProfilePicture"> Edit Profile Picture</a>
-                <a href = "#" className = "ChangeProfilePicture"> Edit Background </a>
-                <a href = "#" className = "ChangeProfilePicture"> Log Out </a>
-
-            </div>
-
-
         </div>
 
 
