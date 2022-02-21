@@ -36,15 +36,15 @@ function SignUp() {
                     <label className="LastNameLabel"> Last Name</label>
                     <br />
 
-                    <input className="FirstNameBox" type="text" required onChange={(e) => setFName(e.target.value)} />
-                    <input className="LastNameBox" type="text" required onChange={(e) => setLName(e.target.value)} />
+                    <input className="FirstNameBox" type="text" onChange={(e) => setFName(e.target.value)} />
+                    <input className="LastNameBox" type="text" onChange={(e) => setLName(e.target.value)} />
 
                     <br />
                     <br />
 
                     <label className="EmailLabel "> Email</label>
                     <br />
-                    <input className="EmailBox" type="text" required onChange={(e) => setEmail(e.target.value)} />
+                    <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
 
                     <br />
                     <br />
@@ -52,12 +52,13 @@ function SignUp() {
 
                     <label className="PasswordLabel"> Password</label>
                     <br />
-                    <input className="PasswordBox" type="text" required onChange={(e) => setPassword(e.target.value)} />
+                    <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
 
                     <br />
                     <br />
                     <br />
                     <br />
+                    <br/>
 
 
                     <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
