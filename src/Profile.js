@@ -21,10 +21,10 @@ function ProfilePage(){
                 </div>
                 
                 <div className = 'ProfileFooter'>
-                    <button className = "Checklist"> Your Checklist </button>
-                    <button className = "ChangeProfile"> Change Profile Picture </button>
-                    <button className = "ChangeBackground"> Change Background </button>
-                    <button className = "Logout"> Log Out </button>
+                    <button className = "Checklist"> checklist </button>
+                    <button className = "ChangeProfile"> profile picture </button>
+                    <button className = "ChangeBackground"> background </button>
+                    <button className = "Logout"> logout </button>
 
                 </div>
 
