@@ -48,7 +48,7 @@ body {
   }
 
   .ProfileCard {
-    background: linear-gradient(132deg, rgb(244, 208, 63, .75) 0%, rgb(22, 160, 133, 1) 100%);
+    background: linear-gradient(132deg, rgb(244, 208, 63, .90) 0%, rgb(22, 160, 133, .75) 100%);
 
     width: 400px;
     height: 620px;
@@ -71,6 +71,10 @@ body {
   }
 
   .ProfilePicture {
+    overflow: hidden;
+    color: transparent;
+    align-items: center;
+
     display: inline-block;
     margin: auto;
     padding: 8px;
@@ -84,11 +88,20 @@ body {
 
   .ProfilePicture img{
       display: block;
+      position: relative;
 
       border-radius: 50%;
       width: 130px;
       height: 130px;
   }
+
+  .ProfilePicture input {
+      display: none;
+  }
+
+  /**
+        PROFILE GREETING
+  */
 
   .ProfileGreeting {
       padding-top: 10px;
@@ -101,10 +114,18 @@ body {
       font-weight: 600;
   }
 
-  .ProfileFooter {
-      /* background-color: antiquewhite; */
-      padding: 20px;
-  }
+    /**
+            PROFILE FOOTER
+    */
+
+    .ProfileFooter {
+        /* background-color: antiquewhite; */
+        padding: 20px;
+    }
+
+    /**
+            BUTTON
+    */
 
   button:hover {
     background-color: #16A085; /* Green */
@@ -132,7 +153,11 @@ body {
 
   }
 
-  @media (max-width: 1000px){
+    /**
+        RESPONSIVENESS
+  */
+
+  @media (max-width: 1500px){
       .ProfileCard{
           width: calc(100%);
       }

@@ -28,14 +28,23 @@ function ProfilePage(){
         console.log("Button clicked");
     }
 
+    function LoadProfileFile(event){
+        document.getElementById("profile").src = URL.createObjectURL(event.target.files[0]);
+    }
+
     return(
         // <button id = "SettingsButton"> settings </button>
-        // body is implicit
+        // body is implicitzx
         <div className = 'Grid'>
             <div className = 'ProfileCard'>
                 <div className = 'ProfileHeader'> 
                     <div className = 'ProfilePicture'>
-                        <img src = "./images/doggy.jpg" alt ="you" />
+                        <label className = 'ProfileHover'>
+                            
+                        </label>
+
+                        <input id='profilefile' type='file' onChange={LoadProfileFile} />
+                        <img src = "./images/doggy.jpg" id = "profile" alt ="you" />
                     </div>
 
                     <div className = 'ProfileGreeting'> 
@@ -82,6 +91,15 @@ function ProfilePage(){
         document.body.style.backgroundImage = "../public/images/mountain2.jpg";
 
     });
+    /**
+     *                         <label className = 'HoverProfile' for = "file">
+                            <span className = 'HoverEffect'></span>
+                            <span> update picture </span>
+                        </label>
+
+                        <input id = "ProfileChange" type = "file" onchange = "changeProfilePicture(event)"/>
+     * 
+     */
 
 }
     
