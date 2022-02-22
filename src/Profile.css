@@ -17,17 +17,20 @@
 
 body {
     /* .. denotes one step backwards from the folder*/
+
+    /* background-image: url(../public/images/mountain2.jpg) no-repeat center; */
     background: url(../public/images/mountain2.jpg) no-repeat center;
-    /* background-color: #327362; */
+    /*background-color: #327362;*/
     background-size: cover;
 
     background-repeat: no-repeat;
     background-attachment: fixed;
 
     overflow: auto;
-    height: auto;
+    height: 100%;
+    width: 100%;
 
-    padding: 75px;
+    padding: 50px;
     max-width: 100%;
 
     font-family: Verdana;
@@ -41,16 +44,16 @@ body {
   .Grid{
       display: grid;
       grid-template-columns: 1fr;
-      justify-content: center;
+      /* justify-content: center; */
   }
 
   .ProfileCard {
     background: linear-gradient(132deg, rgb(244, 208, 63, .75) 0%, rgb(22, 160, 133, 1) 100%);
 
-    width: 350px;
-    height: 600px;
+    width: 400px;
+    height: 620px;
     overflow: hidden;
-    border-radius: 2%;
+    border-radius: 12px;
     box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.2);
     /* box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
@@ -64,6 +67,7 @@ body {
   .ProfileHeader {
       /* background-color: blue; */
       padding-top: 40px 
+      
   }
 
   .ProfilePicture {
@@ -82,8 +86,8 @@ body {
       display: block;
 
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
   }
 
   .ProfileGreeting {
@@ -94,6 +98,7 @@ body {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       color: rgb(229, 228, 214);
       font-size: 2rem;
+      font-weight: 600;
   }
 
   .ProfileFooter {
@@ -101,6 +106,40 @@ body {
       padding: 20px;
   }
 
+  button:hover {
+    background-color: #16A085; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  button{
+      width: 66%;
+      color: rgb(229, 228, 214);
+
+      border: 2px solid;
+      background-color: transparent;
+
+      padding: 6px;
+      margin: 8px;
+
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      border-radius: 12px;
+
+      transition-duration: 0.3s;
+
+  }
+
+  @media (max-width: 1000px){
+      .ProfileCard{
+          width: calc(100%);
+      }
+  }
+
+
+/**
   button{
       width: 66%;
       color: rgb(229, 228, 214);
@@ -121,11 +160,13 @@ body {
   }
 
 button:hover {
-    background-color: #16A085; /* Green */
+    background-color: #16A085;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
+
+*/
 
 
   /**
