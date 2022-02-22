@@ -4,12 +4,29 @@ import './Profile.css'
 
 function ProfilePage(){
 
-    function profile1(){
+    function background1(){
         document.body.style.background = "url('./images/mountain.jpg') no-repeat center";
         document.body.style.backgroundSize = "cover";
         console.log("Button clicked");
     }
-    
+
+    function background2(){
+        document.body.style.background = "url('./images/mountain2.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function background3(){
+        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function backgroundUpload(){
+        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
 
     return(
         // <button id = "SettingsButton"> settings </button>
@@ -22,7 +39,7 @@ function ProfilePage(){
                     </div>
 
                     <div className = 'ProfileGreeting'> 
-                        Welcome back, asdsadada
+                        Welcome back, chris kyle
                     </div>
 
 
@@ -37,16 +54,16 @@ function ProfilePage(){
                 </div>
             </div>
 
-            <div className = 'ProfileModal'>
-                <button onClick = {profile1}> 1 </button>
-                <button className = 'profilebutton1'> 2 </button>
-                <button className = 'profilebutton1'> 3 </button>
-                <button className = 'profilebuttonuploadpic'> Upload Profile </button>
+            <div className = 'BackgroundModal'>
+                <button onClick = {background1}> 1 </button>
+                <button onClick = {background2}> 2 </button>
+                <button onClick = {background3}> 3 </button>
+                <button onClick = {backgroundUpload}> Upload Profile </button>
                 
             
             </div>
 
-            <div className = 'BackgroundModal'>
+            <div className = 'ProfileModal'>
             
             </div>
 
