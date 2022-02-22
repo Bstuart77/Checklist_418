@@ -3,38 +3,104 @@ import './Profile.css'
 // import img1 from './images/doggy.jpg'
 
 function ProfilePage(){
+
+    function background1(){
+        document.body.style.background = "url('./images/mountain.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function background2(){
+        document.body.style.background = "url('./images/mountain2.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function background3(){
+        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function backgroundUpload(){
+        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.body.style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+    function LoadProfileFile(event){
+        document.getElementById("profile").src = URL.createObjectURL(event.target.files[0]);
+    }
+
     return(
         // <button id = "SettingsButton"> settings </button>
-        // body is implicit
-        <div className = 'ProfileCard'>
-            <div className = 'ProfileHeader'> 
-                <div className = 'ProfilePicture'>
-                    <img src = "./images/doggy.jpg" alt ="you" />
+        // body is implicitzx
+        <div className = 'Grid'>
+            <div className = 'ProfileCard'>
+                <div className = 'ProfileHeader'> 
+                    <div className = 'ProfilePicture'>
+                        <label className = 'ProfileHover'>
+                            
+                        </label>
+
+                        <input id='profilefile' type='file' onChange={LoadProfileFile} />
+                        <img src = "./images/doggy.jpg" id = "profile" alt ="you" />
+                    </div>
+
+                    <div className = 'ProfileGreeting'> 
+                        Welcome back, chris kyle
+                    </div>
+
+
                 </div>
+                
+                <div className = 'ProfileFooter'>
+                    <button className = "Checklist"> checklist </button>
+                    <button className = "ChangeProfile"> profile picture </button>
+                    <button className = "ChangeBackground"> back ground </button>
+                    <button className = "Logout"> logout </button>
 
-                <div className = 'ProfileGreeting'> 
-                    Welcome back, ()
                 </div>
-
-
             </div>
+
+            <div className = 'BackgroundModal'>
+                <button onClick = {background1}> 1 </button>
+                <button onClick = {background2}> 2 </button>
+                <button onClick = {background3}> 3 </button>
+                <button onClick = {backgroundUpload}> Upload Profile </button>
+                
             
-            <div className = 'ProfileFooter'>
-                <a href = "#" className = "ChangeProfilePicture"> Your Checklist</a>
-                <a href = "#" className = "ChangeProfilePicture"> Edit Profile Picture</a>
-                <a href = "#" className = "ChangeProfilePicture"> Edit Background </a>
-                <a href = "#" className = "ChangeProfilePicture"> Log Out </a>
-
             </div>
 
+            <div className = 'ProfileModal'>
+            
+            </div>
+
+            <div className = 'Settings'>
+                /** This is where profile and background modal will eventually go to */
+            
+            </div>
 
         </div>
-
-
-
-
-    // <h5> Header test idoasjdiasodj as</h5>
     )
+
+
+    let btn1 = document.querySelector('#profilebutton1');
+
+    btn1.addEventListener('click', () => {
+        document.body.style.backgroundImage = "../public/images/mountain2.jpg";
+
+    });
+    /**
+     *                         <label className = 'HoverProfile' for = "file">
+                            <span className = 'HoverEffect'></span>
+                            <span> update picture </span>
+                        </label>
+
+                        <input id = "ProfileChange" type = "file" onchange = "changeProfilePicture(event)"/>
+     * 
+     */
+
 }
     
 export default ProfilePage
