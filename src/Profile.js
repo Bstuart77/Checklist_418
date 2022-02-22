@@ -29,7 +29,9 @@ function ProfilePage(){
     }
 
     function LoadProfileFile(event){
+        console.log("Button clicked 1");
         document.getElementById("profile").src = URL.createObjectURL(event.target.files[0]);
+        console.log("Button clicked 2");
     }
 
     return(
@@ -39,11 +41,6 @@ function ProfilePage(){
             <div className = 'ProfileCard'>
                 <div className = 'ProfileHeader'> 
                     <div className = 'ProfilePicture'>
-                        <label className = 'ProfileHover'>
-                            
-                        </label>
-
-                        <input id='profilefile' type='file' onChange={LoadProfileFile} />
                         <img src = "./images/doggy.jpg" id = "profile" alt ="you" />
                     </div>
 
@@ -56,7 +53,7 @@ function ProfilePage(){
                 
                 <div className = 'ProfileFooter'>
                     <button className = "Checklist"> checklist </button>
-                    <button className = "ChangeProfile"> profile picture </button>
+                    <button onClick = {LoadProfileFile}> profile </button>
                     <button className = "ChangeBackground"> back ground </button>
                     <button className = "Logout"> logout </button>
 
@@ -67,13 +64,13 @@ function ProfilePage(){
                 <button onClick = {background1}> 1 </button>
                 <button onClick = {background2}> 2 </button>
                 <button onClick = {background3}> 3 </button>
-                <button onClick = {backgroundUpload}> Upload Profile </button>
+                <button onClick = {backgroundUpload}> Upload Background </button>
                 
             
             </div>
 
             <div className = 'ProfileModal'>
-            
+                <input id = "ProfileChange" type = "file" onChange = {LoadProfileFile}/>
             </div>
 
             <div className = 'Settings'>
@@ -92,12 +89,28 @@ function ProfilePage(){
 
     });
     /**
+     * 
+     * <button className = "ChangeProfile"> profile picture </button>
+     * 
      *                         <label className = 'HoverProfile' for = "file">
                             <span className = 'HoverEffect'></span>
                             <span> update picture </span>
                         </label>
 
                         <input id = "ProfileChange" type = "file" onchange = "changeProfilePicture(event)"/>
+     * 
+     */
+
+    /**
+     *                     <div className = 'ProfilePicture'>
+                        <label className = 'ProfileHover' htmlFor = 'file'>
+                            <span> Change Image </span>
+                        </label>
+
+                        <input id='profilefile' type='file' onChange={LoadProfileFile} />
+                        <img src = "./images/doggy.jpg" id = "profile" alt ="you" />
+                    </div>
+     * 
      * 
      */
 

@@ -33,7 +33,6 @@ body {
     padding: 50px;
     max-width: 100%;
 
-    font-family: Verdana;
     text-align: center;
 
     display: flex;
@@ -48,14 +47,15 @@ body {
   }
 
   .ProfileCard {
+    border: 4px solid;
+    border-color: rgb(229, 228, 214);
     background: linear-gradient(132deg, rgb(244, 208, 63, .90) 0%, rgb(22, 160, 133, .75) 100%);
 
     width: 400px;
     height: 620px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.2);
-    /* box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     position: relative;
     display: inline-block;
@@ -66,37 +66,44 @@ body {
 
   .ProfileHeader {
       /* background-color: blue; */
-      padding-top: 40px 
+      padding-top: 40px;
       
   }
 
   .ProfilePicture {
-    overflow: hidden;
     color: transparent;
-    align-items: center;
 
     display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+
     margin: auto;
-    padding: 8px;
+    padding: 4px;
     border-radius: 50%;
     border-width: 100px;
+    background-position: center;
     /* background-color: #F4D03F; */
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%); */
-    background-color: rgb(229, 228, 214, .95);
+    background: linear-gradient(132deg, rgb(240, 255, 0) 0%, rgb(88, 207, 251) 100%);
 
   }
+
+  .ProfilePicture input {
+    display: none;
+}
 
   .ProfilePicture img{
       display: block;
       position: relative;
+      /* object-fit: cover; */
 
       border-radius: 50%;
       width: 130px;
       height: 130px;
-  }
-
-  .ProfilePicture input {
-      display: none;
   }
 
   /**
@@ -112,6 +119,8 @@ body {
       color: rgb(229, 228, 214);
       font-size: 2rem;
       font-weight: 600;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
   }
 
     /**
@@ -151,6 +160,8 @@ body {
 
       transition-duration: 0.3s;
 
+      box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
 
     /**
@@ -165,6 +176,26 @@ body {
 
 
 /**
+  .ProfileHover {
+    cursor: pointer;
+    height: 165px;
+    width: 165px;
+  }
+
+  .ProfileHover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: white;
+    transition: background-color .2s ease-in-out;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+
+
   button{
       width: 66%;
       color: rgb(229, 228, 214);
