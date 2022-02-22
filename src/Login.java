@@ -11,7 +11,8 @@ public class Login {
 
     }
 
-    public int login(String username, String password) {
+    public int login(String username, String password){
+
         // compare username and password to database. If it matches an entry return a positive login code (code 200)
         // else return error code
         // if login is successful send a redirect code as well to log them into main page.

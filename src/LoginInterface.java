@@ -1,4 +1,3 @@
-package ChecklistApp;
 
 public interface LoginInterface {
     void register(String email, String FN, String LN, String UN, String pass);
