@@ -32,8 +32,19 @@ function ProfilePage(){
 
     function LoadProfileFile(event){
         console.log("Button clicked 1");
-        document.getElementById("profile").src = URL.createObjectURL(event.target.files[0]);
+        document.getElementById("profileImage").src = URL.createObjectURL(event.target.files[0]);
         console.log("Button clicked 2");
+    }
+
+    function DisplayProfileModal(){
+        document.getElementById("ProfileChangeModal").style.display = "block";
+        console.log("Button clicked")
+    }
+
+    function CloseProfileModal(){
+        document.getElementById("ProfileChangeModal").style.display = "none";
+        console.log("Button clicked")
+
     }
 
     return(
@@ -44,7 +55,7 @@ function ProfilePage(){
                 <div className = 'ProfileCard'>
                     <div className = 'ProfileHeader'> 
                         <div className = 'ProfilePicture'>
-                            <img src = "./images/doggy.jpg" id = "profile" alt ="you" />
+                            <img src = "./images/doggy.jpg" id = "profileImage" alt ="you" />
                         </div>
 
                         <div className = 'ProfileGreeting'> 
@@ -53,7 +64,14 @@ function ProfilePage(){
                     </div>  
                     <div className = 'ProfileFooter'>
                         <button className = "ProfilePageButton"> checklist </button>
-                        <button className = "ProfilePageButton" onClick = {LoadProfileFile}> profile </button>
+                        <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> profile </button>
+
+                        <div className = 'ProfileModal' id = 'ProfileChangeModal'>
+                            <label for = "file"> Select file</label>
+                            <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
+                            <button onClick = {CloseProfileModal}> X </button>
+                        </div>
+
                         <button className = "ProfilePageButton"> back ground </button>
                         <button className = "ProfilePageButton"> logout </button>
                     </div>
@@ -66,10 +84,6 @@ function ProfilePage(){
                     <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
                     
                 
-                </div>
-
-                <div className = 'ProfileModal'>
-                    <input id = "ProfileChange" type = "file" onChange = {LoadProfileFile}/>
                 </div>
 
                 <div className = 'Settings'>
