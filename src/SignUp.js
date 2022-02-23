@@ -16,60 +16,60 @@ function SignUp() {
         if (!firstName.trim()) {
             alert('Please Enter Name');
             return;
-        }else if(!lastName.trim()) {
+        } else if (!lastName.trim()) {
             alert('Please Last Name');
             return;
-        }else if(!email.trim()) {
+        } else if (!email.trim()) {
             alert('Please Enter Email');
             return;
-        }else if(!password.trim()) {
+        } else if (!password.trim()) {
             alert('Please Enter Password');
             return;
-        }else{
+        } else {
             console.log(signUpInfo);
         }
     }
-        return (
-            <div className="SignUpClass">
-                <form>
-                    <label className="FirstNameLabel"> First Name</label>
-                    <label className="LastNameLabel"> Last Name</label>
-                    <br />
+    return (
+        <div className="SignUpClass">
+            <form>
+                <label className="FirstNameLabel"> First Name</label>
+                <label className="LastNameLabel"> Last Name</label>
+                <br />
 
-                    <input className="FirstNameBox" type="text" onChange={(e) => setFName(e.target.value)} />
-                    <input className="LastNameBox" type="text" onChange={(e) => setLName(e.target.value)} />
+                <input className="FirstNameBox" type="text" onChange={(e) => setFName(e.target.value)} />
+                <input className="LastNameBox" type="text" onChange={(e) => setLName(e.target.value)} />
 
-                    <br />
-                    <br />
+                <br />
+                <br />
 
-                    <label className="EmailLabel "> Email</label>
-                    <br />
-                    <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
+                <label className="EmailLabel "> Email</label>
+                <br />
+                <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
 
-                    <br />
-                    <br />
-
-
-                    <label className="PasswordLabel"> Password</label>
-                    <br />
-                    <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
-
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br/>
-
-
-                    <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
-                </form>
+                <br />
                 <br />
 
 
+                <label className="PasswordLabel"> Password</label>
+                <br />
+                <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
 
-                <button className="SignInWithGoogleButton">Log in with Google</button>
-            </div>
-        );
-    }
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
 
-    export default SignUp;
+
+                <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
+            </form>
+            <br />
+
+
+
+            <button className="SignInWithGoogleButton">Log in with Google</button>
+        </div>
+    );
+}
+
+export default SignUp;
