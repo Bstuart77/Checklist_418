@@ -37,14 +37,13 @@ function ProfilePage(){
     }
 
     function DisplayProfileModal(){
-        document.getElementById("ProfileChangeModal").style.display = "block";
+        if(document.getElementById("ProfileChangeModal").style.display === "block"){
+            document.getElementById("ProfileChangeModal").style.display = "none";
+        } else {
+            document.getElementById("ProfileChangeModal").style.display = "block";
+        }
+        /** document.getElementById("ProfileChangeModal").style.display = "block";*/
         console.log("Button clicked")
-    }
-
-    function CloseProfileModal(){
-        document.getElementById("ProfileChangeModal").style.display = "none";
-        console.log("Button clicked")
-
     }
 
     return(
@@ -64,26 +63,24 @@ function ProfilePage(){
                     </div>  
                     <div className = 'ProfileFooter'>
                         <button className = "ProfilePageButton"> checklist </button>
-                        <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> profile </button>
+                        <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> profile pic </button>
 
                         <div className = 'ProfileModal' id = 'ProfileChangeModal'>
-                            <label for = "file"> Select file</label>
+                            <label htmlFor='file'> Select file </label>
                             <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
-                            <button onClick = {CloseProfileModal}> X </button>
                         </div>
 
                         <button className = "ProfilePageButton"> back ground </button>
+
+                        <div className = 'BackgroundModal'>
+                            <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
+                            <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
+                            <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
+                            <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
+                        </div>
+
                         <button className = "ProfilePageButton"> logout </button>
                     </div>
-                </div>
-
-                <div className = 'BackgroundModal'>
-                    <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
-                    <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
-                    <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
-                    <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
-                    
-                
                 </div>
 
                 <div className = 'Settings'>
