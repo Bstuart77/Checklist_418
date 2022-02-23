@@ -12,9 +12,51 @@ code {
     monospace;
 }
 
+.Spiral1{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-right: 4%;
+}
+
+.Spiral2{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-right: 4%;
+}
+
+.Spiral3{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-right: 20%;
+}
+
+.Spiral4{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-left: 4%;
+}
+
+.Spiral5{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-left: 4%;
+}
+
+.Spiral6{
+  width: 1%;
+  position: relative;
+  top: 15px;
+  margin-left: 4%;
+}
+
 .App {
   background-color: #FEFFE2;
-  padding: 9.3%;
+  padding: 7.5%;
   text-align: center;
 }
 
@@ -39,7 +81,6 @@ code {
   padding: .55%;
   background-color: #FFF8E7;
   border: none;
-
 }
 
 .LastNameBox{
