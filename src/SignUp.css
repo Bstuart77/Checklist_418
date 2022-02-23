@@ -96,6 +96,8 @@ code {
   padding: .85%;
   color: #243D66;
   margin-right: 1%;
-  background-color: #5b99ff;
   border: 2px solid #8CB7FF;
+  background: url(../public/images/google.jpg) no-repeat;
+  background-color: #5b99ff;
+  background-size: 8.5%;
 }
