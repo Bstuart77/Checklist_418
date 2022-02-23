@@ -4,13 +4,11 @@ import BackgroundButton from './Component/BackgroundButton.js';
 // import img1 from './images/doggy.jpg'
 
 function ProfilePage(){
-    /*
     function background1(){
         document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
-    */
 
     function background2(){
         document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
@@ -62,7 +60,7 @@ function ProfilePage(){
                 </div>
 
                 <div className = 'BackgroundModal'>
-                    <BackgroundButton label = "1" background = "url('./images/mountain.jpg')"/>
+                    <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
                     <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
                     <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
                     <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
@@ -92,6 +90,8 @@ function ProfilePage(){
 
     });
     /**
+     * 
+     * <BackgroundButton label = "1" background = "url('./images/mountain.jpg')"/>
      * 
      * <button className = "ChangeProfile"> profile picture </button>
      * 
