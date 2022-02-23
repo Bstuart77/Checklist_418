@@ -1,30 +1,34 @@
 import React from 'react'
 import './Profile.css'
+import BackgroundButton from './Component/BackgroundButton.js';
 // import img1 from './images/doggy.jpg'
 
 function ProfilePage(){
-
+    /*
     function background1(){
-        document.body.style.background = "url('./images/mountain.jpg') no-repeat center";
-        document.body.style.backgroundSize = "cover";
+        document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
+    */
 
     function background2(){
-        document.body.style.background = "url('./images/mountain2.jpg') no-repeat center";
-        document.body.style.backgroundSize = "cover";
+        document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
     function background3(){
-        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        document.body.style.backgroundSize = "cover";
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+        document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
     function backgroundUpload(){
-        document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        document.body.style.backgroundSize = "cover";
+        document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
@@ -37,8 +41,7 @@ function ProfilePage(){
     return(
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
-
-        <div className = 'ProfileBody'>
+        <div className = 'ProfileBody' id = "profile-page">
              <div className = 'Grid'>
                 <div className = 'ProfileCard'>
                     <div className = 'ProfileHeader'> 
@@ -49,19 +52,17 @@ function ProfilePage(){
                         <div className = 'ProfileGreeting'> 
                             Welcome back, chris kyle
                         </div>
-                    </div>
-                    
+                    </div>  
                     <div className = 'ProfileFooter'>
                         <button className = "ProfilePageButton"> checklist </button>
                         <button className = "ProfilePageButton" onClick = {LoadProfileFile}> profile </button>
                         <button className = "ProfilePageButton"> back ground </button>
                         <button className = "ProfilePageButton"> logout </button>
-
                     </div>
                 </div>
 
                 <div className = 'BackgroundModal'>
-                    <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
+                    <BackgroundButton label = "1" background = "url('./images/mountain.jpg')"/>
                     <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
                     <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
                     <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
