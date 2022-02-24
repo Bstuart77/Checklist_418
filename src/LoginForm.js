@@ -12,7 +12,7 @@ function LoginForm({ Login, error }) {
   };
 
   return (
-    <form onSubmit={submissionHandler}>
+    <form className = "login-form" onSubmit={submissionHandler}>
       <div className="inside-form">
         <h1>Log In to *Planner*</h1>
         <br />
@@ -27,15 +27,13 @@ function LoginForm({ Login, error }) {
             onChange={(e) => setDetails({ ...details, name: e.target.value })}
             value={details.name}
           />
-
-        <br /> 
         </div>
 
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <br />
           <input
-            type="email"
+            type="email" required
             name="email"
             placeholder="email@domain.com"
             id="email"
@@ -55,7 +53,7 @@ function LoginForm({ Login, error }) {
           <label htmlFor="password">Password:</label>
           <br />
           <input
-            type="password"
+            type="password" required
             name="password"
             placeholder="password"
             id="password"
