@@ -16,7 +16,7 @@ function LoginForm({ Login, error }) {
       <div className="inside-form">
         <h1>Log In to *Planner*</h1>
         <br />
-        {error !== "" ? <div className="error">{error}</div> : ""}
+        {error !== "" ? <div className="error">{alert(error)}</div> : ""}
         <div className="form-group">
           <label htmlFor="UsernameLabel">Username:</label>
           <input
