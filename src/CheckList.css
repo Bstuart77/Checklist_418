@@ -1,4 +1,32 @@
-.h1tag{
-    color: red;
+.DailyViewClass{
+    background-color: #ffd1b2;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 13%;
+    margin-right: 13%;
+    border: 3px solid grey;
 }
 
+.ChecklistToProfile
+{
+    position: absolute;
+    top: 500px;
+    left: 700px;
+
+}
+
+.MonthlyView
+{
+    position: absolute;
+    top: 500px;
+    left: 800px;
+
+}
+
+.DailyView
+{
+    position: absolute;
+    top: 500px;
+    left: 900px;
+
+}
