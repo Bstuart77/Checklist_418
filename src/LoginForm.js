@@ -14,25 +14,33 @@ function LoginForm({ Login, error }) {
   return (
     <form className = "login-form" onSubmit={submissionHandler}>
       <div className="inside-form">
-        <h1>Log In to *Planner*</h1>
+
+        <h1 className="page-title">Log In to *Planner*</h1>
+        
         <br />
+
         {error !== "" ? <div className="error">{alert(error)}</div> : ""}
+        
         <div className="form-group">
           <label htmlFor="UsernameLabel">Username:</label>
-          <input
+
+          <br />
+
+          <input className = "username-input"
             type="text"
             name="name"
-            placeholder="Username"
+            placeholder="username"
             id="name"
             onChange={(e) => setDetails({ ...details, name: e.target.value })}
             value={details.name}
           />
+
         </div>
 
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <br />
-          <input
+          <input className = "email-input"
             type="email" required
             name="email"
             placeholder="email@domain.com"
@@ -40,11 +48,7 @@ function LoginForm({ Login, error }) {
             onChange={(e) => setDetails({ ...details, email: e.target.value })}
             value={details.email}
           />
-
-          <br />
-          
-        </div>
-        
+        </div>  
         <div className="reset-email">
           <label htmlFor="reset-email">Forgot Email?</label>
         </div>
@@ -52,7 +56,7 @@ function LoginForm({ Login, error }) {
         <div className="form-group">
           <label htmlFor="password">Password:</label>
           <br />
-          <input
+          <input className = "password-input"
             type="password" required
             name="password"
             placeholder="password"
@@ -67,18 +71,19 @@ function LoginForm({ Login, error }) {
         <div className="reset-password">
           <label htmlFor="reset-password">Forgot Password?</label>
         </div>
-
-
+        
         <input className="LoginButton" type="submit" value="Log In" />{" "}
+        <br />
         <input
           className="LogInWithGoogleButton"
           type="submit"
           value="Log In with Google"
         />
       </div>
+
     </form>
   );
-  // made the login button.
+  // made the login buttons.
 }
 
 export default LoginForm;

@@ -15,55 +15,61 @@ input{
 .Spiral1{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-right: 4%;
 }
 
 .Spiral2{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-right: 4%;
 }
 
 .Spiral3{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-right: 20%;
 }
 
 .Spiral4{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-left: 4%;
 }
 
 .Spiral5{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-left: 4%;
 }
 
 .Spiral6{
   width: 1%;
   position: relative;
-  top: -550px;
+  top: -790px;
   margin-left: 4%;
 }
 
-.reset-password{
-  font-size:xx-small;
-  color: #171a3d;
-  text-align: "center";
+.username-input{
+  margin-bottom: 4%;
 }
 
 .reset-email{
   font-size:xx-small;
   color: #171a3d;
   text-align: "center";
+  margin-bottom: 3%;
+}
+
+.reset-password{
+  font-size:xx-small;
+  color: #171a3d;
+  text-align: "center";
+  margin-bottom: 10%;
 }
 
 .LogoutButton{
@@ -75,14 +81,6 @@ input{
   border: 2px solid #FFD28F  
 } 
 
-.LoginButton{
-  margin: auto;
-  padding: .85%;
-  color: #000000;
-  background-color: #fff9eb;
-  border: 2px solid #f1ead6;
-} 
-
 .LoginPage{
   background-color: #ffddc6;
   padding-top: 4%;
@@ -92,8 +90,19 @@ input{
   border: 3px solid rgb(221, 215, 195);
 }
 
+.LoginButton{
+  margin: auto;
+  padding: .85%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F;
+  width: 44.5%;
+  margin-bottom: 1%;
+} 
+
 .LogInWithGoogleButton{
   margin: auto;
+  margin-bottom: 4%;
   width: 44.5%;
   padding: .85%;
   color: #000000;
@@ -134,107 +143,3 @@ form .inside-form{
   background-image: linear-gradient(to bottom, #94b6ff, #FE4880);
 } */
 
-
-/*   
-
-  .LoginClass{
-    background-color: #ffd1b2;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-left: 18%;
-    margin-right: 18%;
-    border: 3px solid grey;
-  }
-  
-
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-   
-  .LoginForm{
-    background-color: #ffddc6;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-left: 18%;
-    margin-right: 18%;
-    border: 3px solid rgb(221, 215, 195);
-  }
-  
-  .inside-form{
-    float: left;
-    margin-left: 26.9%;
-  }
-  
-  .form-group{
-    float: left;
-    margin-left: 26.9%;
-    width: 17%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  }
-  
-  .LastNameBox{
-    float: right;
-    margin-right: 26.9%;
-    width: 17%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  
-  }
-  
-  .LastNameLabel{
-    float: right;
-    margin-right: 35.5%;
-  }
-  
-  .EmailBox{
-    width: 45%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  }
-  
-  .EmailLabel{
-    margin-left: -41.2%;
-  }
-  
-  .PasswordLabel{
-    margin-left: -37.7%;
-  }
-  
-  .PasswordBox{
-    padding: .55%;
-    width: 45%;
-    background-color: #FFF8E7;
-    border: none;
-  }
-  
-  .LogInButton{
-    margin: auto;
-    width: 44.5%;
-    padding: .85%;
-    background-color: #f8c272;
-    color: #000000;
-    border: 2px solid #CC984C
-  }
-  
-  .LogInWithGoogleButton{
-    margin: auto;
-    width: 44.5%;
-    padding: .85%;
-    color: #000000;
-    background-color: #5b99ff;
-    border: 2px solid #8CB7FF;
-  } */
