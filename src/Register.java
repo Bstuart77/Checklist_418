@@ -1,9 +1,26 @@
 package ChecklistApp;
 
-public class Register implements RegisterInterface {
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
+public class Register implements RegisterInterface  {
+    String url = "jdbc:postgresql://localhost:5432/postgres";
+    String dbUsername = "postgres";
+    String password = "database1";
+    int userID;
 
-    public int setEmailAttribute(String emailAddress) {
+    public void dbConnection(String query) throws SQLException{
+        Connection con = DriverManager.getConnection(url,dbUsername,password);
+        Statement statement = con.createStatement();
+        ResultSet resultFromDB = statement.executeQuery(query);
+    }
+
+    public int setEmailAttribute(String emailAddress) throws SQLException {
+        String queryForEmail = "UPDATE userInfo SET EmailAddress = " + emailAddress + "WHERE userID =" + userID + ";";
+        dbConnection(queryForEmail);
         // set the email attribute in the database.
         // if successful return code 200.
         // else return server error.
