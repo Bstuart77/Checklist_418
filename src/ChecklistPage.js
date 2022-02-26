@@ -31,10 +31,12 @@ function ChecklistPage() {
             taskList
         }
             
-        <button className='ChecklistToProfile'>Go To Profile</button>
+        <button className='DailyToProfile'>Go To Profile</button>
         <button className='MonthlyView'>Monthly View</button>
-        <button className='DailyView'>Daily View</button>
+        
+        <button className='DailyToAddTask'>Add/Remove a Task</button>
            
+        
         </div>
 
         
