@@ -63,7 +63,7 @@ function LoginForm({ Login, error }) {
         <input className="LoginButton" type="submit" value="Log In" />{" "}
         <br />
         <input
-          className="LogInWithGoogleButton"
+          className="GoogleLogin"
           type="submit"
           value="Log In with Google"
         />
