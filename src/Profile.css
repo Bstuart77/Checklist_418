@@ -1,3 +1,237 @@
+/*
+    Color reference:
+    White: #E5E4D6
+    Light Green: #7CF002
+    Dark Green: #09D92B
+    Teal: #02F0B4
+    Blue: #029FE6
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    box-sizing: border-box;
+}
+
+.ProfileBody {
+    /* .. denotes one step backwards from the folder*/
+
+    /* background-image: url(../public/images/mountain2.jpg) no-repeat center; */
+    background: url(../public/images/mountain2.jpg) no-repeat center;
+    /*background-color: #327362;*/
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+
+    padding: 50px;
+    max-width: 100%;
+
+    text-align: center;
+
+    display: flex;
+    
+    justify-content: center;
+  }
+
+  .Grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      /* justify-content: center; */
+  }
+
+  .ProfileCard {
+    border: solid 10px transparent;
+    border-image: linear-gradient(45deg, #92FFC0, #002661, 1);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /* border-color: rgb(229, 228, 214); */
+    background: linear-gradient(132deg, rgb(244, 208, 63, .90) 0%, rgb(22, 160, 133, .75) 100%);
+
+    width: 400px;
+    height: 620px;
+    overflow: hidden;
+
+    border-radius: 12px;
+    box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    position: relative;
+    display: inline-block;
+
+    text-align: center;
+
+  }
+
+  .ProfileHeader {
+      /* background-color: blue; */
+      padding-top: 40px;
+      
+  }
+
+  .ProfilePicture {
+    color: transparent;
+
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+
+    margin: auto;
+    padding: 6px;
+    border-radius: 50%;
+    border-width: 100px;
+    background-position: center;
+    /* background-color: #F4D03F; */
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%); */
+    background: linear-gradient(132deg, rgb(240, 255, 0) 0%, rgb(88, 207, 251) 100%);
+
+  }
+
+  .ProfilePicture input {
+    display: none;
+}
+
+  .ProfilePicture img{
+      display: block;
+      position: relative;
+      /* object-fit: cover; */
+
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+  }
+
+  /**
+        PROFILE GREETING
+  */
+
+  .ProfileGreeting {
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 18px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #F1E8FF;
+      /* color: rgb(229, 228, 214); */
+      font-size: 2.2rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  }
+
+    /**
+            PROFILE FOOTER
+    */
+
+    .ProfileFooter {
+        /* background-color: antiquewhite; */
+        padding: 20px;
+    }
+
+    /**
+            BUTTON
+    */
+
+  .ProfilePageButton:hover {
+    background-color: #16A085; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.ProfilePageButton{
+      width: 66%;
+      color: #F1E8FF;
+      /* color: rgb(229, 228, 214); */
+
+      border: 4px solid;
+      background-color: transparent;
+
+      padding: 6px;
+      margin: 8px;
+
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      border-radius: 12px;
+
+      transition-duration: 0.3s;
+
+      box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
+    /**
+        RESPONSIVENESS
+  */
+
+  @media (max-width: 1500px){
+      .ProfileCard{
+          width: calc(100%);
+      }
+  }
+
+
+/**
+  .ProfileHover {
+    cursor: pointer;
+    height: 165px;
+    width: 165px;
+  }
+
+  .ProfileHover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: white;
+    transition: background-color .2s ease-in-out;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+
+
+  button{
+      width: 66%;
+      color: rgb(229, 228, 214);
+
+      border: 2px solid;
+      background-color: #2E695D;
+
+      padding: 4px;
+      margin: 8px;
+
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.2rem;
+
+      border-radius: 12px;
+
+      transition-duration: 0.3s;
+
+  }
+
+button:hover {
+    background-color: #16A085;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+*/
+
+
+  /**
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +240,6 @@
 }
 
 body {
-    /* .. denotes one step backwards from the folder*/
     background: url(../public/images/mountain.jpg) no-repeat center;
     background-size: cover;
 
@@ -29,3 +262,33 @@ body {
     overflow: hidden;
 
   }
+
+  .ProfileHeader {
+      padding: 50px 20px;
+  }
+
+  .ProfilePicture {
+    display: inline-block;
+    padding: 4px;
+    margin: auto;
+    border-radius: 50%;
+
+    background: white;
+
+  }
+
+  .ProfilePicture img{
+      display: block;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+  }
+
+  .ProfileGreeting {
+      padding: 20px;
+      font-size: 18px;
+      color: black;
+  }
+
+
+  */

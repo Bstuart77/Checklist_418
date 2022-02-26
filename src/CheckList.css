@@ -1,32 +1,35 @@
 .DailyViewClass{
-    background-color: #ffd1b2;
-    padding-top: 4%;
+    background-color: #780ddb;
+    /*padding-top: 4%;
     padding-bottom: 4%;
     margin-left: 13%;
     margin-right: 13%;
-    border: 3px solid grey;
+    border: 3px solid grey;*/
+    position: absolute;
+    top: 100px;
+    left: 500px;
 }
 
-.ChecklistToProfile
+.DailyToProfile
 {
     position: absolute;
-    top: 500px;
-    left: 700px;
+    top: 400px;
+    left: 50px;
 
 }
 
 .MonthlyView
 {
     position: absolute;
-    top: 500px;
-    left: 800px;
+    top: 400px;
+    left: 200px;
 
 }
 
-.DailyView
+.DailyToAddTask
 {
     position: absolute;
-    top: 500px;
-    left: 900px;
+    top: 400px;
+    left: 350px;
 
 }

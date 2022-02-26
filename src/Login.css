@@ -1,104 +1,145 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+}
+
+input{
+  background-color: #fdefe6;
+} 
+
+.Spiral1{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-right: 4%;
+}
+
+.Spiral2{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-right: 4%;
+}
+
+.Spiral3{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-right: 20%;
+}
+
+.Spiral4{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-left: 4%;
+}
+
+.Spiral5{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-left: 4%;
+}
+
+.Spiral6{
+  width: 1%;
+  position: relative;
+  top: -790px;
+  margin-left: 4%;
+}
+
+.username-input{
+  margin-bottom: 4%;
+}
+
+.reset-email{
+  font-size:xx-small;
+  color: #171a3d;
+  text-align: "center";
+  margin-bottom: 3%;
+}
+
+.reset-password{
+  font-size:xx-small;
+  color: #171a3d;
+  text-align: "center";
+  margin-bottom: 10%;
+}
+
+.LogoutButton{
+  margin: auto;
+  padding: .85%;
+  margin-right: 1%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F  
+} 
+
+.LoginPage{
+  background-color: #ffddc6;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-left: 18%;
+  margin-right: 18%;
+  border: 3px solid rgb(221, 215, 195);
+}
+
+.LoginButton{
+  margin: auto;
+  padding: .85%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F;
+  width: 44.5%;
+  margin-bottom: 1%;
+} 
+
+.LogInWithGoogleButton{
+  margin: auto;
+  margin-bottom: 4%;
+  width: 44.5%;
+  padding: .85%;
+  color: #000000;
+  background-color: #5b99ff;
+  border: 2px solid #8CB7FF;
+} 
+
+form.Logout{
+  margin: auto;
+  width: 25%;
+  padding: .85%;
+  background-color: #f8c272;
+  color: #000000;
+  border: 2px solid #CC984C
+}
   
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  .App{
-    background-color: #FEFFE2;
-    padding-top: 6%;
-    padding-left: 11%;
-    padding-bottom: 9.5%;
-    padding-right: 11%;
-    text-align: center;
-  }
-  
-  .SignUpClass{
-    background-color: #ffd1b2;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-left: 18%;
-    margin-right: 18%;
-    border: 3px solid grey;
-  }
-  
-  .FirstNameLabel{
-    float: left;
-    margin-left: 26.9%;
-  }
-  
-  .FirstNameBox{
-    float: left;
-    margin-left: 26.9%;
-    width: 17%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  
-  }
-  
-  .LastNameBox{
-    float: right;
-    margin-right: 26.9%;
-    width: 17%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  
-  
-  }
-  
-  .LastNameLabel{
-    float: right;
-    margin-right: 35.5%;
-  }
-  
-  .EmailBox{
-    width: 45%;
-    padding: .55%;
-    background-color: #FFF8E7;
-    border: none;
-  
-  }
-  
-  .EmailLabel{
-    margin-left: -41.2%;
-  }
-  
-  .PasswordLabel{
-    margin-left: -37.7%;
-  }
-  
-  .PasswordBox{
-    padding: .55%;
-    width: 45%;
-    background-color: #FFF8E7;
-    border: none;
-  
-  }
-  
-  .SignUpButton{
-    margin: auto;
-    width: 44.5%;
-    padding: .85%;
-    background-color: #f8c272;
-    color: #000000;
-    border: 2px solid #CC984C
-  }
-  
-  .SignInWithGoogleButton{
-    margin: auto;
-    width: 44.5%;
-    padding: .85%;
-    color: #000000;
-    background-color: #5b99ff;
-    border: 2px solid #8CB7FF;
-  }
+form{
+  display: block;
+  position: relative;
+}/* destroys sign up page's colors if there is a bg color specified here, so don't. */
+
+form .inside-form{
+  position: relative;
+  display: block;
+  padding: 3px;
+  z-index: 2;
+}
+
+/* form::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top:-5px;
+  left:-5px;
+  right:-5px;
+  bottom:-5px;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, #94b6ff, #FE4880);
+} */
+

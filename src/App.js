@@ -1,27 +1,19 @@
 import SignUp from './SignUp';
 import Profile from './Profile';
+import Login from './Login';
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // <SignUp/>
-    // </div>
-    <Profile/>
-  );
+    <div className="App">
+      {/* {<><img src="images/spiral.PNG" className='Spiral1' /><img src="images/spiral.PNG" className='Spiral2' /><img src="images/spiral.PNG" className='Spiral3' /><img src="images/spiral.PNG" className='Spiral4' /><img src="images/spiral.PNG" className='Spiral5' /><img src="images/spiral.PNG" className='Spiral6' /></> }
+       */}
+      {/* <SignUp /> */}
+      <Login/>
+       {<><img src="images/spiral.PNG" className='Spiral1' /><img src="images/spiral.PNG" className='Spiral2' /><img src="images/spiral.PNG" className='Spiral3' /><img src="images/spiral.PNG" className='Spiral4' /><img src="images/spiral.PNG" className='Spiral5' /><img src="images/spiral.PNG" className='Spiral6' /></> }
+     
+      {/* <Profile/>  */}
+      
+    </div>);
 }
 
 export default App;
