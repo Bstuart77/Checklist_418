@@ -1,7 +1,33 @@
+.locate-email-title{
+    padding: 5%;
+}
+
 .circle {
     height: 80vh;
     width: 80vh;
     background-color: rgb(143, 225, 236);
     border-radius: 50%;
     display: inline-block;
+  }
+
+  .locate-email{
+      align-content: center;
+}
+
+.email-label{
+font-size:medium;
+}
+
+.Locate-Login{
+    margin: auto;
+    padding: .85%;
+    background-color: #FFBF60;
+    color: #664C26;
+    border: 2px solid #FFD28F;
+    width: 44.5%;
+    margin-bottom: 1%;
+}
+  .email-input{
+    background-color: #fdefe6;
+    margin: 4%;
   }
