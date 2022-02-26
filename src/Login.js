@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import LoginForm from "./LoginForm";
 import "./Login.css";
+import LoginForm from "./LoginForm";
 
 function LoginMain() {
   const testUser = {
@@ -8,7 +8,7 @@ function LoginMain() {
     password: "test",
   };
 
-  const [user, setUserData] = useState({ name: "", email: "" });
+  const [user, setUserData] = useState({ email: "", password: ""});
   const [error, setError] = useState("");
 
   const Login = (details) => {
@@ -20,43 +20,59 @@ function LoginMain() {
     ) {
       console.log("Successfully logged in.");
       setUserData({
-        name: details.name,
         email: details.email,
       });
-    } 
-    else {
-      if (details.email === "" ||
-        details.password === ""){
-          console.log("At least one of the fields is blank. Enter something for all the fields.");
-          setError("At least one of the fields is blank. Enter something for all the fields.");
-          return <h1>At least one of the fields is blank. Enter something for all the fields and try again.</h1>;    
-        }
-        else{
-          console.log("Login details do not match any records. Please try again.");
-          setError("Login details do not match any records. Please try again.");
-          return <h1>The password and email combination don't match. Please try again.</h1>;    
-        }
+    } else {
+      if (details.email === "" || details.password === "") {
+        console.log(
+          "At least one of the fields is blank. Enter something for all the fields."
+        );
+        alert("At least one of the fields is blank. Enter something for all the fields.");
+        setError(
+          "At least one of the fields is blank. Enter something for all the fields."
+        );
+      } else {
+        console.log(
+          "Login details do not match any records. Please try again."
+        );
+        alert("Login details do not match any records. Please try again.");
+        setError("Login details do not match any records. Please try again.");
+
+      }
     }
-  }
+  };
 
   const Logout = () => {
     console.log("Logged out.");
-    setUserData({ name: "", email: "" });
+    setUserData({ email: "" }); //name: "",
   };
 
   // Welcoming the User after they've logged in.
+  // TODO link this to checklist or profile instead:
+  
+  let Profile = "./Profile";
+
   return (
     <div className="LoginPage">
       {user.email !== "" ? (
         <div className="Welcome">
           <h2>
-            Welcome to *Planner*, <span>{user.name}</span>
+            Welcome to *Planner*.
           </h2>
-          <button className = "LogoutButton" onClick={Logout}>Log Out</button>
+
+          <a htmlFor="to-profile" href={Profile}>
+            {" "}
+            Redirect to Profile page or some dashboard page.
+          </a>
+
+          <button className="LogoutButton" onClick={Logout}>
+            Log Out
+          </button>
         </div>
       ) : (
         <LoginForm Login={Login} error={error} />
         // show login form when User is not logged in.
+        // <span>{user.name}</span>
       )}
     </div>
   );
