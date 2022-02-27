@@ -16,15 +16,15 @@ function LocateEmail() {
   };
 
   return (
-    <div className="LocateEmailContent">
+    <div className="locate-email-content">
       <span class="circle">
         <br />
         <br />
         <br />
         <br />
-        <h1 className = "locate-email-title">Locate Your Email</h1>
+        <h1 className="locate-email-title">Locate Your Email</h1>
         <form className="locate-email">
-          <label className="email-label">Email</label>       
+          <label className="email-label">Email</label>
           <input
             className="email-input"
             type="text"
