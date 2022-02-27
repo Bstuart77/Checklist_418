@@ -1,33 +1,33 @@
-.locate-email-title{
-    padding: 5%;
+.locate-email-title {
+  padding: 5%;
 }
 
 .circle {
-    height: 80vh;
-    width: 80vh;
-    background-color: rgb(143, 225, 236);
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .locate-email{
-      align-content: center;
+  height: 80vh;
+  width: 80vh;
+  background-color: rgb(143, 225, 236);
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.email-label{
-font-size:medium;
+.locate-email {
+  align-content: center;
 }
 
-.Locate-Login{
-    margin: auto;
-    padding: .85%;
-    background-color: #FFBF60;
-    color: #664C26;
-    border: 2px solid #FFD28F;
-    width: 44.5%;
-    margin-bottom: 1%;
+.email-label {
+  font-size: medium;
 }
-  .email-input{
-    background-color: #fdefe6;
-    margin: 4%;
-  }
+
+.Locate-Login {
+  margin: auto;
+  padding: 0.85%;
+  background-color: #ffbf60;
+  color: #664c26;
+  border: 2px solid #ffd28f;
+  width: 44.5%;
+  margin-bottom: 1%;
+}
+.email-input {
+  background-color: #fdefe6;
+  margin: 4%;
+}
