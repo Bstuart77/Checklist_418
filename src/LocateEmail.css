@@ -5,7 +5,7 @@
 .circle {
   height: 80vh;
   width: 80vh;
-  background-color: rgb(143, 225, 236);
+  background-image: linear-gradient(to top, rgb(122, 224, 255), rgb(54, 31, 182));
   border-radius: 50%;
   display: inline-block;
 }

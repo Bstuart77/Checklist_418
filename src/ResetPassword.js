@@ -17,7 +17,7 @@ function ResetPassword() {
 
   return (
     <div className="reset-password-content">
-      <span class="circle">
+      <span class="circle2">
         <br />
         <br />
         <h1 className="reset-password-title">Reset Your Password</h1>
@@ -25,7 +25,7 @@ function ResetPassword() {
           <label className="password-label">New Password</label>
           <input
             className="password-input"
-            type="text"
+            type="password"
             required
             placeholder="password"
             onChange={(e) => setNewPassword(e.target.value)}
