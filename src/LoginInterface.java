@@ -1,4 +1,3 @@
-package ChecklistApp;
 
 public interface LoginInterface {
     int login(String username, String password);

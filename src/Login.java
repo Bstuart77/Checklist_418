@@ -1,16 +1,41 @@
-package ChecklistApp;
+
+import java.sql.*;
+
 public class Login implements LoginInterface {
-    String emailAddress = "";
-    String firstName = "";
-    String lastName = "";
-    String userName = "";
-    String password = "";
+
+    // JDBC Driver
+    final String JDBC_DRIVER = "";
+    // Database URL
+    final String DB_URL = "jdbc:postgresql://localhost:5432/ICSI418Y";
+    // Database Username
+    final String DB_USERNAME = "postgres";
+    // Database Password
+    final String DB_PASS = "database1";
+
+    public ResultSet dbConnect(String query) throws SQLException {
+        Connection connect = DriverManager.getConnection(DB_URL,DB_USERNAME,DB_PASS);
+        Statement statement = connect.createStatement();
+        return statement.executeQuery(query);
+    }
+
 
     public int login(String username, String password) {
         // compare username and password to database. If it matches an entry return a positive login code (code 200)
         // else return error code
         // if login is successful send a redirect code as well to log them into main page.
-        return 0;
+        try {
+            String query = "SELECT userPass FROM usersDatabase WHERE userID =" + username;
+            ResultSet passwordResult = dbConnect(query);
+            String storedPassword = passwordResult.getString("userPass");
+
+            if(storedPassword.equals(password)){
+                return 200;
+            } else {
+                return 500;
+            }
+        } catch (SQLException e) {
+            return 500;
+        }
     }
 
     public int getEmailAttribute(String emailAddress) {
