@@ -68,7 +68,7 @@ function ProfilePage(){
                         </div>
 
                         <div className = 'ProfileGreeting'> 
-                            Welcome back, chris kyle
+                            Welcome back, (username here)
                         </div>
                     </div>  
                     <div className = 'ProfileFooter'>
