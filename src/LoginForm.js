@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import "./ResetPassword";
 import "./ResetPassword.css";
+import "./LocateEmail";
+import "./LocateEmail.css";
 import "./Login.css";
+import "./Profile";
 
 function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
-
+  const [details, setDetails] = useState({  email: "", password: "" });
+    
   const submissionHandler = (e) => {
-    e.preventDefault();
+    e.preventDefault();    
     Login(details);
   };
+
+  let ResetPassword = "./ResetPassword";
+  let LocateEmail = "./LocateEmail";
 
   return (
     <form className = "login-form" onSubmit={submissionHandler}>
@@ -18,24 +24,6 @@ function LoginForm({ Login, error }) {
         <h1 className="page-title">Log In to *Planner*</h1>
         
         <br />
-
-        {error !== "" ? <div className="error">{alert(error)}</div> : ""}
-        
-        <div className="form-group">
-          <label htmlFor="UsernameLabel">Username:</label>
-
-          <br />
-
-          <input className = "username-input"
-            type="text"
-            name="name"
-            placeholder="username"
-            id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
-          />
-
-        </div>
 
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -49,8 +37,8 @@ function LoginForm({ Login, error }) {
             value={details.email}
           />
         </div>  
-        <div className="reset-email">
-          <label htmlFor="reset-email">Forgot Email?</label>
+        <div className="locate-email">
+        <a htmlFor="locate-email" href={LocateEmail}>Forgot Email?</a>
         </div>
 
         <div className="form-group">
@@ -69,13 +57,13 @@ function LoginForm({ Login, error }) {
         </div>
 
         <div className="reset-password">
-          <label htmlFor="reset-password">Forgot Password?</label>
+          <a htmlFor="reset-password" href={ResetPassword}>Forgot Password?</a>
         </div>
         
         <input className="LoginButton" type="submit" value="Log In" />{" "}
         <br />
         <input
-          className="LogInWithGoogleButton"
+          className="GoogleLogin"
           type="submit"
           value="Log In with Google"
         />
@@ -84,6 +72,7 @@ function LoginForm({ Login, error }) {
     </form>
   );
   // made the login buttons.
+  // make a link to Google login inputs or some new page for it.
 }
 
 export default LoginForm;

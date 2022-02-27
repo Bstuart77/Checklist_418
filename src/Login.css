@@ -8,7 +8,7 @@ body {
   justify-content: center;
 }
 
-input{
+.email-input, .password-input{
   background-color: #fdefe6;
 } 
 
@@ -17,6 +17,7 @@ input{
   position: relative;
   top: -790px;
   margin-right: 4%;
+  margin-top: 10%;
 }
 
 .Spiral2{
@@ -24,12 +25,14 @@ input{
   position: relative;
   top: -790px;
   margin-right: 4%;
+  margin-top: 10%;
 }
 
 .Spiral3{
   width: 1%;
   position: relative;
   top: -790px;
+  margin-top: 10%;
   margin-right: 20%;
 }
 
@@ -37,6 +40,7 @@ input{
   width: 1%;
   position: relative;
   top: -790px;
+  margin-top: 10%;
   margin-left: 4%;
 }
 
@@ -44,6 +48,7 @@ input{
   width: 1%;
   position: relative;
   top: -790px;
+  margin-top: 10%;
   margin-left: 4%;
 }
 
@@ -51,14 +56,11 @@ input{
   width: 1%;
   position: relative;
   top: -790px;
+  margin-top: 10%;
   margin-left: 4%;
 }
 
-.username-input{
-  margin-bottom: 4%;
-}
-
-.reset-email{
+.locate-email{
   font-size:xx-small;
   color: #171a3d;
   text-align: "center";
@@ -100,7 +102,7 @@ input{
   margin-bottom: 1%;
 } 
 
-.LogInWithGoogleButton{
+.GoogleLogin{
   margin: auto;
   margin-bottom: 4%;
   width: 44.5%;
@@ -110,7 +112,7 @@ input{
   border: 2px solid #8CB7FF;
 } 
 
-form.Logout{
+.Logout{
   margin: auto;
   width: 25%;
   padding: .85%;
@@ -118,13 +120,8 @@ form.Logout{
   color: #000000;
   border: 2px solid #CC984C
 }
-  
-form{
-  display: block;
-  position: relative;
-}/* destroys sign up page's colors if there is a bg color specified here, so don't. */
 
-form .inside-form{
+.inside-form{
   position: relative;
   display: block;
   padding: 3px;

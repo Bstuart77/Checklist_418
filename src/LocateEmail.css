@@ -1,29 +1,24 @@
-.reset-password-title {
+.locate-email-title {
   padding: 5%;
 }
 
-.circle2 {
+.circle {
   height: 80vh;
   width: 80vh;
-  background-image: linear-gradient(to bottom, #94b6ff, #FE4880);
+  background-image: linear-gradient(to top, rgb(122, 224, 255), rgb(54, 31, 182));
   border-radius: 50%;
   display: inline-block;
 }
 
-.reset-password-form {
+.locate-email {
   align-content: center;
 }
 
-.password-label {
+.email-label {
   font-size: medium;
 }
 
-.password-input {
-  background-color: #fdefe6;
-  margin: 4%;
-}
-
-.new-password-button {
+.Locate-Login {
   margin: auto;
   padding: 0.85%;
   background-color: #ffbf60;
@@ -31,4 +26,8 @@
   border: 2px solid #ffd28f;
   width: 44.5%;
   margin-bottom: 1%;
+}
+.email-input {
+  background-color: #fdefe6;
+  margin: 4%;
 }
