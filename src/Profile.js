@@ -46,6 +46,16 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
+    function DisplayBackgroundModal(){
+        if(document.getElementById("BackgrounChangeModal").style.display === "block"){
+            document.getElementById("BackgrounChangeModal").style.display = "none";
+        } else {
+            document.getElementById("BackgrounChangeModal").style.display = "block";
+        }
+        /** document.getElementById("ProfileChangeModal").style.display = "block";*/
+        console.log("Button clicked")
+    }
+
     return(
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
@@ -63,6 +73,7 @@ function ProfilePage(){
                     </div>  
                     <div className = 'ProfileFooter'>
                         <button className = "ProfilePageButton"> checklist </button>
+
                         <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> profile pic </button>
 
                         <div className = 'ProfileModal' id = 'ProfileChangeModal'>
@@ -70,13 +81,12 @@ function ProfilePage(){
                             <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
                         </div>
 
-                        <button className = "ProfilePageButton"> back ground </button>
+                        <button className = "ProfilePageButton" onClick = {DisplayBackgroundModal}> background </button>
 
-                        <div className = 'BackgroundModal'>
+                        <div className = 'BackgroundModal' id = 'BackgrounChangeModal'>
                             <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
                             <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
                             <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
-                            <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
                         </div>
 
                         <button className = "ProfilePageButton"> logout </button>
@@ -100,7 +110,9 @@ function ProfilePage(){
         document.body.style.backgroundImage = "../public/images/mountain2.jpg";
 
     });
-    /**
+    /*
+     * 
+     * <button className = "ProfilePageButton" onClick = {backgroundUpload}> Upload Background </button>
      * 
      * <BackgroundButton label = "1" background = "url('./images/mountain.jpg')"/>
      * 

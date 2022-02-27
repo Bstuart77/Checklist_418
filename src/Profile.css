@@ -30,7 +30,7 @@
     height: 100%;
     width: 100%;
 
-    padding: 50px;
+    padding: 52px;
     max-width: 100%;
 
     text-align: center;
@@ -54,7 +54,7 @@
     /* border-color: rgb(229, 228, 214); */
     background: linear-gradient(132deg, rgb(244, 208, 63, .90) 0%, rgb(22, 160, 133, .75) 100%);
 
-    width: 400px;
+    width: 100px;
     height: 602px;
     overflow: auto;
 
@@ -193,6 +193,11 @@
       color: #F1E8FF;
 
       box-sizing: border-box;
+  }
+
+  .BackgroundModal{
+    display: none;
+
   }
 
   .ProfileChange{
