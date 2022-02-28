@@ -12,47 +12,47 @@ code {
     monospace;
 }
 
-.Spiral1{
+.SignUpSpiral1{
   width: 1%;
   position: relative;
-  top: 15px;
+  top: -500px;
   margin-right: 4%;
 }
 
-.Spiral2{
+.SignUpSpiral6{
   width: 1%;
   position: relative;
-  top: 15px;
+  top: -500px;
+  margin-left: 4%;
+}
+
+.SignUpSpiral2{
+  width: 1%;
+  position: relative;
+  top: -500px;
   margin-right: 4%;
 }
 
-.Spiral3{
+.SignUpSpiral3{
   width: 1%;
   position: relative;
-  top: 15px;
-  margin-right: 20%;
+  top: -500px;
+  margin-right: 14%;
 }
 
-.Spiral4{
+.SignUpSpiral4{
   width: 1%;
   position: relative;
-  top: 15px;
+  top: -500px;
   margin-left: 4%;
 }
 
-.Spiral5{
+.SignUpSpiral5{
   width: 1%;
   position: relative;
-  top: 15px;
+  top: -500px;
   margin-left: 4%;
-}
-
-.Spiral6{
-  width: 1%;
-  position: relative;
-  top: 15px;
-  margin-left: 4%;
-}
+} 
 
 .App {
   background-color: #FEFFE2;
@@ -94,7 +94,7 @@ code {
 
 .LastNameLabel{
   float: right;
-  margin-right: 35.6%;
+  margin-right: 35.9%;
 }
 
 .EmailBox{
