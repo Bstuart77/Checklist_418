@@ -38,29 +38,69 @@ public class Login implements LoginInterface {
         }
     }
 
-    public int getEmailAttribute(String emailAddress) {
+    public int getEmailAttribute(String userID) {
         // get the email attribute in the database.
         // if successful return code 200.
         // else return server error.
-        return 0;
+        try {
+            String query = "SELECT userEmail FROM usersDatabase WHERE userID=" + userID;
+            ResultSet emailResult = dbConnect(query);
+            return 200;
+        } catch (SQLException e) {
+            return 500;
+        }
     }
 
-    public int getNameAttribute(String firstname, String lastname) {
+    public int getFirstNameAttribute(String userID) {
         // get the first and last name attribute in the database.
         // if successful return code 200
         // else return server error.
-        return 0;
+        try {
+            String query = "SELECT userFirstName FROM usersDatabase WHERE userID=" + userID;
+            ResultSet emailResult = dbConnect(query);
+            return 200;
+        } catch (SQLException e) {
+            return 500;
+        }
     }
-    public int getUserAttribute(String username){
+
+    public int getLastNameAttribute(String userID) {
+        // get the first and last name attribute in the database.
+        // if successful return code 200
+        // else return server error.
+        try {
+            String query = "SELECT userLastName FROM usersDatabase WHERE userID=" + userID;
+            ResultSet emailResult = dbConnect(query);
+            return 200;
+        } catch (SQLException e){
+            return 500;
+        }
+    }
+
+
+    public int getUserAttribute(String email){
         // get the username with the correct data entry.
         // if successful return code 200
         // else return server error.
-        return 0;
+        try {
+            String query = "SELECT userID FROM usersDatabase WHERE userEmail=" + email;
+            ResultSet emailResult = dbConnect(query);
+            return 200;
+        } catch (SQLException e){
+            return 500;
+        }
     }
-    public int getPassAttribute(String password){
+
+    public int getPassAttribute(String userID){
         // get the password with the correct data entry.
         // if successful return code 200
         // else return server error.
+        try {
+            String query = "SELECT userID FROM usersDatabase WHERE userID=" + userID;
+            ResultSet emailResult = dbConnect(query);
+        } catch (SQLException e){
+            return 500;
+        }
         return 0;
     }
 
