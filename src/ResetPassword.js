@@ -17,7 +17,7 @@ function ResetPassword() {
 
   return (
     <div className="reset-password-content">
-      <span class="circle2">
+      <span className="circle2">
         <br />
         <br />
         <h1 className="reset-password-title">Reset Your Password</h1>
