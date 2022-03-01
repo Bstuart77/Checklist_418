@@ -17,7 +17,7 @@ function LocateEmail() {
 
   return (
     <div className="locate-email-content">
-      <span class="circle">
+      <span className="circle">
         <br />
         <br />
         <br />
