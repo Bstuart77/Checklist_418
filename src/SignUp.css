@@ -15,48 +15,48 @@ code {
 .SignUpSpiral1{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-right: 4%;
 }
 
 .SignUpSpiral6{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-left: 4%;
 }
 
 .SignUpSpiral2{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-right: 4%;
 }
 
 .SignUpSpiral3{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-right: 14%;
 }
 
 .SignUpSpiral4{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-left: 4%;
 }
 
 .SignUpSpiral5{
   width: 1%;
   position: relative;
-  top: -500px;
+  top: -570px;
   margin-left: 4%;
 } 
 
 .App {
   background-color: #FEFFE2;
-  padding: 7.5%;
+  padding: 4.5%;
   text-align: center;
 }
 
@@ -71,12 +71,12 @@ code {
 
 .FirstNameLabel{
   float: left;
-  margin-left: 26.8%;
+  margin-left: 27%;
 }
 
 .FirstNameBox{
   float: left;
-  margin-left: 26.8%;
+  margin-left: 27%;
   width: 17%;
   padding: .55%;
   background-color: #FFF8E7;
@@ -94,7 +94,7 @@ code {
 
 .LastNameLabel{
   float: right;
-  margin-right: 35.9%;
+  margin-right: 36.5%;
 }
 
 .EmailBox{
@@ -106,14 +106,27 @@ code {
 }
 
 .EmailLabel{
-  margin-left: -41.2%;
+  margin-left: -41.6%;
 }
 
 .PasswordLabel{
-  margin-left: -37.7%;
+  margin-left: -38.5%;
+}
+
+
+.ConfirmPasswordLabel{
+  margin-left: -32%;
 }
 
 .PasswordBox{
+  padding: .55%;
+  width: 45%;
+  background-color: #FFF8E7;
+  margin-right: 1%;
+  border: none;
+}
+
+.ConfirmPasswordBox{
   padding: .55%;
   width: 45%;
   background-color: #FFF8E7;
