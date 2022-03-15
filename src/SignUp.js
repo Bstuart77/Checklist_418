@@ -54,6 +54,13 @@ function SignUp() {
                 <br />
                 <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
 
+                <br/>
+                <br/>
+
+                <label className="ConfirmPasswordLabel"> Confirm Password</label>
+                <br />
+                <input className="ConfirmPasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
+
                 <br />
                 <br />
                 <br />
