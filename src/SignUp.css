@@ -124,6 +124,8 @@ code {
   background-color: #FFF8E7;
   margin-right: 1%;
   border: none;
+  -webkit-text-security: disc;
+  -text-security: disc;
 }
 
 .ConfirmPasswordBox{
@@ -132,6 +134,8 @@ code {
   background-color: #FFF8E7;
   margin-right: 1%;
   border: none;
+  -webkit-text-security: disc;
+  -text-security: disc;
 }
 
 .SignUpButton{
