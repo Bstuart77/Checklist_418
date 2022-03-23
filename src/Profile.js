@@ -3,6 +3,9 @@ import './Profile.css'
 import BackgroundButton from './Component/BackgroundButton.js';
 // import img1 from './images/doggy.jpg'
 
+// after background or profile change, call the backend to save the changes
+// after login, 
+
 function ProfilePage(){
     function background1(){
         document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
@@ -94,8 +97,6 @@ function ProfilePage(){
                 </div>
 
                 <div className = 'Settings'>
-                    /** This is where profile and background modal will eventually go to */
-                
                 </div>
 
             </div>     
