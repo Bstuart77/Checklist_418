@@ -200,6 +200,10 @@
 
   }
 
+  .Settings{
+    display: none;
+  }
+
   .ProfileChange{
     opacity: 1;
     /* position: absolute; */
