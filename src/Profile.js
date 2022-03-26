@@ -133,14 +133,14 @@ function ProfilePage(){
                                 <button className = "ProfilePageButton" onClick = {DisplayBackgroundModal}> change background </button>
 
                                 <div className = 'BackgroundModal' id = 'BackgroundChangeModal'>
-                                    <button className = "ProfilePageButton" onClick = {background1}> 1 </button>
-                                    <button className = "ProfilePageButton" onClick = {background2}> 2 </button>
-                                    <button className = "ProfilePageButton" onClick = {background3}> 3 </button>
-                                    <button className = "ProfilePageButton" onClick = {background4}> 4 </button>
-                                    <button className = "ProfilePageButton" onClick = {background5}> 5 </button>
-                                    <button className = "ProfilePageButton" onClick = {background6}> 6 </button>
-                                    <button className = "ProfilePageButton" onClick = {background7}> 7 </button>
-                                    <button className = "ProfilePageButton" onClick = {background8}> 8 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background1}> 1 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background2}> 2 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background3}> 3 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background4}> 4 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background5}> 5 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background6}> 6 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background7}> 7 </button>
+                                    <button className = "BackgroundChooseButton" onClick = {background8}> 8 </button>
                                 </div>
                         </div>
 
