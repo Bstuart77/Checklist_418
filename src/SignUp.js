@@ -30,7 +30,8 @@ function SignUp() {
         }
     }
     return (
-        <div className="SignUpClass">
+        <div className = "SignUpBody">
+                    <div className="SignUpClass">
             <form>
                 <label className="FirstNameLabel"> First Name</label>
                 <label className="LastNameLabel"> Last Name</label>
@@ -70,6 +71,9 @@ function SignUp() {
 
                 <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
             </form>
+        </div>
+
+
         </div>
     );
 }

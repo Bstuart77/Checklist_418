@@ -1,3 +1,9 @@
+.LocalEmailBody {
+  background-color: #FEFFE2;
+  padding: 7%;
+  text-align: center;
+}
+
 .locate-email-title {
   padding: 5%;
 }
