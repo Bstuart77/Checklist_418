@@ -1,8 +1,20 @@
-import React from 'react'
-import './Profile.css'
+import React, {useEffect, useState} from 'react';
+import './Profile.css';
 import BackgroundButton from './Component/BackgroundButton.js';
-
 function ProfilePage(){
+    const[clockState, setClockState] = useState();
+
+    useEffect(() => {
+        
+        setInterval(() => {
+            const date = new Date();
+            setClockState(date.toLocaleTimeString())
+
+        }, 1000);
+
+
+    }, []);
+
     function background1(){
         document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
@@ -113,9 +125,11 @@ function ProfilePage(){
                             <img src = "./images/default.jpg" id = "profileImage" alt ="you" />
                         </div>
 
-                        <div className = 'ProfileGreeting'> 
-                            Welcome back, (username here)
+                        <div className = 'Clock'>
+                            {clockState}
                         </div>
+
+
                     </div>  
                     <div className = 'ProfileFooter'>
                         <button className = "ProfilePageButton"> checklist </button>
@@ -160,6 +174,18 @@ function ProfilePage(){
         document.body.style.backgroundImage = "../public/images/mountain2.jpg";
 
     });
+
+    /*
+    <div className = 'ProfileGreeting'> 
+        Welcome back, (username here)
+    </div>
+
+
+    <div className = 'Clock'>
+        {clockState}
+
+</div>
+*/
 
 }
     

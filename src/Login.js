@@ -53,27 +53,32 @@ function LoginMain() {
   let Profile = "./Profile";
 
   return (
-    <div className="LoginPage">
-      {user.email !== "" ? (
-        <div className="Welcome">
-          <h2>
-            Welcome to *Planner*.
-          </h2>
+    <div className = "LoginPageBody"> 
+      <div className="LoginPage">
+        {user.email !== "" ? (
+          <div className="Welcome">
+            <h2>
+              Welcome to *Planner*.
+            </h2>
 
-          <a htmlFor="to-profile" href={Profile}>
-            {" "}
-            Redirect to Profile page or some dashboard page.
-          </a>
+            <a htmlFor="to-profile" href={Profile}>
+              {" "}
+              Redirect to Profile page or some dashboard page.
+            </a>
 
-          <button className="LogoutButton" onClick={Logout}>
-            Log Out
-          </button>
-        </div>
-      ) : (
-        <LoginForm Login={Login} error={error} />
-        // show login form when User is not logged in.
-        // <span>{user.name}</span>
-      )}
+            <button className="LogoutButton" onClick={Logout}>
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <LoginForm Login={Login} error={error} />
+          // show login form when User is not logged in.
+          // <span>{user.name}</span>
+        )}
+      </div>
+    
+    
+    
     </div>
   );
 }

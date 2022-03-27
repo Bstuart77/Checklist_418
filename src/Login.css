@@ -74,6 +74,12 @@ body {
   margin-bottom: 10%;
 }
 
+.LoginPageBody{
+  background-color: #FEFFE2;
+  padding: 7%;
+  text-align: center;
+}
+
 .LogoutButton{
   margin: auto;
   padding: .85%;

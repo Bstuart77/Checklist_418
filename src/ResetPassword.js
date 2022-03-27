@@ -16,27 +16,32 @@ function ResetPassword() {
   };
 
   return (
-    <div className="reset-password-content">
-      <span className="circle2">
-        <br />
-        <br />
-        <h1 className="reset-password-title">Reset Your Password</h1>
-        <form className="reset-password-form">
-          <label className="password-label">New Password</label>
-          <input
-            className="password-input"
-            type="password"
-            required
-            placeholder="password"
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
+    <div className = "ResetPasswordBody">
+      <div className="reset-password-content">
+        <span className="circle2">
           <br />
           <br />
-          <button className="new-password-button" onClick={submitSignUp}>
-            Reset My Password
-          </button>
-        </form>
-      </span>
+          <h1 className="reset-password-title">Reset Your Password</h1>
+          <form className="reset-password-form">
+            <label className="password-label">New Password</label>
+            <input
+              className="password-input"
+              type="password"
+              required
+              placeholder="password"
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+            <br />
+            <br />
+            <button className="new-password-button" onClick={submitSignUp}>
+              Reset My Password
+            </button>
+          </form>
+        </span>
+      </div>
+
+
+
     </div>
   );
 }
