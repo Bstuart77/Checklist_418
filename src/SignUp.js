@@ -6,6 +6,7 @@ function SignUp() {
     const [lastName, setLName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
 
     const submitSignUp = (e) => {
@@ -25,53 +26,57 @@ function SignUp() {
         } else if (!password.trim()) {
             alert('Please Enter Password');
             return;
+        } else if (confirmPassword != password) {
+            alert('Passwords do not match');
+            return;
         } else {
             console.log(signUpInfo);
         }
     }
+
     return (
-        <div className = "SignUpBody">
-                    <div className="SignUpClass">
-            <form>
-                <label className="FirstNameLabel"> First Name</label>
-                <label className="LastNameLabel"> Last Name</label>
-                <br />
+        <div className="SignUpBody">
+            <div className="SignUpClass">
+                <form>
+                    <label className="FirstNameLabel"> First Name</label>
+                    <label className="LastNameLabel"> Last Name</label>
+                    <br />
 
-                <input className="FirstNameBox" type="text" onChange={(e) => setFName(e.target.value)} />
-                <input className="LastNameBox" type="text" onChange={(e) => setLName(e.target.value)} />
+                    <input className="FirstNameBox" type="text" onChange={(e) => setFName(e.target.value)} />
+                    <input className="LastNameBox" type="text" onChange={(e) => setLName(e.target.value)} />
 
-                <br />
-                <br />
+                    <br />
+                    <br />
 
-                <label className="EmailLabel "> Email</label>
-                <br />
-                <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
+                    <label className="EmailLabel "> Email</label>
+                    <br />
+                    <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
 
-                <br />
-                <br />
-
-
-                <label className="PasswordLabel"> Password</label>
-                <br />
-                <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
-
-                <br />
-                <br />
-
-                <label className="ConfirmPasswordLabel"> Confirm Password</label>
-                <br />
-                <input className="ConfirmPasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
-
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                    <br />
+                    <br />
 
 
-                <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
-            </form>
-        </div>
+                    <label className="PasswordLabel"> Password</label>
+                    <br />
+                    <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
+
+                    <br />
+                    <br />
+
+                    <label className="ConfirmPasswordLabel"> Confirm Password</label>
+                    <br />
+                    <input className="ConfirmPasswordBox" type="text" onChange={(e) => setConfirmPassword(e.target.value)} />
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                    <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
+                </form>
+            </div>
 
 
         </div>
