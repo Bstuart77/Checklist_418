@@ -114,6 +114,12 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("SettingsChangeModal")) {
+            document.getElementById("SettingsChangeModal").style.display = "none";
+        }
+      }
+
     return(
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
@@ -136,27 +142,33 @@ function ProfilePage(){
 
                         <button className = "ProfilePageButton" onClick = {DisplaySettingModal}> settings </button>
                         
-                            <div className = 'Settings' id = 'SettingsChangeModal'>
-                                <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> change profile pic </button>
+                            <div className = "SettingsModal" id = "SettingsChangeModal">
+                                <div className = "SettingsModalBody">
+                                    Settings
 
-                                <div className = 'ProfileModal' id = 'ProfileChangeModal'>
-                                    <label htmlFor='file'> Select file </label>
-                                    <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
+                                    <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> change profile pic </button>
+
+                                    <div className = 'ProfileModal' id = 'ProfileChangeModal'>
+                                        <label htmlFor='file'> Select file </label>
+                                        <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
+                                    </div>
+
+                                    <button className = "ProfilePageButton" onClick = {DisplayBackgroundModal}> change background </button>
+
+                                    <div className = 'BackgroundModal' id = 'BackgroundChangeModal'>
+                                        <button className = "BackgroundChooseButton" onClick = {background1}> 1 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background2}> 2 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background3}> 3 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background4}> 4 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background5}> 5 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background6}> 6 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background7}> 7 </button>
+                                        <button className = "BackgroundChooseButton" onClick = {background8}> 8 </button>
+                                    </div>
+
+
                                 </div>
-
-                                <button className = "ProfilePageButton" onClick = {DisplayBackgroundModal}> change background </button>
-
-                                <div className = 'BackgroundModal' id = 'BackgroundChangeModal'>
-                                    <button className = "BackgroundChooseButton" onClick = {background1}> 1 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background2}> 2 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background3}> 3 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background4}> 4 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background5}> 5 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background6}> 6 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background7}> 7 </button>
-                                    <button className = "BackgroundChooseButton" onClick = {background8}> 8 </button>
-                                </div>
-                        </div>
+                            </div>
 
                         <button className = "ProfilePageButton"> logout </button>
                     </div>
