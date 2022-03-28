@@ -9,10 +9,7 @@ function ProfilePage(){
         setInterval(() => {
             const date = new Date();
             setClockState(date.toLocaleTimeString())
-
         }, 1000);
-
-
     }, []);
 
     function background1(){
@@ -132,15 +129,16 @@ function ProfilePage(){
                         </div>
 
                         <div className = 'Clock'>
+                            <p> Welcome back, it is currently </p>
                             {clockState}
                         </div>
 
 
                     </div>  
                     <div className = 'ProfileFooter'>
-                        <button className = "ProfilePageButton"> checklist </button>
+                        <button className = "ProfilePageButton"> Your Checklist </button>
 
-                        <button className = "ProfilePageButton" onClick = {DisplaySettingModal}> settings </button>
+                        <button className = "ProfilePageButton" onClick = {DisplaySettingModal}> Settings </button>
                         
                             <div className = "SettingsModal" id = "SettingsChangeModal">
                                 <div className = "SettingsModalBody">
@@ -170,7 +168,7 @@ function ProfilePage(){
                                 </div>
                             </div>
 
-                        <button className = "ProfilePageButton"> logout </button>
+                        <button className = "ProfilePageButton"> Log Out </button>
                     </div>
                 </div>
 
