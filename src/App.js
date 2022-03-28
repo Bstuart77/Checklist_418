@@ -4,11 +4,15 @@ import Profile from "./Profile";
 import Checklist from "./ChecklistPage";
 import ResetPassword from "./ResetPassword";
 import LocateEmail from "./LocateEmail";
+import MonthlyView from "./MonthlyView";
 
 
 function App() {
   return (
     <div className="App">
+
+      <MonthlyView/>
+
   
       {/* <Login/>
       {<><img src="images/spiral.PNG" className='Spiral1' /><img src="images/spiral.PNG" className='Spiral2' /><img src="images/spiral.PNG" className='Spiral3' /><img src="images/spiral.PNG" className='Spiral4' /><img src="images/spiral.PNG" className='Spiral5' /><img src="images/spiral.PNG" className='Spiral6' /></> } */}
