@@ -1,16 +1,24 @@
 package ChecklistApp;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.*;
+
+
+@RestController
 public class Register implements RegisterInterface  {
     String url = "jdbc:postgresql://localhost:5432/ICSI418Y";
     String dbUsername = "postgres";
     String password = "database1";
     int userID;
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
     /**
      * Function to establish a connection between the JDBC driver and the Postgresql Database.
@@ -29,11 +37,11 @@ public class Register implements RegisterInterface  {
      * @return
      * @throws SQLException
      */
-    public int setEmailAttribute(String emailAddress) throws SQLException {
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
+    public int setEmailAttribute(@RequestParam("emailAddress")String emailAddress) throws SQLException {
         try {
-            String queryForEmail = "UPDATE usersDatabase SET userEmail = " + emailAddress + "WHERE userID =" + userID + ";";
-            dbConnection(queryForEmail);
-        } catch(SQLException e){
+            jdbcTemplate.execute("UPDATE usersDatabase SET userEmail = " + emailAddress + "WHERE userID =" + userID);
+        } catch(Exception e){
             return 500;
         }
         return 200;
@@ -47,11 +55,11 @@ public class Register implements RegisterInterface  {
      * @param firstname
      * @return
      */
-    public int setFirstNameAttribute(String firstname){
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
+    public int setFirstNameAttribute(@RequestParam("firstName")String firstname){
         try {
-            String queryForFirstName = "UPDATE usersDatabase SET userFirstName = " + firstname + "WHERE userID =" + userID + ";";
-            dbConnection(queryForFirstName);
-        } catch(SQLException e){
+            jdbcTemplate.execute("UPDATE usersDatabase SET userFirstName = " + firstname + "WHERE userID =" + userID);
+        } catch(Exception e){
             return 500;
         }
         return 200;
@@ -65,11 +73,11 @@ public class Register implements RegisterInterface  {
      * @param lastname
      * @return
      */
-    public int setLastNameAttribute(String lastname) {
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
+    public int setLastNameAttribute(@RequestParam("lastName")String lastname) {
         try {
-            String queryForName = "UPDATE usersDatabase SET userLastName = " + lastname + "WHERE userID =" + userID + ";";
-            dbConnection(queryForName);
-        } catch(SQLException e){
+            jdbcTemplate.execute("UPDATE usersDatabase SET userLastName = " + lastname + "WHERE userID =" + userID);
+        } catch(Exception e){
             return 500;
         }
         return 200;
@@ -83,11 +91,11 @@ public class Register implements RegisterInterface  {
      * @param password
      * @return
      */
-    public int setPassAttribute(String password){
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
+    public int setPassAttribute(@RequestParam("password") String password){
         try {
-            String queryForPass = "UPDATE usersDatabase SET userPass = " + password + "WHERE userID =" + userID + ";";
-            dbConnection(queryForPass);
-        } catch(SQLException e){
+            jdbcTemplate.execute("UPDATE usersDatabase SET userPass = " + password + "WHERE userID =" + userID);
+        } catch(Exception e){
             return 500;
         }
         return 200;

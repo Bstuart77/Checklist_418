@@ -14,6 +14,6 @@ public class DemoApplication {
 	}
 	@GetMapping
 	public String hello(){
-		return "Hello World Bitches";
+		return "Hello World I am being hosted on port 8080!";
 	}
 }
