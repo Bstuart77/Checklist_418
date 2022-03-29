@@ -61,12 +61,6 @@ function LoginForm({ Login, error }) {
         </div>
         
         <input className="LoginButton" type="submit" value="Log In" />{" "}
-        <br />
-        <input
-          className="GoogleLogin"
-          type="submit"
-          value="Log In with Google"
-        />
       </div>
 
     </form>
