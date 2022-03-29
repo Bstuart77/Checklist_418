@@ -2,10 +2,7 @@ package ChecklistApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -14,7 +11,6 @@ public class Register {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
-
 
 
     @RequestMapping(method = RequestMethod.POST,path = "/register")
@@ -26,8 +22,6 @@ public class Register {
         jdbcTemplate.execute("UPDATE usersDatabase SET userFirstName = " + firstName + "WHERE userID =" + userID);
         jdbcTemplate.execute("UPDATE usersDatabase SET userLastName = " + lastName + "WHERE userID =" + userID);
         jdbcTemplate.execute("UPDATE usersDatabase SET userPass = " + password + "WHERE userID =" + userID);
-
-
 
 
     }
