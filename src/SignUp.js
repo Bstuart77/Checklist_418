@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Profile from "./Profile";
 
 function SignUp() {
 
@@ -7,6 +8,9 @@ function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+    let emailFormat =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
     const submitSignUp = (e) => {
@@ -29,16 +33,17 @@ function SignUp() {
         } else if (confirmPassword != password) {
             alert('Passwords do not match');
             return;
-        } else {
+        } else if(!emailFormat.test(email)){
+            alert('Invalid Email');
+        }else
             console.log(signUpInfo);
         }
-    }
 
     return (
         <div className="SignUpBody">
             <div className="SignUpClass">
                 <form>
-                    <label className="FirstNameLabel"> First Name</label>
+                    <label className="FirstNameLabel">First Name</label>
                     <label className="LastNameLabel"> Last Name</label>
                     <br />
 
@@ -48,7 +53,7 @@ function SignUp() {
                     <br />
                     <br />
 
-                    <label className="EmailLabel "> Email</label>
+                    <label className="EmailLabel ">Email</label>
                     <br />
                     <input className="EmailBox" type="text" onChange={(e) => setEmail(e.target.value)} />
 
@@ -56,14 +61,14 @@ function SignUp() {
                     <br />
 
 
-                    <label className="PasswordLabel"> Password</label>
+                    <label className="PasswordLabel">Password</label>
                     <br />
                     <input className="PasswordBox" type="text" onChange={(e) => setPassword(e.target.value)} />
 
                     <br />
                     <br />
 
-                    <label className="ConfirmPasswordLabel"> Confirm Password</label>
+                    <label className="ConfirmPasswordLabel">Confirm Password</label>
                     <br />
                     <input className="ConfirmPasswordBox" type="text" onChange={(e) => setConfirmPassword(e.target.value)} />
 
@@ -77,8 +82,6 @@ function SignUp() {
                     <button className="SignUpButton" onClick={submitSignUp}>Sign Up</button>
                 </form>
             </div>
-
-
         </div>
     );
 }
