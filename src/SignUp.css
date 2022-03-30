@@ -60,15 +60,6 @@ code {
   margin-left: 4%;
 } 
 
-/*
-.App {
-  background-color: #FEFFE2;
-  padding: 7%;
-  text-align: center;
-}
-*/
-
-
 .SignUpBody{
   background-color: #949494;
   background-position: auto;
@@ -165,9 +156,4 @@ code {
   background-color: #508851;
   color: black;
   border: 2px solid #000000
-}
-
-.SignInWithGoogleButton{
-  width: 44.5%;
-  margin-right: 1%;
-}
+};
