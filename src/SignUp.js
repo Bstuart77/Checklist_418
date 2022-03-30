@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Profile from "./Profile";
 
 function SignUp() {
 
@@ -10,7 +9,7 @@ function SignUp() {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     let emailFormat =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
     const submitSignUp = (e) => {
@@ -33,11 +32,11 @@ function SignUp() {
         } else if (confirmPassword != password) {
             alert('Passwords do not match');
             return;
-        } else if(!emailFormat.test(email)){
+        } else if (!emailFormat.test(email)) {
             alert('Invalid Email');
-        }else
+        } else
             console.log(signUpInfo);
-        }
+    }
 
     return (
         <div className="SignUpBody">
