@@ -62,7 +62,6 @@ code {
 
 .SignUpBody{
   background-color: #949494;
-  background-position: auto;
   padding-top: 7%;
   padding-bottom: 11%;
   text-align: center;
@@ -156,4 +155,9 @@ code {
   background-color: #508851;
   color: black;
   border: 2px solid #000000
-};
+}
+
+.SignUpButton:hover{
+  background: white;
+  opacity: 30%;
+}
