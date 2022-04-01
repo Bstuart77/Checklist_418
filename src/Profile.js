@@ -5,7 +5,7 @@ function ProfilePage(){
     const[clockState, setClockState] = useState();
 
     useEffect(() => {
-        
+
         setInterval(() => {
             const date = new Date();
             setClockState(date.toLocaleTimeString())
@@ -82,7 +82,7 @@ function ProfilePage(){
     }
 
     function DisplayProfileModal(){
-        if(document.getElementById("ProfileChangeModal").style.display === "block"){
+        if(document.getElementById("ProfileChangeModal").style.display === "block") {
             document.getElementById("ProfileChangeModal").style.display = "none";
         } else {
             document.getElementById("ProfileChangeModal").style.display = "block";
@@ -92,7 +92,7 @@ function ProfilePage(){
     }
 
     function DisplayBackgroundModal(){
-        if(document.getElementById("BackgroundChangeModal").style.display === "block"){
+        if(document.getElementById("BackgroundChangeModal").style.display === "block") {
             document.getElementById("BackgroundChangeModal").style.display = "none";
         } else {
             document.getElementById("BackgroundChangeModal").style.display = "block";
@@ -102,7 +102,7 @@ function ProfilePage(){
     }
 
     function DisplaySettingModal(){
-        if(document.getElementById("SettingsChangeModal").style.display === "block"){
+        if(document.getElementById("SettingsChangeModal").style.display === "block") {
             document.getElementById("SettingsChangeModal").style.display = "none";
         } else {
             document.getElementById("SettingsChangeModal").style.display = "block";
@@ -111,78 +111,95 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
-    window.onclick = function(event) {
-        if (event.target == document.getElementById("SettingsChangeModal")) {
+    function DisplayRewards(){
+        if(document.getElementById("RewardsPageModal").style.display === "block") {
+            document.getElementById("RewardsPageModal").style.display = "none";
+        } else {
+            document.getElementById("RewardsPageModal").style.display = "block";
+        }
+    }
+
+    window.onclick = function (event){
+        if(event.target == document.getElementById("SettingsChangeModal")) {
             document.getElementById("SettingsChangeModal").style.display = "none";
         }
-      }
+    }
 
-      /**
-       *    FUNCTION FOR CALLING THE BACKEND TO GET THE PROFILE PICTURE
-       * 
-       * 
-       * 
-       *    FUNCTION FOR CALLING THE BACKEND TO GET THE CORRECT BACKGROUND PICTURE
-       * 
-       * 
-       */
 
-    return(
+    /**
+     *    FUNCTION FOR CALLING THE BACKEND TO GET THE PROFILE PICTURE
+     * 
+     * 
+     * 
+     *    FUNCTION FOR CALLING THE BACKEND TO GET THE CORRECT BACKGROUND PICTURE
+     * 
+     * 
+     */
+
+    return (
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
-        <div className = 'ProfileBody' id = "profile-page">
-             <div className = 'Grid'>
-                <div className = 'ProfileCard'>
-                    <div className = 'ProfileHeader'> 
-                        <div className = 'ProfilePicture'>
-                            <img src = "./images/default.jpg" id = "profileImage" alt ="you" />
+        <div className='ProfileBody' id="profile-page">
+            <div className='Grid'>
+                <div className='ProfileCard'>
+                    <div className='ProfileHeader'>
+                        <div className='ProfilePicture'>
+                            <img src="./images/default.jpg" id="profileImage" alt="you" />
                         </div>
 
-                        <div className = 'Clock'>
+                        <div className='Clock'>
                             <p> Welcome back, it is currently </p>
                             {clockState}
                         </div>
 
 
-                    </div>  
-                    <div className = 'ProfileFooter'>
-                        <button className = "ProfilePageButton"> Your Checklist </button>
+                    </div>
+                    <div className='ProfileFooter'>
+                        <button className="ProfilePageButton"> Your Checklist </button>
+                        <button className="ProfilePageButton" onClick={DisplayRewards}>Go To Rewards</button>
+                        <button className="ProfilePageButton" onClick={DisplaySettingModal}> Settings </button>
 
-                        <button className = "ProfilePageButton" onClick = {DisplaySettingModal}> Settings </button>
-                        
-                            <div className = "SettingsModal" id = "SettingsChangeModal">
-                                <div className = "SettingsModalBody">
-                                    Settings
+                        <div className="RewardModal" id="RewardsPageModal">
+                            <div className="RewardsModalBody">
+                                My Rewards
 
-                                    <button className = "ProfilePageButton" onClick = {DisplayProfileModal}> change profile pic </button>
-
-                                    <div className = 'ProfileModal' id = 'ProfileChangeModal'>
-                                        <label htmlFor='file'> Select file </label>
-                                        <input id = 'ProfileChangeButton' type = "file" onChange = {LoadProfileFile}/>
-                                    </div>
-
-                                    <button className = "ProfilePageButton" onClick = {DisplayBackgroundModal}> change background </button>
-
-                                    <div className = 'BackgroundModal' id = 'BackgroundChangeModal'>
-                                        <button className = "BackgroundChooseButton" onClick = {background1}> 1 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background2}> 2 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background3}> 3 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background4}> 4 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background5}> 5 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background6}> 6 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background7}> 7 </button>
-                                        <button className = "BackgroundChooseButton" onClick = {background8}> 8 </button>
-                                    </div>
-
-
-                                </div>
                             </div>
 
-                        <button className = "ProfilePageButton"> Log Out </button>
+                        </div>
+
+                        <div className="SettingsModal" id="SettingsChangeModal">
+                            <div className="SettingsModalBody">
+                                Settings
+
+                                <button className="ProfilePageButton" onClick={DisplayProfileModal}> change profile pic </button>
+
+                                <div className='ProfileModal' id='ProfileChangeModal'>
+                                    <label htmlFor='file'> Select file </label>
+                                    <input id='ProfileChangeButton' type="file" onChange={LoadProfileFile} />
+                                </div>
+
+                                <button className="ProfilePageButton" onClick={DisplayBackgroundModal}> change background </button>
+
+                                <div className='BackgroundModal' id='BackgroundChangeModal'>
+                                    <button className="BackgroundChooseButton" onClick={background1}> 1 </button>
+                                    <button className="BackgroundChooseButton" onClick={background2}> 2 </button>
+                                    <button className="BackgroundChooseButton" onClick={background3}> 3 </button>
+                                    <button className="BackgroundChooseButton" onClick={background4}> 4 </button>
+                                    <button className="BackgroundChooseButton" onClick={background5}> 5 </button>
+                                    <button className="BackgroundChooseButton" onClick={background6}> 6 </button>
+                                    <button className="BackgroundChooseButton" onClick={background7}> 7 </button>
+                                    <button className="BackgroundChooseButton" onClick={background8}> 8 </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <button className="ProfilePageButton"> Log Out </button>
                     </div>
                 </div>
 
-            </div>     
+            </div>
         </div>
 
     )
@@ -208,5 +225,5 @@ function ProfilePage(){
 */
 
 }
-    
+
 export default ProfilePage
