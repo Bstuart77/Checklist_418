@@ -117,6 +117,16 @@ function ProfilePage(){
         }
       }
 
+      /**
+       *    FUNCTION FOR CALLING THE BACKEND TO GET THE PROFILE PICTURE
+       * 
+       * 
+       * 
+       *    FUNCTION FOR CALLING THE BACKEND TO GET THE CORRECT BACKGROUND PICTURE
+       * 
+       * 
+       */
+
     return(
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
