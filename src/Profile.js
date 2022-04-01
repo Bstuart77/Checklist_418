@@ -119,9 +119,13 @@ function ProfilePage(){
         }
     }
 
+
     window.onclick = function (event){
         if(event.target == document.getElementById("SettingsChangeModal")) {
             document.getElementById("SettingsChangeModal").style.display = "none";
+
+        } else if (event.target == document.getElementById("RewardsPageModal")){
+            document.getElementById("RewardsPageModal").style.display = "none";
         }
     }
 
