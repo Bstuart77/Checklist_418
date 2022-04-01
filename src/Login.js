@@ -56,7 +56,7 @@ function LoginMain() {
     <div className = "LoginPageBody"> 
       <div className="LoginPage">
         {user.email !== "" ? (
-          <div className="Welcome">
+          <div className='Welcome'>
             <h2>
               Welcome to *Planner*.
             </h2>

@@ -8,6 +8,115 @@ body {
   justify-content: center;
 }
 
+.LoginPageBody{
+  background: url(../public/images/mountain10.jpg) no-repeat center;
+  /* background-color: #FEFFE2; */
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* padding: 7%; */
+
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 100px;
+  padding-bottom: 220px;
+  max-width: 100%;
+}
+
+.LoginPage{
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  /* border-color: rgb(229, 228, 214); */
+  /* background: radial-gradient(45deg  rgba(252,37,103,1) 0%, rgba(250,38,151,1) 46.2%, rgba(186,8,181,1) 90.1% ); */
+
+  width: 600px;
+  height: 400px;
+  overflow: auto;
+
+  border-radius: 4px;
+  box-shadow: 0 -10px 100px 0 rgba(0, 0, 0, 0.5), 0px 20px 100px 0 rgba(0, 0, 0, 0.19);
+
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+
+  transition-duration: 1s;
+}
+
+
+.Welcome{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #F1E8FF;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.locate-email{
+  font-size:xx-small;
+  color: #171a3d;
+  text-align: "center";
+  margin-bottom: 3%;
+}
+
+.reset-password{
+  font-size:xx-small;
+  color: #171a3d;
+  text-align: "center";
+  margin-bottom: 10%;
+}
+
+
+
+.LogoutButton{
+  margin: auto;
+  padding: .85%;
+  margin-right: 1%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F  
+} 
+
+.LoginButton{
+  margin: auto;
+  padding: .85%;
+  background-color: #FFBF60;
+  color: #664C26;
+  border: 2px solid #FFD28F;
+  width: 44.5%;
+  margin-bottom: 1%;
+} 
+
+.Logout{
+  margin: auto;
+  width: 25%;
+  padding: .85%;
+  background-color: #f8c272;
+  color: #000000;
+  border: 2px solid #CC984C
+}
+
+.inside-form{
+  position: relative;
+  display: block;
+  padding: 3px;
+  z-index: 2;
+}
+
+
 .email-input, .password-input{
   background-color: #fdefe6;
 } 
@@ -58,68 +167,4 @@ body {
   top: -790px;
   margin-top: 10%;
   margin-left: 4%;
-}
-
-.locate-email{
-  font-size:xx-small;
-  color: #171a3d;
-  text-align: "center";
-  margin-bottom: 3%;
-}
-
-.reset-password{
-  font-size:xx-small;
-  color: #171a3d;
-  text-align: "center";
-  margin-bottom: 10%;
-}
-
-.LoginPageBody{
-  background-color: #FEFFE2;
-  padding: 7%;
-  text-align: center;
-}
-
-.LogoutButton{
-  margin: auto;
-  padding: .85%;
-  margin-right: 1%;
-  background-color: #FFBF60;
-  color: #664C26;
-  border: 2px solid #FFD28F  
-} 
-
-.LoginPage{
-  background-color: #ffddc6;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  margin-left: 18%;
-  margin-right: 18%;
-  border: 3px solid rgb(221, 215, 195);
-}
-
-.LoginButton{
-  margin: auto;
-  padding: .85%;
-  background-color: #FFBF60;
-  color: #664C26;
-  border: 2px solid #FFD28F;
-  width: 44.5%;
-  margin-bottom: 1%;
-} 
-
-.Logout{
-  margin: auto;
-  width: 25%;
-  padding: .85%;
-  background-color: #f8c272;
-  color: #000000;
-  border: 2px solid #CC984C
-}
-
-.inside-form{
-  position: relative;
-  display: block;
-  padding: 3px;
-  z-index: 2;
 }
