@@ -18,8 +18,6 @@ function LocateEmail() {
 
         // TODO send the email to the backend and wait for its reponse.
 
-
-        
         if (email == "test@test.com") {
           console.log(
             locateEmail,
@@ -48,7 +46,7 @@ function LocateEmail() {
   };
 
   return (
-    <div className="LocalEmailBody">
+    <div className="LocateEmailBody">
       <div className="locate-email-content">
         <span className="circle">
           <br />
