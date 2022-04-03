@@ -13,9 +13,9 @@ function ResetPassword() {
     const resetPasswordConfirmation = { confirmNewPassword };
     // keeping the consts to send the stored password to backend.
     if (
-      newPassword.length == 1 ||
+      newPassword.length === 1 ||
       newPassword.length <= 6 ||
-      confirmNewPassword.length == 1 ||
+      confirmNewPassword.length === 1 ||
       confirmNewPassword.length <= 6
     ) {
       alert("Your password has to be at least 7 characters long.");
@@ -26,7 +26,7 @@ function ResetPassword() {
       console.log(newPassword);
       console.log(confirmNewPassword);
     } else {
-      if (confirmNewPassword != newPassword) {
+      if (confirmNewPassword !== newPassword) {
         alert("Your passwords don't match.");
         console.log(newPassword);
         console.log(confirmNewPassword);

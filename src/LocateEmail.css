@@ -9,13 +9,16 @@
 .locate-email-title {
   padding: 5%;
   font-size: xx-large;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
 }
 
 .circle {
   overflow: auto;
   height: 100vh;
   width: 100vh;
-
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(
     to top,
     rgba(228, 249, 255, 0.096),
@@ -52,4 +55,10 @@
 .email-input {
   background-color: #fdefe6;
   margin: 4%;
+  margin-bottom: 6%;
+}
+
+.links {
+  margin-top: 11%;
+  font-size: smaller;
 }
