@@ -29,18 +29,50 @@ body {
   max-width: 100%;
 }
 
-.LoginPage {
-  max-height: 100%;
+
+
+.LoginPage{
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  /* border-color: rgb(229, 228, 214); */
+  /* background: radial-gradient(45deg  rgba(252,37,103,1) 0%, rgba(250,38,151,1) 46.2%, rgba(186,8,181,1) 90.1% ); */
+
+  width: 600px;
+  height: 400px;
   overflow: auto;
-  padding: 2%;
-  border-radius: 2px;
-  box-shadow: 0px 20px 100px 0 rgba(0, 0, 0, 0.211);
+
+  border-radius: 4px;
+  box-shadow: 0 -10px 100px 0 rgba(0, 0, 0, 0.85), 0px 20px 100px 0 rgba(0, 0, 0, 0.25);
 
   position: relative;
   display: inline-block;
 
   text-align: center;
+
+  transition: background 1s;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .LoginButton {
   margin: auto;
