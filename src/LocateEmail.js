@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./LocateEmail.css";
+import "./ResetPassword";
+import "./SignUp";
 
 function LocateEmail() {
   const [email, setEmail] = useState("");
@@ -18,7 +20,7 @@ function LocateEmail() {
 
         // TODO send the email to the backend and wait for its reponse.
 
-        if (email == "test@test.com") {
+        if (email === "test@test.com") {
           console.log(
             locateEmail,
             "The email entered has an account with this service."
@@ -51,8 +53,6 @@ function LocateEmail() {
         <span className="circle">
           <br />
           <br />
-          <br />
-          <br />
           <h1 className="locate-email-title">Locate Your Email</h1>
           <form className="locate-email">
             <label className="email-label">Email</label>
@@ -65,11 +65,21 @@ function LocateEmail() {
             />
             <br />
             <br />
-            <br />
             <button className="Locate-Login" onClick={submissionHandler}>
               Locate Email Login
             </button>
           </form>
+
+          <div className="links">
+            <a htmlFor="to-reset-password" href={"./ResetPassword"}>
+              {"Reset Password"}
+            </a>
+            <br></br>
+            <a htmlFor="to-sign-up" href={"./SignUp"}>
+              {"Sign Up for an Account"}
+            </a>
+          </div>
+          <br></br>
         </span>
       </div>
     </div>
