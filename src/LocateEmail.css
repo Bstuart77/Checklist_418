@@ -1,5 +1,6 @@
 .LocateEmailBody {
-  background: url(../public/images/trees.jpg) no-repeat center;
+  background: url(../public/images/sky.jpg) no-repeat center;
+  background-position: 78%;
   background-color: #feffe2;
   padding: 7%;
   text-align: center;
