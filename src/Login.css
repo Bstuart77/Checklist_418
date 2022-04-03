@@ -1,21 +1,20 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   justify-content: center;
 }
 
-.LoginPageBody{
+.LoginPageBody {
   background: url(../public/images/mountain10.jpg) no-repeat center;
-  /* background-color: #FEFFE2; */
   background-size: cover;
-
+  background-color: #2c0a2d;
+  /* Need background-color so there's no white margin at the bottom of the page, yet this doesn't change the color of that margin at all.... Ideally, there would not even be a white margin or any margin visible....*/
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* padding: 7%; */
 
   overflow: auto;
   height: 100%;
@@ -28,143 +27,73 @@ body {
   padding-top: 100px;
   padding-bottom: 220px;
   max-width: 100%;
+  /* max-height: 100%; */
 }
 
-.LoginPage{
+.LoginPage {
   background-origin: border-box;
   background-clip: content-box, border-box;
-  /* border-color: rgb(229, 228, 214); */
-  /* background: radial-gradient(45deg  rgba(252,37,103,1) 0%, rgba(250,38,151,1) 46.2%, rgba(186,8,181,1) 90.1% ); */
 
-  width: 600px;
-  height: 400px;
+  /* width: 600px;
+  height: 400px;  box size affects the white margin at the bottom of the background image */
   overflow: auto;
-
-  border-radius: 4px;
-  box-shadow: 0 -10px 100px 0 rgba(0, 0, 0, 0.5), 0px 20px 100px 0 rgba(0, 0, 0, 0.19);
+  padding: 2%;
+  border-radius: 2px;
+  box-shadow: 0px 20px 100px 0 rgba(0, 0, 0, 0.211);
 
   position: relative;
   display: inline-block;
 
   text-align: center;
-
-  transition-duration: 1s;
 }
 
-
-.Welcome{
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 18px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #F1E8FF;
-  font-size: 2.4rem;
-  font-weight: 800;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-
+.LoginButton {
+  margin: auto;
+  padding: 0.85%;
+  background-color: #ffbf60;
+  color: #664c26;
+  border: 2px solid #ffd28f;
+  width: 44.5%;
+  margin-bottom: 1%;
 }
 
-.locate-email{
-  font-size:xx-small;
+.inside-form {
+  position: relative;
+  display: block;
+  padding: 3px;
+}
+
+.email-input,
+.password-input {
+  background-color: #fdefe6;
+}
+
+.locate-email,
+.reset-password {
+  font-size: xx-small;
   color: #171a3d;
   text-align: "center";
   margin-bottom: 3%;
 }
 
-.reset-password{
-  font-size:xx-small;
-  color: #171a3d;
-  text-align: "center";
-  margin-bottom: 10%;
+.Welcome {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: xx-large;
+  /* font-weight: 800; */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  color: #f1e8ff;
 }
 
-
-
-.LogoutButton{
+.LogoutButton {
   margin: auto;
-  padding: .85%;
-  margin-right: 1%;
-  background-color: #FFBF60;
-  color: #664C26;
-  border: 2px solid #FFD28F  
-} 
-
-.LoginButton{
-  margin: auto;
-  padding: .85%;
-  background-color: #FFBF60;
-  color: #664C26;
-  border: 2px solid #FFD28F;
-  width: 44.5%;
-  margin-bottom: 1%;
-} 
-
-.Logout{
-  margin: auto;
-  width: 25%;
-  padding: .85%;
-  background-color: #f8c272;
-  color: #000000;
-  border: 2px solid #CC984C
-}
-
-.inside-form{
-  position: relative;
-  display: block;
-  padding: 3px;
-  z-index: 2;
-}
-
-
-.email-input, .password-input{
-  background-color: #fdefe6;
-} 
-
-.Spiral1{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-right: 4%;
-  margin-top: 10%;
-}
-
-.Spiral2{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-right: 4%;
-  margin-top: 10%;
-}
-
-.Spiral3{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-top: 10%;
-  margin-right: 20%;
-}
-
-.Spiral4{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-top: 10%;
-  margin-left: 4%;
-}
-
-.Spiral5{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-top: 10%;
-  margin-left: 4%;
-}
-
-.Spiral6{
-  width: 1%;
-  position: relative;
-  top: -790px;
-  margin-top: 10%;
-  margin-left: 4%;
+  padding: 0.85%;
+  margin-bottom: 5%; /* the background being displayed has to do with the contents being shown on the page.*/
+  margin-top: 1%;
+  background-color: #ffbf60;
+  color: #664c26;
+  border: 2px solid #ffd28f;
 }
