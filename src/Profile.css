@@ -362,7 +362,7 @@
   background: linear-gradient(132deg, #f4d03fe6 0%, #16a085bf 100%);
   margin: 2% auto; /* 15% from the top and centered */
   padding-left: 2%;
-  width: 75%; /* Could be more or less, depending on screen size */
+  width: 70%; /* Could be more or less, depending on screen size */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
   transition-duration: 0.3s;
@@ -375,10 +375,19 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.UserSince{
+  background-color: grey;
+  padding-bottom: 7%;
+  margin-top: -11%;
+  margin-left: 35%;
+  width: 25%;
+  color: black;
+}
+
 .ProfileIcon{
   background-color: grey;
   padding-bottom: 11%;
-  margin-right: 60%;
+  margin-right: 45%;
   width: 11%;
 }
 
