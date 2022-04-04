@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './Profile.css';
+import {useNavigate} from "react-router-dom"
 import BackgroundButton from './Component/BackgroundButton.js';
+
 function ProfilePage(){
     const[clockState, setClockState] = useState();
 
@@ -119,6 +121,14 @@ function ProfilePage(){
         }
     }
 
+    function goToCheckList(){
+        navigateProfile("/monthlyview")
+    }
+
+    function goToLogin(){
+        navigateProfile("/")
+    }
+
 
     window.onclick = function (event){
         if(event.target == document.getElementById("SettingsChangeModal")) {
@@ -140,6 +150,9 @@ function ProfilePage(){
      * 
      */
 
+    const navigateProfile = useNavigate();
+
+
     return (
         // <button id = "SettingsButton"> settings </button>
         // body is implicitz
@@ -159,7 +172,9 @@ function ProfilePage(){
 
                     </div>
                     <div className='ProfileFooter'>
-                        <button className="ProfilePageButton"> Your Checklist </button>
+                        <button className="ProfilePageButton" onClick={goToCheckList}> Your Checklist </button>
+
+
                         <button className="ProfilePageButton" onClick={DisplayRewards}>Go To Rewards</button>
                         <button className="ProfilePageButton" onClick={DisplaySettingModal}> Settings </button>
 
@@ -199,7 +214,7 @@ function ProfilePage(){
                             </div>
                         </div>
 
-                        <button className="ProfilePageButton"> Log Out </button>
+                        <button className="ProfilePageButton" onClick={goToLogin}> Log Out </button>
                     </div>
                 </div>
 
