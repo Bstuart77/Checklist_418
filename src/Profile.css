@@ -387,10 +387,23 @@
 .ProfileIcon{
   background-color: grey;
   padding-bottom: 11%;
-  margin-right: 45%;
-  width: 11%;
+  width: 25%;
 }
 
+.BadgesDisplay{
+  background-color: grey;
+  padding-bottom: 11%;
+  margin-top: 5%;
+  width: 60%;
+}
+
+.PointCounter{
+  background-color: grey;
+  margin-top: 5%;
+  margin-left: 15%;
+  font-size: 30px;
+  width: 30%;
+}
   .ProfileChange{
     opacity: 1;
     /* position: absolute; */
