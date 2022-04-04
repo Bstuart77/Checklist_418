@@ -185,6 +185,7 @@ function ProfilePage(){
                                 <br/>
                                 
                             <div className='ProfileIcon'/>
+                            <div className='UserSince'>User Since</div>
                             </div>
 
                         </div>
