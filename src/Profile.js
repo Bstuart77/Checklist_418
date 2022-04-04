@@ -184,8 +184,10 @@ function ProfilePage(){
                                 <br/>
                                 <br/>
                                 
-                            <div className='ProfileIcon'/>
+                            <div className='ProfileIcon'> Icon </div>
                             <div className='UserSince'>User Since</div>
+                            <div className='BadgesDisplay'> Badges on display </div>
+                            <div className='PointCounter'>Points: 0 </div>
                             </div>
 
                         </div>
