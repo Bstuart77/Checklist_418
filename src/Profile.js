@@ -181,7 +181,10 @@ function ProfilePage(){
                         <div className="RewardModal" id="RewardsPageModal">
                             <div className="RewardsModalBody">
                                 My Rewards
-
+                                <br/>
+                                <br/>
+                                
+                            <div className='ProfileIcon'/>
                             </div>
 
                         </div>
