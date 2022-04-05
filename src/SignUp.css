@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+.SignUpText{
+  font-size: xx-large;
+  margin-top: -7%;
+  padding-bottom: 4%;
+  padding-right: 5%;
+}
+
 .SignUpSpiral1{
   width: 1%;
   position: relative;
