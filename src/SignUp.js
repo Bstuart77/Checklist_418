@@ -41,6 +41,7 @@ function SignUp() {
     return (
         <div className="SignUpBody">
             <div className="SignUpClass">
+                <h3 className='SignUpText'> Sign Up</h3>
                 <form>
                     <label className="FirstNameLabel">First Name</label>
                     <label className="LastNameLabel"> Last Name</label>
