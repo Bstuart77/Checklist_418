@@ -404,6 +404,20 @@
   font-size: 30px;
   width: 30%;
 }
+
+.InactiveStarClass{
+  width: 8%;
+  margin-right: 80%;
+  pointer-events: auto;
+}
+
+.InactiveShield{
+  position: relative;
+  bottom: 55.5px;
+  width: 6%;
+  margin-right: 60%;
+  pointer-events: auto;
+}
   .ProfileChange{
     opacity: 1;
     /* position: absolute; */
