@@ -392,7 +392,7 @@
 
 .BadgesDisplay{
   background-color: grey;
-  padding-bottom: 11%;
+  padding-bottom: 13%;
   margin-top: 5%;
   width: 60%;
 }
@@ -406,16 +406,88 @@
 }
 
 .InactiveStarClass{
-  width: 8%;
-  margin-right: 80%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 35%;
+  bottom: 41.5%;
+  width: 3.5%;
   pointer-events: auto;
 }
 
 .InactiveShield{
-  position: relative;
-  bottom: 55.5px;
-  width: 6%;
-  margin-right: 60%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 40%;
+  bottom: 41.25%;
+  width: 2.75%;
+  pointer-events: auto;
+}
+
+.ShowStar{
+  display: none;
+  background-color: rgb(180, 180, 180);
+  padding-bottom: 7%;
+  width: 60%;
+}
+
+.ShowShield{
+  display: none;
+  background-color: rgb(180, 180, 180);
+  padding-bottom: 7%;
+  width: 60%;
+}
+
+.BronzeStar{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 45%;
+  bottom: 22%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.SilverStar{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 22%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.GoldStar{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 55%;
+  bottom: 22%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.BronzeShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 45%;
+  bottom: 19.75%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.SilverShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 19.75%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.GoldShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 55%;
+  bottom: 19.75%;
+  width: 3.5%;
   pointer-events: auto;
 }
   .ProfileChange{

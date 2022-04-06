@@ -121,6 +121,21 @@ function ProfilePage(){
         }
     }
 
+    function DisplayStars(){
+        if(document.getElementById("ShowStarModal").style.display === "block") {
+            document.getElementById("ShowStarModal").style.display = "none";
+        } else {
+            document.getElementById("ShowStarModal").style.display = "block";
+        }
+    }
+
+    function ShowShields(){
+        if(document.getElementById("ShowShieldModal").style.display === "block") {
+            document.getElementById("ShowShieldModal").style.display = "none";
+        } else {
+            document.getElementById("ShowShieldModal").style.display = "block";
+        }
+    }
     function goToCheckList(){
         navigateProfile("/monthlyview")
     }
@@ -187,9 +202,22 @@ function ProfilePage(){
                             <div className='ProfileIcon'> Icon </div>
                             <div className='UserSince'>User Since</div>
                             <div className='BadgesDisplay'> Badges on display 
-                                <img src='/images/InactiveStar.png'className='InactiveStarClass'/>  
-                                <img src='/images/InactiveShield.png'className='InactiveShield'/>  
+                                <img src='/images/InactiveStar.png'className='InactiveStarClass' onClick={DisplayStars}/>  
+                                <img src='/images/InactiveShield.png'className='InactiveShield' onClick={ShowShields}/>  
                              </div>
+
+                             <div className='ShowStar' id="ShowStarModal">
+                                    <img src='/images/BronzeStar.png'className='BronzeStar'/>  
+                                    <img src='/images/SilverStar.png'className='SilverStar'/>  
+                                    <img src='/images/GoldStar.png'className='GoldStar'/>  
+                                </div>
+
+                            <div className='ShowShield' id='ShowShieldModal'>
+                                    <img src='/images/BronzeShield.png'className='BronzeShield'/>  
+                                    <img src='/images/SilverShield.png'className='SilverShield'/>  
+                                    <img src='/images/GoldShield.png'className='GoldShield'/> 
+                            </div>
+                                
                             <div className='PointCounter'>Points: 0 </div>
                             </div>
 
