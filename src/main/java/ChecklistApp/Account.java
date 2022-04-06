@@ -1,16 +1,19 @@
 package ChecklistApp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Account {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userID;
+
     private String userFirstName;
     private String userLastName;
+
+    @Column(unique = true)
     private String userEmailAddress;
+
     private String userPass;
 
 

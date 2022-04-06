@@ -1,30 +1,29 @@
-package ChecklistApp;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.*;
-
-
-@RestController
-public class Register {
-    int userID;
-
-    @Autowired
-    JdbcTemplate jdbcTemplate;
-
-
-    @RequestMapping(method = RequestMethod.POST,path = "/register")
-    public void register(@RequestParam("emailAddress")String emailAddress,
-                         @RequestParam("firstName") String firstName,
-                         @RequestParam("lastName") String lastName,
-                         @RequestParam("password") String password){
-        jdbcTemplate.execute("UPDATE usersDatabase SET userEmail = " + emailAddress + "WHERE userID =" + userID);
-        jdbcTemplate.execute("UPDATE usersDatabase SET userFirstName = " + firstName + "WHERE userID =" + userID);
-        jdbcTemplate.execute("UPDATE usersDatabase SET userLastName = " + lastName + "WHERE userID =" + userID);
-        jdbcTemplate.execute("UPDATE usersDatabase SET userPass = " + password + "WHERE userID =" + userID);
-
-
-    }
+//package ChecklistApp;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.web.bind.annotation.*;
+//
+//
+//public class Register {
+//    int userID;
+//
+//    @Autowired
+//    JdbcTemplate jdbcTemplate;
+//
+//
+//    @RequestMapping(method = RequestMethod.POST,path = "/register")
+//    public void register(@RequestParam("emailAddress")String emailAddress,
+//                         @RequestParam("firstName") String firstName,
+//                         @RequestParam("lastName") String lastName,
+//                         @RequestParam("password") String password){
+//        jdbcTemplate.execute("UPDATE usersDatabase SET userEmail = " + emailAddress + "WHERE userID =" + userID);
+//        jdbcTemplate.execute("UPDATE usersDatabase SET userFirstName = " + firstName + "WHERE userID =" + userID);
+//        jdbcTemplate.execute("UPDATE usersDatabase SET userLastName = " + lastName + "WHERE userID =" + userID);
+//        jdbcTemplate.execute("UPDATE usersDatabase SET userPass = " + password + "WHERE userID =" + userID);
+//
+//
+//    }
 
 //    /**
 //     * Function to set an email address attribute in the sql database.
@@ -99,4 +98,4 @@ public class Register {
 //        // else return server error.
 //    }
 
-}
+//}

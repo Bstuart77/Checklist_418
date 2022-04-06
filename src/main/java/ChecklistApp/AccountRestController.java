@@ -26,14 +26,21 @@ public class AccountRestController {
         newAccount.setUserEmailAddress(emailAddress);
         newAccount.setUserPass(password);
         accountRepository.save(newAccount);
-        return 200; //return successful code 200
+        Integer uID = newAccount.getUserID();
+        return uID; //return successful code 200
     }
 
     @PostMapping(path = "/login")
     public @ResponseBody Integer loginToUserAccount(@RequestParam("emailAddress")String emailAddress,
                                                     @RequestParam("password") String password){
 
-        return 200; // return successful code 200
+        Account DBAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(DBAccount.getUserPass().equals(password)){
+            return 200; // successful login
+        }else{
+            return 401; // authorization failure.
+        }
+
     }
 
 
