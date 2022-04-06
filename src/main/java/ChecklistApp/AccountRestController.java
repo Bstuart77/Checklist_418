@@ -32,7 +32,7 @@ public class AccountRestController {
     @PostMapping(path = "/login")
     public @ResponseBody Integer loginToUserAccount(@RequestParam("emailAddress")String emailAddress,
                                                     @RequestParam("password") String password){
-        
+
         return 200; // return successful code 200
     }
 
