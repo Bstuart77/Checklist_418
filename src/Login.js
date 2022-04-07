@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import LoginForm from "./LoginForm";
+import { Navigate } from "react-router-dom";
 
 function LoginMain() {
   const testUser = {
@@ -43,55 +44,21 @@ function LoginMain() {
     }
   };
 
-  const Logout = () => {
-    console.log("Logged out.");
-    setUserData({ email: "" }); //name: "",
-  };
+  // const Logout = () => {
+  //   console.log("Logged out.");
+  //   setUserData({ email: "" }); //name: "",
+  // };
 
-  // Welcoming the User after they've logged in.
-  // TODO link this to checklist or profile instead:
-
-  let Profile = "./Profile";
-
+  // redirect the user to the profile page after they've logged in.
   return (
     <div className="LoginPageBody">
       <div className="LoginPage">
         {user.email !== "" ? (
           <>
-            <div className="Welcome">
-              <h2>Welcome to *Planner*.</h2>
-            </div>
-
-            <br></br>
-
-            <a htmlFor="to-profile" href={Profile}>
-              {"Redirect to Profile page or some dashboard page.\n"}
-            </a>
-            <br></br>
-
-            <text>
-              Scroll up to read the parts that are displayed directly on top of
-              the mountains. This placeholder text (and the breaks) needs to be
-              in the code. Otherwise, the background doesn't display fully and
-              instead displays a white margin. More text goes here. When this is
-              gone, the white margin shows up and the background is truncated.
-              Adding a background color does not change the color of the white
-              margin. I have no idea what it is. and also, the text has to be
-              placed over some sort of background color / box color because this
-              unreadable until you scroll up.
-            </text>
-
-            <br></br>
-
-            <br></br>
-            <button className="LogoutButton" onClick={Logout}>
-              Log Out
-            </button>
+            <Navigate to="/profile" replace={true} />
           </>
         ) : (
           <LoginForm Login={Login} error={error} />
-          // show login form when User is not logged in.
-          // <span>{user.name}</span>
         )}
       </div>
     </div>
