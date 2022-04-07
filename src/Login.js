@@ -44,10 +44,10 @@ function LoginMain() {
     }
   };
 
-  // const Logout = () => {
-  //   console.log("Logged out.");
-  //   setUserData({ email: "" }); //name: "",
-  // };
+  const Logout = () => {
+    console.log("Logged out.");
+    setUserData({ email: "" });
+  };
 
   // redirect the user to the profile page after they've logged in.
   return (
