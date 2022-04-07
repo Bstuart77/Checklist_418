@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {useNavigate} from "react-router-dom"
 
 function SignUp() {
 
@@ -35,7 +36,13 @@ function SignUp() {
         } else if (!emailFormat.test(email)) {
             alert('Invalid Email');
         } else
-            console.log(signUpInfo);
+        goToProfile();
+    }
+
+    const navigateProfile = useNavigate();
+
+    function goToProfile(){
+        navigateProfile("/profile")
     }
 
     return (
