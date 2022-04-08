@@ -42,7 +42,7 @@ function SignUp() {
     const navigateProfile = useNavigate();
 
     function goToProfile(){
-        navigateProfile("/profile")
+        navigateProfile("/")
     }
 
     return (
