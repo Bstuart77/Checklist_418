@@ -33,15 +33,15 @@
   backdrop-filter: blur(10px);
 }
 
-.locate-email {
+.locate-email-form {
   align-content: center;
 }
 
-.email-label {
+.locate-email-label {
   font-size: medium;
 }
 
-.Locate-Login {
+.locate-login-button {
   margin: auto;
   padding: 0.85%;
   background-color: #ffbf60;
@@ -52,13 +52,13 @@
   margin-bottom: 1%;
 }
 
-.email-input {
+.locate-email-input {
   background-color: #fdefe6;
   margin: 4%;
   margin-bottom: 6%;
 }
 
-.links {
+.other-links {
   margin-top: 11%;
   font-size: smaller;
 }
