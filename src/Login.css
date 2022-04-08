@@ -1,12 +1,7 @@
 .LoginPageBody {
-  background: url(../public/images/desert.jpg) no-repeat center;
+  background-color: #676767;
 
-  background-size: cover;
-  background-color: #5bd3ff;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  color: #171a3d;
+  color: black;
 
   overflow: auto;
   height: 100%;
@@ -27,13 +22,16 @@
   -max-height: fit-content;
   height: 100vh;
   width: 100vh;
-
+  /* background-color: #8bb48c; */
   background-image: linear-gradient(
-    to bottom,
-    rgba(228, 249, 255, 0.048),
-    rgba(255, 245, 230, 0.373)
+    to top,
+
+    hsla(120, 30%, 71%, 0.789),
+    hsla(120, 21%, 63%, 0.914)
   );
 
+  /* background-image: linear-gradient(to top, #8bb48c, #8bb48c91); */
+  border: 3px solid #222222;
   border-radius: 50%;
   display: inline-block;
   -webkit-backdrop-filter: blur(10px);
@@ -42,7 +40,7 @@
 
 .email-input-on-login,
 .password-input-login {
-  background-color: #fdefe6;
+  background-color: #c5ddc5;
   margin-bottom: 2%;
 }
 
@@ -62,15 +60,14 @@
 .email-label-login-pg,
 .password-label-login-pg {
   margin: 2%;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-button-login-page {
   margin-top: 8%;
   padding: 0.85%;
-  background-color: #ffbf60;
-  color: #664c26;
-  border: 2px solid #ffd28f;
+  background-color: #508851;
+  color: #0c2e1c;
+  border: 2px solid #396a3a;
   width: 20%;
   margin-bottom: 1%;
 }
@@ -87,11 +84,8 @@
 .login-title {
   margin-top: 15%;
   margin-bottom: 6%;
-  color: #ffffff;
+  color: #000000;
   font-size: xx-large;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
-    sans-serif;
 }
 
 .LogoutButton {
@@ -99,7 +93,7 @@
   padding: 0.85%;
   margin-bottom: 5%; /* the background being displayed has to do with the contents being shown on the page.*/
   margin-top: 1%;
-  background-color: #ffbf60;
-  color: #664c26;
-  border: 2px solid #ffd28f;
+  background-color: #508851;
+  color: #0c2e1c;
+  border: 2px solid #396a3a;
 }
