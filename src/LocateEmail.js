@@ -49,39 +49,37 @@ function LocateEmail() {
 
   return (
     <div className="LocateEmailBody">
-      <div className="locate-email-content">
-        <span className="circle">
+      <span className="circle">
+        <br />
+        <br />
+        <h1 className="locate-email-title">Locate Your Account</h1>
+        <form className="locate-email-form">
+          <label className="locate-email-label">Email</label>
+          <input
+            className="locate-email-input"
+            type="email"
+            required
+            placeholder="email@domain.com"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <br />
           <br />
-          <h1 className="locate-email-title">Locate Your Email</h1>
-          <form className="locate-email">
-            <label className="email-label">Email</label>
-            <input
-              className="email-input"
-              type="email"
-              required
-              placeholder="email@domain.com"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <br />
-            <br />
-            <button className="Locate-Login" onClick={submissionHandler}>
-              Locate Email Login
-            </button>
-          </form>
+          <button className="locate-login-button" onClick={submissionHandler}>
+            Locate Email Login
+          </button>
+        </form>
 
-          <div className="links">
-            <a htmlFor="to-reset-password" href={"./ResetPassword"}>
-              {"Reset Password"}
-            </a>
-            <br></br>
-            <a htmlFor="to-sign-up" href={"./SignUp"}>
-              {"Sign Up for an Account"}
-            </a>
-          </div>
+        <div className="other-links">
+          <a htmlFor="to-reset-password" href={"./ResetPassword"}>
+            {"Reset Password"}
+          </a>
           <br></br>
-        </span>
-      </div>
+          <a htmlFor="to-sign-up" href={"./SignUp"}>
+            {"Sign Up for an Account"}
+          </a>
+        </div>
+        <br></br>
+      </span>
     </div>
   );
 }

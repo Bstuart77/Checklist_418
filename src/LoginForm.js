@@ -21,15 +21,14 @@ function LoginForm({ Login, error }) {
 
   return (
     <form className="login-form" onSubmit={submissionHandler}>
-      <h1 className="title">Log In to Planner</h1>
+      <h1 className="login-title">Log In to Planner</h1>
 
       <div className="emailStuff">
-        <label className="emailLabel" htmlFor="email">
+        <label className="email-label-login-pg" htmlFor="email">
           Email:
         </label>
-
         <input
-          className="email-input"
+          className="email-input-on-login"
           type="email"
           required
           name="email"
@@ -38,21 +37,19 @@ function LoginForm({ Login, error }) {
           onChange={(e) => setDetails({ ...details, email: e.target.value })}
           value={details.email}
         />
-
-        <div className="space">
-          <br></br>
-          {""}
+        <br></br>
+        <div className="locate-email-link-lg">
+          <a htmlFor="locate-email" href={LocateEmail}>
+            Forgot Your Account Name?
+          </a>
         </div>
-
-        <a className="locate-email" htmlFor="locate-email" href={LocateEmail}>
-          Forgot Your Account Name?
-        </a>
       </div>
+      <br></br>
 
       <div className="passwordStuff">
-        <label htmlFor="password">Password:</label>
+        <label className="password-label-login-pg">Password:</label>
         <input
-          className="password-input"
+          className="password-input-login"
           type="password"
           required
           name="password"
@@ -62,27 +59,20 @@ function LoginForm({ Login, error }) {
           value={details.password}
         />
 
-        <div className="space2">
-          <br></br>
-          {""}
-        </div>
-
-        <div className="reset-password">
-          <a htmlFor="reset-password" href={ResetPassword}>
+        <div className="reset-password-link-lg">
+          <a htmlFor="reset-password-lg" href={ResetPassword}>
             Forgot Your Password?
           </a>
         </div>
 
-        <div className="space3">
-          <br></br>
-          {""}
-        </div>
-
-        <input className="LoginButton" type="submit" value="Log In" />
-        {""}
+        <input
+          className="login-button-login-page"
+          type="submit"
+          value="Log In"
+        />
       </div>
-      <div className="toSignUp">
-        <a htmlFor="sign-up" href={SignUp}>
+      <div className="to-sign-up-pg">
+        <a htmlFor="sign-up-lg" href={SignUp}>
           Don't have an account? Sign up!
         </a>
       </div>
