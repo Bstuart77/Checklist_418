@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import LoginForm from "./LoginForm";
+import { Navigate } from "react-router-dom";
 
 function LoginMain() {
   const testUser = {
@@ -8,7 +9,7 @@ function LoginMain() {
     password: "test",
   };
 
-  const [user, setUserData] = useState({ email: "", password: ""});
+  const [user, setUserData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
   const Login = (details) => {
@@ -27,7 +28,9 @@ function LoginMain() {
         console.log(
           "At least one of the fields is blank. Enter something for all the fields."
         );
-        alert("At least one of the fields is blank. Enter something for all the fields.");
+        alert(
+          "At least one of the fields is blank. Enter something for all the fields."
+        );
         setError(
           "At least one of the fields is blank. Enter something for all the fields."
         );
@@ -37,43 +40,27 @@ function LoginMain() {
         );
         alert("Login details do not match any records. Please try again.");
         setError("Login details do not match any records. Please try again.");
-
       }
     }
   };
 
   const Logout = () => {
     console.log("Logged out.");
-    setUserData({ email: "" }); //name: "",
+    setUserData({ email: "" });
   };
 
-  // Welcoming the User after they've logged in.
-  // TODO link this to checklist or profile instead:
-  
-  let Profile = "./Profile";
-
+  // redirect the user to the profile page after they've logged in.
   return (
-    <div className="LoginPage">
-      {user.email !== "" ? (
-        <div className="Welcome">
-          <h2>
-            Welcome to *Planner*.
-          </h2>
-
-          <a htmlFor="to-profile" href={Profile}>
-            {" "}
-            Redirect to Profile page or some dashboard page.
-          </a>
-
-          <button className="LogoutButton" onClick={Logout}>
-            Log Out
-          </button>
-        </div>
-      ) : (
-        <LoginForm Login={Login} error={error} />
-        // show login form when User is not logged in.
-        // <span>{user.name}</span>
-      )}
+    <div className="LoginPageBody">
+      <div className="LoginPage">
+        {user.email !== "" ? (
+          <>
+            <Navigate to="/profile" replace={true} />
+          </>
+        ) : (
+          <LoginForm Login={Login} error={error} />
+        )}
+      </div>
     </div>
   );
 }

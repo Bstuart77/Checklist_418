@@ -4,23 +4,24 @@ import Profile from "./Profile";
 import Checklist from "./ChecklistPage";
 import ResetPassword from "./ResetPassword";
 import LocateEmail from "./LocateEmail";
+import MonthlyView from "./MonthlyView";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-  
-      {/* <Login/>
-      {<><img src="images/spiral.PNG" className='Spiral1' /><img src="images/spiral.PNG" className='Spiral2' /><img src="images/spiral.PNG" className='Spiral3' /><img src="images/spiral.PNG" className='Spiral4' /><img src="images/spiral.PNG" className='Spiral5' /><img src="images/spiral.PNG" className='Spiral6' /></> } */}
-
-      {/* <ResetPassword/> */}
-      {/* <LocateEmail/> */}
-      
-      {/* <SignUp />    
-      <img src="images/spiral.PNG" className='SignUpSpiral1' /><img src="images/spiral.PNG" className='SignUpSpiral2' /><img src="images/spiral.PNG" className='SignUpSpiral3' /><img src="images/spiral.PNG" className='SignUpSpiral4' /><img src="images/spiral.PNG" className='SignUpSpiral5' /><img src="images/spiral.PNG" className='SignUpSpiral6' />
-       */}
-
-      <Profile/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/resetpassword" element={<ResetPassword />} />
+          <Route path="/locateemail" element={<LocateEmail />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/monthlyview" element={<MonthlyView />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/checklist" element={<Checklist />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

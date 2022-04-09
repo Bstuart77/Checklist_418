@@ -3,76 +3,81 @@ import "./ResetPassword";
 import "./ResetPassword.css";
 import "./LocateEmail";
 import "./LocateEmail.css";
+import "./SignUp";
 import "./Login.css";
 import "./Profile";
 
+let ResetPassword = "./ResetPassword";
+let LocateEmail = "./LocateEmail";
+let SignUp = "./SignUp";
+
 function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({  email: "", password: "" });
-    
+  const [details, setDetails] = useState({ email: "", password: "" });
+
   const submissionHandler = (e) => {
-    e.preventDefault();    
+    e.preventDefault();
     Login(details);
   };
 
-  let ResetPassword = "./ResetPassword";
-  let LocateEmail = "./LocateEmail";
-
   return (
-    <form className = "login-form" onSubmit={submissionHandler}>
-      <div className="inside-form">
+    <form className="login-form" onSubmit={submissionHandler}>
+      <h1 className="login-title">Log In to Planner</h1>
 
-        <h1 className="page-title">Log In to *Planner*</h1>
-        
-        <br />
-
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <br />
-          <input className = "email-input"
-            type="email" required
-            name="email"
-            placeholder="email@domain.com"
-            id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
-          />
-        </div>  
-        <div className="locate-email">
-        <a htmlFor="locate-email" href={LocateEmail}>Forgot Email?</a>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <br />
-          <input className = "password-input"
-            type="password" required
-            name="password"
-            placeholder="password"
-            id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-            value={details.password}
-          />
-        </div>
-
-        <div className="reset-password">
-          <a htmlFor="reset-password" href={ResetPassword}>Forgot Password?</a>
-        </div>
-        
-        <input className="LoginButton" type="submit" value="Log In" />{" "}
-        <br />
+      <div className="emailStuff">
+        <label className="email-label-login-pg" htmlFor="email">
+          Email:
+        </label>
         <input
-          className="GoogleLogin"
+          className="email-input-on-login"
+          type="email"
+          required
+          name="email"
+          placeholder="email@domain.com"
+          id="email"
+          onChange={(e) => setDetails({ ...details, email: e.target.value })}
+          value={details.email}
+        />
+        <br></br>
+        <div className="locate-email-link-lg">
+          <a htmlFor="locate-email" href={LocateEmail}>
+            Forgot Your Account Name?
+          </a>
+        </div>
+      </div>
+      <br></br>
+
+      <div className="passwordStuff">
+        <label className="password-label-login-pg">Password:</label>
+        <input
+          className="password-input-login"
+          type="password"
+          required
+          name="password"
+          placeholder="password"
+          id="password"
+          onChange={(e) => setDetails({ ...details, password: e.target.value })}
+          value={details.password}
+        />
+
+        <div className="reset-password-link-lg">
+          <a htmlFor="reset-password-lg" href={ResetPassword}>
+            Forgot Your Password?
+          </a>
+        </div>
+
+        <input
+          className="login-button-login-page"
           type="submit"
-          value="Log In with Google"
+          value="Log In"
         />
       </div>
-
+      <div className="to-sign-up-pg">
+        <a htmlFor="sign-up-lg" href={SignUp}>
+          Don't have an account? Sign up!
+        </a>
+      </div>
     </form>
   );
-  // made the login buttons.
-  // make a link to Google login inputs or some new page for it.
 }
 
 export default LoginForm;
