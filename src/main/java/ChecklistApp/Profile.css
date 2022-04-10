@@ -19,7 +19,7 @@
     /* .. denotes one step backwards from the folder*/
 
     /* background-image: url(../public/images/mountain2.jpg) no-repeat center; */
-    background: url(../public/images/mountain8.png) no-repeat center;
+    background: url('/public/images/mountain8.png') no-repeat center;
     /*background-color: #327362;*/
     background-size: cover;
 
