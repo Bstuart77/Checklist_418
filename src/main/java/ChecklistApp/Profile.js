@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import BackgroundButton from './Component/BackgroundButton.js';
 
-function ProfilePage(){
-    const[clockState, setClockState] = useState();
+function ProfilePage() {
+    const [clockState, setClockState] = useState();
 
     useEffect(() => {
 
@@ -14,19 +14,19 @@ function ProfilePage(){
         }, 1000);
     }, []);
 
-    function background1(){
+    function background1() {
         document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
-    function background2(){
+    function background2() {
         document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
-    function background3(){
+    function background3() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
@@ -34,7 +34,7 @@ function ProfilePage(){
         console.log("Button clicked");
     }
 
-    function background4(){
+    function background4() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
@@ -42,28 +42,28 @@ function ProfilePage(){
         console.log("Button clicked");
     }
 
-    function background5(){
+    function background5() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
-    function background6(){
+    function background6() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
-    function background7(){
+    function background7() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
-    function background8(){
+    function background8() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
         document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
@@ -71,20 +71,20 @@ function ProfilePage(){
         console.log("Button clicked");
     }
 
-    function backgroundUpload(){
+    function backgroundUpload() {
         document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
         document.getElementById("profile-page").style.backgroundSize = "cover";
         console.log("Button clicked");
     }
 
-    function LoadProfileFile(event){
+    function LoadProfileFile(event) {
         console.log("Button clicked 1");
         document.getElementById("profileImage").src = URL.createObjectURL(event.target.files[0]);
         console.log("Button clicked 2");
     }
 
-    function DisplayProfileModal(){
-        if(document.getElementById("ProfileChangeModal").style.display === "block") {
+    function DisplayProfileModal() {
+        if (document.getElementById("ProfileChangeModal").style.display === "block") {
             document.getElementById("ProfileChangeModal").style.display = "none";
         } else {
             document.getElementById("ProfileChangeModal").style.display = "block";
@@ -93,8 +93,8 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
-    function DisplayBackgroundModal(){
-        if(document.getElementById("BackgroundChangeModal").style.display === "block") {
+    function DisplayBackgroundModal() {
+        if (document.getElementById("BackgroundChangeModal").style.display === "block") {
             document.getElementById("BackgroundChangeModal").style.display = "none";
         } else {
             document.getElementById("BackgroundChangeModal").style.display = "block";
@@ -103,8 +103,8 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
-    function DisplaySettingModal(){
-        if(document.getElementById("SettingsChangeModal").style.display === "block") {
+    function DisplaySettingModal() {
+        if (document.getElementById("SettingsChangeModal").style.display === "block") {
             document.getElementById("SettingsChangeModal").style.display = "none";
         } else {
             document.getElementById("SettingsChangeModal").style.display = "block";
@@ -113,44 +113,47 @@ function ProfilePage(){
         console.log("Button clicked")
     }
 
-    function DisplayRewards(){
-        if(document.getElementById("RewardsPageModal").style.display === "block") {
+    function DisplayRewards() {
+        if (document.getElementById("RewardsPageModal").style.display === "block") {
             document.getElementById("RewardsPageModal").style.display = "none";
         } else {
             document.getElementById("RewardsPageModal").style.display = "block";
         }
     }
 
-    function DisplayStars(){
-        if(document.getElementById("ShowStarModal").style.display === "block") {
+    function DisplayStars() {
+        if (document.getElementById("ShowStarModal").style.display === "block") {
             document.getElementById("ShowStarModal").style.display = "none";
         } else {
             document.getElementById("ShowStarModal").style.display = "block";
         }
     }
 
-    function ShowShields(){
-        if(document.getElementById("ShowShieldModal").style.display === "block") {
+    function ShowShields() {
+        if (document.getElementById("ShowShieldModal").style.display === "block") {
             document.getElementById("ShowShieldModal").style.display = "none";
         } else {
             document.getElementById("ShowShieldModal").style.display = "block";
         }
     }
-    function goToCheckList(){
+    function goToCheckList() {
         navigateProfile("/monthlyview")
     }
 
-    function goToLogin(){
+    function goToLogin() {
         navigateProfile("/")
     }
 
 
-    window.onclick = function (event){
-        if(event.target == document.getElementById("SettingsChangeModal")) {
+    window.onclick = function (event) {
+        if (event.target == document.getElementById("SettingsChangeModal")) {
             document.getElementById("SettingsChangeModal").style.display = "none";
 
-        } else if (event.target == document.getElementById("RewardsPageModal")){
+        } else if (event.target == document.getElementById("RewardsPageModal")) {
             document.getElementById("RewardsPageModal").style.display = "none";
+
+        } else if (event.target == document.getElementById("ShowStarModal")) {
+            document.getElementById("ShowStarModal").style.display = "none";
         }
     }
 
@@ -196,29 +199,34 @@ function ProfilePage(){
                         <div className="RewardModal" id="RewardsPageModal">
                             <div className="RewardsModalBody">
                                 My Rewards
-                                <br/>
-                                <br/>
-                                
-                            <div className='ProfileIcon'> Icon </div>
-                            <div className='UserSince'>User Since</div>
-                            <div className='BadgesDisplay'> Badges on display 
-                                <img src='/images/InactiveStar.png'className='InactiveStarClass' onClick={DisplayStars}/>  
-                                <img src='/images/InactiveShield.png'className='InactiveShield' onClick={ShowShields}/>  
-                             </div>
+                                <br />
+                                <br />
 
-                             <div className='ShowStar' id="ShowStarModal">
-                                    <img src='/images/BronzeStar.png'className='BronzeStar'/>  
-                                    <img src='/images/SilverStar.png'className='SilverStar'/>  
-                                    <img src='/images/GoldStar.png'className='GoldStar'/>  
+                                <div className='ProfileIcon'> Icon </div>
+                                <div className='UserSince'>User Since</div>
+                                <div className='BadgesDisplay'> Badges on display
+                                    <img src='/images/InactiveStar.png' className='InactiveStarClass' onClick={DisplayStars} />
+                                    <img src='/images/InactiveShield.png' className='InactiveShield' onClick={ShowShields} />
                                 </div>
 
-                            <div className='ShowShield' id='ShowShieldModal'>
-                                    <img src='/images/BronzeShield.png'className='BronzeShield'/>  
-                                    <img src='/images/SilverShield.png'className='SilverShield'/>  
-                                    <img src='/images/GoldShield.png'className='GoldShield'/> 
-                            </div>
-                                
-                            <div className='PointCounter'>Points: 0 </div>
+                                <div className='ShowStar' id="ShowStarModal">
+                                    <img src='/images/BronzeStar.png' className='BronzeStar' />
+                                    <button className='UnlockBronzeStar'>Unlock Bronze Star: 1 </button>
+
+                                    <img src='/images/SilverStar.png' className='SilverStar' />
+                                    <button className='UnlockSilverStar'>Unlock Silver Star: 3 </button>
+
+                                    <img src='/images/GoldStar.png' className='GoldStar' />
+                                    <button className='UnlockGoldStar'>Unlock Gold Star: 5 </button>
+                                </div>
+
+                                <div className='ShowShield' id='ShowShieldModal'>
+                                    <img src='/images/BronzeShield.png' className='BronzeShield' />
+                                    <img src='/images/SilverShield.png' className='SilverShield' />
+                                    <img src='/images/GoldShield.png' className='GoldShield' />
+                                </div>
+
+                                <div className='PointCounter'>Points: 0 </div>
                             </div>
 
                         </div>
@@ -257,7 +265,6 @@ function ProfilePage(){
 
             </div>
         </div>
-
     )
 
 
@@ -269,16 +276,16 @@ function ProfilePage(){
     });
 
     /*
-    <div className = 'ProfileGreeting'> 
-        Welcome back, (username here)
-    </div>
-
-
-    <div className = 'Clock'>
-        {clockState}
-
-</div>
-*/
+    <div className='ProfileGreeting'>
+                Welcome back, (username here)
+            </div>
+ 
+ 
+            <div className='Clock'>
+                {clockState}
+ 
+            </div>
+            */
 
 }
 
