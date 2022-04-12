@@ -58,7 +58,7 @@ function MonthlyView() {
             Add Event
           </button>
         </div>
-       <Calendar 
+       <Calendar className="calendar" 
           localizer = {localizer} 
           events = {allEvents} 
           startAccessor = "start" 
