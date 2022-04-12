@@ -75,8 +75,8 @@ function ProfilePage() {
     }
 
     function background2() {
-        if(count < 5){
-            
+        if (count < 5) {
+
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
             document.getElementById("profile-page").style.backgroundSize = "cover";
@@ -88,7 +88,7 @@ function ProfilePage() {
     function background3() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
-        if(count < 10){
+        if (count < 10) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
@@ -101,7 +101,7 @@ function ProfilePage() {
     function background4() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
-        if(count < 20){
+        if (count < 20) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
@@ -114,7 +114,7 @@ function ProfilePage() {
     function background5() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
-        if(count < 40){
+        if (count < 40) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
@@ -124,7 +124,7 @@ function ProfilePage() {
         }
     }
     function background6() {
-        if(count < 80){
+        if (count < 80) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
@@ -136,7 +136,7 @@ function ProfilePage() {
         //document.body.style.backgroundSize = "cover";
     }
     function background7() {
-        if(count < 150){
+        if (count < 150) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
@@ -148,7 +148,7 @@ function ProfilePage() {
         //document.body.style.backgroundSize = "cover";
     }
     function background8() {
-        if(count < 200){
+        if (count < 200) {
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
@@ -181,6 +181,55 @@ function ProfilePage() {
             document.getElementById("ShowShieldModal").style.display = "block";
         }
     }
+
+    function UnlockBronzeStar() {
+        if (count >= 1) {
+
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
+    function UnlockSilverStar() {
+        if (count >= 3) {
+            console.log(11111);
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
+    function UnlockGoldStar() {
+        if (count >= 5) {
+            console.log(11111);
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
+    function UnlockBronzeShield(){
+        if (count >= 10) {
+            console.log(11111);
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
+    function UnlockSilverShield(){
+        if (count >= 20) {
+            console.log(11111);
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
+    function UnlockGoldShield(){
+        if (count >= 50) {
+            console.log(11111);
+        } else {
+            alert("Insufficient Points")
+        }
+    }
+
     function goToCheckList() {
         navigateProfile("/monthlyview")
     }
@@ -200,10 +249,10 @@ function ProfilePage() {
         } else if (event.target == document.getElementById("ShowStarModal")) {
             document.getElementById("ShowStarModal").style.display = "none";
 
-        }else if(event.target == document.getElementById("ShowShieldModal")) {
+        } else if (event.target == document.getElementById("ShowShieldModal")) {
             document.getElementById("ShowShieldModal").style.display = "none";
+        }
     }
-}
 
     /**
      * FUNCTION FOR GETTING USER'S FIRST NAME
@@ -274,24 +323,24 @@ function ProfilePage() {
 
                                 <div className='ShowStar' id="ShowStarModal">
                                     <img src='/images/BronzeStar.png' className='BronzeStar' />
-                                    <button className='UnlockBronzeStar'>Unlock Bronze Star: 1 </button>
+                                    <button className='UnlockBronzeStar' onClick={UnlockBronzeStar}>Unlock Bronze Star: 1 </button>
 
                                     <img src='/images/SilverStar.png' className='SilverStar' />
-                                    <button className='UnlockSilverStar'>Unlock Silver Star: 3 </button>
+                                    <button className='UnlockSilverStar' onClick={UnlockSilverStar}>Unlock Silver Star: 3 </button>
 
                                     <img src='/images/GoldStar.png' className='GoldStar' />
-                                    <button className='UnlockGoldStar'>Unlock Gold Star: 5 </button>
+                                    <button className='UnlockGoldStar' onClick={UnlockGoldStar}>Unlock Gold Star: 5 </button>
                                 </div>
 
                                 <div className='ShowShield' id='ShowShieldModal'>
                                     <img src='/images/BronzeShield.png' className='BronzeShield' />
-                                    <button className='UnlockBronzeStar'>Unlock Bronze Shield: 10 </button>
+                                    <button className='UnlockBronzeStar' onClick={UnlockBronzeShield}>Unlock Bronze Shield: 10 </button>
 
                                     <img src='/images/SilverShield.png' className='SilverShield' />
-                                    <button className='UnlockSilverStar'>Unlock Silver Shield: 20 </button>
+                                    <button className='UnlockSilverStar' onClick={UnlockSilverShield}>Unlock Silver Shield: 20 </button>
 
                                     <img src='/images/GoldShield.png' className='GoldShield' />
-                                    <button className='UnlockGoldStar'>Unlock Gold Shield: 50 </button>
+                                    <button className='UnlockGoldStar' onClick={UnlockGoldShield}>Unlock Gold Shield: 50 </button>
 
                                 </div>
 
@@ -306,7 +355,7 @@ function ProfilePage() {
                             <div className="SettingsModalBody">
                                 Settings
 
-                                <div className = "PointCounter">
+                                <div className="PointCounter">
                                     Points: {count}
                                 </div>
 
