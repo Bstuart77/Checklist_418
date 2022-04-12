@@ -13,69 +13,6 @@ function ProfilePage() {
         }, 1000);
     }, []);
 
-    function background1() {
-        document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
-    function background2() {
-        document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
-    function background3() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
-    function background4() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
-    function background5() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-    function background6() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-    function background7() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-    function background8() {
-        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
-        //document.body.style.backgroundSize = "cover";
-        document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
-    function backgroundUpload() {
-        document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
-        document.getElementById("profile-page").style.backgroundSize = "cover";
-        console.log("Button clicked");
-    }
-
     function LoadProfileFile(event) {
         console.log("Button clicked 1");
         document.getElementById("profileImage").src = URL.createObjectURL(event.target.files[0]);
@@ -128,10 +65,106 @@ function ProfilePage() {
     const [quantity, setQuantity] = useState(0);
 
     const handleAddOne = () => {
-        setCount(count + 10);
-     }
+        setCount(count + 5);
+    }
 
+    function background1() {
+        document.getElementById("profile-page").style.background = "url('./images/mountain.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
 
+    function background2() {
+        if(count < 5){
+            
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+    }
+
+    function background3() {
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+        if(count < 10){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+    }
+
+    function background4() {
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+        if(count < 20){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+    }
+
+    function background5() {
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+        if(count < 40){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+    }
+    function background6() {
+        if(count < 80){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+    }
+    function background7() {
+        if(count < 150){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+    }
+    function background8() {
+        if(count < 200){
+
+        } else {
+            document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+        }
+        //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
+        //document.body.style.backgroundSize = "cover";
+    }
+
+    function backgroundUpload() {
+        document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
 
     function DisplayStars() {
         if (document.getElementById("ShowStarModal").style.display === "block") {
@@ -239,14 +272,19 @@ function ProfilePage() {
                                 </div>
 
                                 <div className='PointCounter'> {count} </div>
-                                <button onClick={handleAddOne}> +10 </button>
+                                <button onClick={handleAddOne}> +5 </button>
                             </div>
 
                         </div>
 
                         <div className="SettingsModal" id="SettingsChangeModal">
+
                             <div className="SettingsModalBody">
                                 Settings
+
+                                <div className = "PointCounter">
+                                    {count}
+                                </div>
 
                                 <button className="ProfilePageButton" onClick={DisplayProfileModal}> Upload Profile Picture </button>
 
@@ -261,11 +299,11 @@ function ProfilePage() {
                                     <button className="BackgroundChooseButton" onClick={background1}> 0 </button>
                                     <button className="BackgroundChooseButton" onClick={background2}> 5 </button>
                                     <button className="BackgroundChooseButton" onClick={background3}> 10 </button>
-                                    <button className="BackgroundChooseButton" onClick={background4}> 15 </button>
-                                    <button className="BackgroundChooseButton" onClick={background5}> 20 </button>
-                                    <button className="BackgroundChooseButton" onClick={background6}> 50 </button>
-                                    <button className="BackgroundChooseButton" onClick={background7}> 100 </button>
-                                    <button className="BackgroundChooseButton" onClick={background8}> 150 </button>
+                                    <button className="BackgroundChooseButton" onClick={background4}> 20 </button>
+                                    <button className="BackgroundChooseButton" onClick={background5}> 40 </button>
+                                    <button className="BackgroundChooseButton" onClick={background6}> 80 </button>
+                                    <button className="BackgroundChooseButton" onClick={background7}> 150 </button>
+                                    <button className="BackgroundChooseButton" onClick={background8}> 200 </button>
                                 </div>
 
 

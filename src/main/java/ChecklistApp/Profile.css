@@ -401,7 +401,8 @@
 .PointCounter{
   background-color: grey;
   margin-top: 5%;
-  margin-left: 15%;
+  /*align-content: center;*/
+  /*margin-left: 15%;*/
   font-size: 30px;
   width: 30%;
 }
