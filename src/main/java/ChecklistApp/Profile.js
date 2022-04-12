@@ -271,7 +271,7 @@ function ProfilePage() {
                                     <img src='/images/GoldShield.png' className='GoldShield' />
                                 </div>
 
-                                <div className='PointCounter'> {count} </div>
+                                <div className='PointCounter'> Points: {count} </div>
                                 <button onClick={handleAddOne}> +5 </button>
                             </div>
 
