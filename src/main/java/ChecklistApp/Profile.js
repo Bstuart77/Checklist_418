@@ -283,8 +283,14 @@ function ProfilePage() {
 
                                 <div className='ShowShield' id='ShowShieldModal'>
                                     <img src='/images/BronzeShield.png' className='BronzeShield' />
+                                    <button className='UnlockBronzeStar'>Unlock Bronze Shield: 10 </button>
+
                                     <img src='/images/SilverShield.png' className='SilverShield' />
+                                    <button className='UnlockSilverStar'>Unlock Silver Shield: 20 </button>
+
                                     <img src='/images/GoldShield.png' className='GoldShield' />
+                                    <button className='UnlockGoldStar'>Unlock Gold Shield: 50 </button>
+
                                 </div>
 
                                 <div className='PointCounter'> Points: {count} </div>

@@ -8,7 +8,7 @@
 
 */
 
-*{
+* {
   margin: 0;
   padding: 0;
   /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -39,23 +39,21 @@
   text-align: center;
 
   display: flex;
-  
+
   justify-content: center;
 }
 
-.Grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    /* justify-content: center; */
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* justify-content: center; */
 }
 
 .ProfileCard {
-  background-image: linear-gradient(
-    to top,
+  background-image: linear-gradient(to top,
 
-    hsla(120, 30%, 71%, 0.789),
-    hsla(120, 21%, 63%, 0.914)
-  );
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
 
   border: 3px solid #222222;
   /*
@@ -83,15 +81,15 @@
 
 }
 
-.ProfileCard:hover{
+.ProfileCard:hover {
   background-color: #16A085;
 
 }
 
 .ProfileHeader {
-    /* background-color: blue; */
-    padding-top: 20px;
-    
+  /* background-color: blue; */
+  padding-top: 20px;
+
 }
 
 .ProfilePicture {
@@ -120,14 +118,14 @@
   display: none;
 }
 
-.ProfilePicture img{
-    display: block;
-    position: relative;
-    /* object-fit: cover; */
+.ProfilePicture img {
+  display: block;
+  position: relative;
+  /* object-fit: cover; */
 
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
 }
 
 .Clock {
@@ -143,30 +141,30 @@
 */
 
 .ProfileGreeting {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #222222;
-    /* color: rgb(229, 228, 214); */
-    font-size: 2.4rem;
-    font-weight: 800;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
+  /* color: rgb(229, 228, 214); */
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
 }
 
-  /**
+/**
           PROFILE FOOTER
   */
 
-  .ProfileFooter {
-      /* background-color: antiquewhite; */
-      padding: 5px;
-      box-sizing: border-box;
-  }
+.ProfileFooter {
+  /* background-color: antiquewhite; */
+  padding: 5px;
+  box-sizing: border-box;
+}
 
-  /**
+/**
           BUTTON
   */
 
@@ -186,7 +184,7 @@
 
 /* background-color: rgb(240, 255, 0); */
 /* background-color: transparent; */
-  /* color: rgb(229, 228, 214); */
+/* color: rgb(229, 228, 214); */
 
 /*
 .ProfilePageButton{
@@ -210,60 +208,62 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 */
 
-.RewardsPage{
-width: 25%;
-color: #F1E8FF;
-/* color: rgb(229, 228, 214); */
+.RewardsPage {
+  width: 25%;
+  color: #F1E8FF;
+  /* color: rgb(229, 228, 214); */
 
-border: 15px solid;
-background-color: rgb(240, 255, 0);
-/* background-color: transparent; */
+  border: 15px solid;
+  background-color: rgb(240, 255, 0);
+  /* background-color: transparent; */
 
-padding: 2px;
-margin: 2px;
+  padding: 2px;
+  margin: 2px;
 
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 1.4rem;
-font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
 
-border-radius: 20px;
+  border-radius: 20px;
 
-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 
-box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.RewardsPage:hover{
-background-color: #16A085; /* Green */
-color: white;
-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.RewardsPage:hover {
+  background-color: #16A085;
+  /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .BackgroundChooseButton:hover {
-  background-color: #16A085; /* Green */
+  background-color: #16A085;
+  /* Green */
   color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.BackgroundChooseButton{
-      width: 18%;
-      color: white;
+.BackgroundChooseButton {
+  width: 18%;
+  color: white;
 
-      border: 4px solid;
-      background-color: transparent;
+  border: 4px solid;
+  background-color: transparent;
 
-      padding: 2px;
-      margin: 2px;
+  padding: 2px;
+  margin: 2px;
 
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
 
-      border-radius: 12px;
+  border-radius: 12px;
 
-      transition-duration: 0.3s;
+  transition-duration: 0.3s;
 
-      box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -292,30 +292,38 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   box-sizing: border-box;
 }
 
-.BackgroundModal{
+.BackgroundModal {
   display: none;
   width: 70%;
 
 }
 
-.SettingsModal{
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+.SettingsModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-.SettingsModalBody{
+.SettingsModalBody {
   overflow: auto;
 
   border: 3px solid #222222;
-  
+
   /* border-image: linear-gradient(45deg, #92FFC0, #002661, 1); */
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -327,15 +335,15 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   flex-wrap: wrap;
   align-content: center;
   /* background: linear-gradient(132deg,#222222; 0%, #222222; 100%); */
-  background-image: linear-gradient(
-    to top,
+  background-image: linear-gradient(to top,
 
-    hsla(120, 30%, 71%, 0.789),
-    hsla(120, 21%, 63%, 0.914)
-  );
-  margin: 10% auto; /* 15% from the top and centered */
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
+  margin: 10% auto;
+  /* 15% from the top and centered */
   /*padding: 10px;*/
-  width: 33%; /* Could be more or less, depending on screen size */
+  width: 33%;
+  /* Could be more or less, depending on screen size */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
   transition-duration: 0.3s;
@@ -349,208 +357,231 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
 
-.SettingsModalBody:hover{
+.SettingsModalBody:hover {
   background-color: #508851;
 
 }
 
-.RewardModal{
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.RewardModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-.RewardsModalBody{
-overflow: auto;
+.RewardsModalBody {
+  overflow: auto;
 
-border: 3px solid #222222;
+  border: 3px solid #222222;
 
-/* border-image: linear-gradient(45deg, #92FFC0, #002661, 1); */
-background-origin: border-box;
-background-clip: content-box, border-box;
+  /* border-image: linear-gradient(45deg, #92FFC0, #002661, 1); */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 
-border-radius: 12px;
+  border-radius: 12px;
 
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-align-content: center;
-/* background: linear-gradient(132deg,#222222; 0%, #222222; 100%); */
-background-image: linear-gradient(
-  to top,
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  /* background: linear-gradient(132deg,#222222; 0%, #222222; 100%); */
+  background-image: linear-gradient(to top,
 
-  hsla(120, 30%, 71%, 0.789),
-  hsla(120, 21%, 63%, 0.914)
-);
-margin: 5% auto; /* 15% from the top and centered */
-/*padding: 10px;*/
-width: 70%; /* Could be more or less, depending on screen size */
-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
+  margin: 5% auto;
+  /* 15% from the top and centered */
+  /*padding: 10px;*/
+  width: 70%;
+  /* Could be more or less, depending on screen size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-color: #222222;
-/* color: rgb(229, 228, 214); */
-font-size: 2.2rem;
-font-weight: 600;
-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
+  /* color: rgb(229, 228, 214); */
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.UserSince{
-background-color: grey;
-padding-bottom: 7%;
-margin-top: -11%;
-margin-left: 35%;
-width: 25%;
-color: black;
+.UserSince {
+  background-color: grey;
+  padding-bottom: 7%;
+  margin-top: -11%;
+  margin-left: 35%;
+  width: 25%;
+  color: black;
 }
 
-.ProfileIcon{
-background-color: grey;
-padding-bottom: 11%;
-width: 25%;
+.ProfileIcon {
+  background-color: grey;
+  padding-bottom: 11%;
+  width: 25%;
 }
 
-.BadgesDisplay{
-background-color: grey;
-padding-bottom: 13%;
-margin-top: 5%;
-width: 60%;
+.BadgesDisplay {
+  background-color: grey;
+  padding-bottom: 13%;
+  margin-top: 5%;
+  width: 60%;
 }
 
-.PointCounter{
-background-color: 508851;
-margin-top: 5%;
-/*align-content: center;*/
-/*margin-left: 15%;*/
-font-size: 30px;
-width: 30%;
+.PointCounter {
+  background-color: 508851;
+  margin-top: 5%;
+  /*align-content: center;*/
+  /*margin-left: 15%;*/
+  font-size: 30px;
+  width: 30%;
 }
 
-.InactiveStarClass{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 35%;
-bottom: 41.5%;
-width: 3.5%;
-pointer-events: auto;
+.InactiveStarClass {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 35%;
+  bottom: 41.5%;
+  width: 3.5%;
+  pointer-events: auto;
 }
 
-.InactiveShield{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 40%;
-bottom: 41.25%;
-width: 2.75%;
-pointer-events: auto;
+.InactiveShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 40%;
+  bottom: 41.25%;
+  width: 2.75%;
+  pointer-events: auto;
 }
 
-.ShowStar{
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-overflow: auto; /* Enable scroll if needed */
-display: none;
-margin-left: 1.75%;
-background-color: rgb(252, 252, 252);
-padding-bottom: 20%;
-width: 60%;
+.ShowStar {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  margin-left: 1.75%;
+  background-color: rgb(252, 252, 252);
+  padding-bottom: 20%;
+  width: 60%;
 }
 
-.ShowShield{
-display: none;
-background-color: rgb(180, 180, 180);
-padding-bottom: 7%;
-width: 60%;
+.ShowShield {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  margin-left: 1.75%;
+  background-color: rgb(252, 252, 252);
+  padding-bottom: 20%;
+  width: 60%;
 }
 
-.BronzeStar{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 25%;
-bottom: 40%;
-width: 10%;
-pointer-events: auto;
+.BronzeStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
 }
 
-.SilverStar{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 50%;
-bottom: 40%;
-width: 10%;
-pointer-events: auto;
+.SilverStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
 }
 
-.GoldStar{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 75%;
-bottom: 40%;
-width: 10%;
-pointer-events: auto;
+.GoldStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
 }
 
-.UnlockBronzeStar{
-position: absolute;
-transform: translate(-50%, -50%);
-bottom: 25%;
-left: 25%;
+.UnlockBronzeStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 25%;
 }
 
-.UnlockSilverStar{
-position: absolute;
-transform: translate(-50%, -50%);
-bottom: 25%;
-left: 50%;
+.UnlockSilverStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 50%;
 }
 
-.UnlockGoldStar{
-position: absolute;
-transform: translate(-50%, -50%);
-bottom: 25%;
-left: 76%;
-}
-.BronzeShield{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 45%;
-bottom: 19.75%;
-width: 3.5%;
-pointer-events: auto;
+.UnlockGoldStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 76%;
 }
 
-.SilverShield{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 50%;
-bottom: 19.75%;
-width: 3.5%;
-pointer-events: auto;
+.BronzeShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
 }
 
-.GoldShield{
-position: absolute;
-transform: translate(-50%, -50%);
-left: 55%;
-bottom: 19.75%;
-width: 3.5%;
-pointer-events: auto;
+.SilverShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
 }
-.ProfileChange{
+
+.GoldShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
+}
+
+.ProfileChange {
   opacity: 1;
   /* position: absolute; */
 }
 
-  /**
+/**
       RESPONSIVENESS
 */
 
@@ -567,4 +598,3 @@ pointer-events: auto;
   }
 }
 */
-
