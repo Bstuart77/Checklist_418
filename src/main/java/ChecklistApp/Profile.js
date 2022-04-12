@@ -202,6 +202,24 @@ function ProfilePage() {
         }
     }
 
+    /**
+     * FUNCTION FOR GETTING USER'S FIRST NAME
+    useEffect(() => {
+        // GET request using fetch inside useEffect React hook
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: 'React Hooks POST Request Example' })
+        };
+        fetch('https://reqres.in/api/posts', requestOptions)
+            .then(response => response.json())
+            .then(data => setPostId(data.id));
+    
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    }, []);
+     */
+
+
 
     /**
      *    FUNCTION FOR CALLING THE BACKEND TO GET THE PROFILE PICTURE
@@ -236,8 +254,6 @@ function ProfilePage() {
                     </div>
                     <div className='ProfileFooter'>
                         <button className="ProfilePageButton" onClick={goToCheckList}> Your Checklist </button>
-
-
                         <button className="ProfilePageButton" onClick={DisplayRewards}> Rewards </button>
                         <button className="ProfilePageButton" onClick={DisplaySettingModal}> Settings </button>
 
@@ -283,7 +299,7 @@ function ProfilePage() {
                                 Settings
 
                                 <div className = "PointCounter">
-                                    {count}
+                                    Points: {count}
                                 </div>
 
                                 <button className="ProfilePageButton" onClick={DisplayProfileModal}> Upload Profile Picture </button>
