@@ -83,7 +83,6 @@
 
 .ProfileCard:hover {
   background-color: #16A085;
-
 }
 
 .ProfileHeader {
@@ -383,7 +382,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-.RewardsModalBody{
+.RewardsModalBody {
   align-content: center;
   overflow: auto;
 
@@ -489,7 +488,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: auto;
   /* Enable scroll if needed */
   display: none;
-  margin-left: 4.5 %;
+  margin-left: 4.5%;
   background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
