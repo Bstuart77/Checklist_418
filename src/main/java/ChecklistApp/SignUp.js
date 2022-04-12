@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function SignUp() {
 
@@ -17,7 +17,7 @@ function SignUp() {
         e.preventDefault();
 
 
-        const signUpInfo = { firstName, lastName, email, password }
+        const signUpInfo = { firstName, lastName, email, password };
         if (!firstName.trim()) {
             alert('Please Enter Name');
             return;
@@ -35,13 +35,20 @@ function SignUp() {
             return;
         } else if (!emailFormat.test(email)) {
             alert('Invalid Email');
-        } else
-        goToProfile();
+        } else {
+            // fetch('http://localhost:3000/', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(signUpInfo)
+            // }).then(() => {
+            //     console.log(signUpInfo + " Added");
+            // })
+            goToProfile();
+        }
     }
-
     const navigateProfile = useNavigate();
 
-    function goToProfile(){
+    function goToProfile() {
         navigateProfile("/")
     }
 
