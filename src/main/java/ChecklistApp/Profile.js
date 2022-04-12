@@ -7,7 +7,6 @@ function ProfilePage() {
     const [clockState, setClockState] = useState();
 
     useEffect(() => {
-
         setInterval(() => {
             const date = new Date();
             setClockState(date.toLocaleTimeString())
@@ -125,7 +124,7 @@ function ProfilePage() {
         POINT COUNTER FOR TESTING
     */
 
-    const [count, setCount] = useState(0);          // NEED TO CHANGE THIS: MAKE SURE
+    const [count, setCount] = useState(0);          // NEED TO CHANGE THIS: MAKE SURE THIS IS REPLACED WITH GET REQUEST
     const [quantity, setQuantity] = useState(0);
 
     const handleAddOne = () => {
@@ -133,7 +132,6 @@ function ProfilePage() {
      }
 
 
-    
 
     function DisplayStars() {
         if (document.getElementById("ShowStarModal").style.display === "block") {
@@ -250,24 +248,24 @@ function ProfilePage() {
                             <div className="SettingsModalBody">
                                 Settings
 
-                                <button className="ProfilePageButton" onClick={DisplayProfileModal}> change profile pic </button>
+                                <button className="ProfilePageButton" onClick={DisplayProfileModal}> Upload Profile Picture </button>
 
                                 <div className='ProfileModal' id='ProfileChangeModal'>
                                     <label htmlFor='file'> Select file </label>
                                     <input id='ProfileChangeButton' type="file" onChange={LoadProfileFile} />
                                 </div>
 
-                                <button className="ProfilePageButton" onClick={DisplayBackgroundModal}> change background </button>
+                                <button className="ProfilePageButton" onClick={DisplayBackgroundModal}> Change Background </button>
 
                                 <div className='BackgroundModal' id='BackgroundChangeModal'>
-                                    <button className="BackgroundChooseButton" onClick={background1}> 1 </button>
-                                    <button className="BackgroundChooseButton" onClick={background2}> 2 </button>
-                                    <button className="BackgroundChooseButton" onClick={background3}> 3 </button>
-                                    <button className="BackgroundChooseButton" onClick={background4}> 4 </button>
-                                    <button className="BackgroundChooseButton" onClick={background5}> 5 </button>
-                                    <button className="BackgroundChooseButton" onClick={background6}> 6 </button>
-                                    <button className="BackgroundChooseButton" onClick={background7}> 7 </button>
-                                    <button className="BackgroundChooseButton" onClick={background8}> 8 </button>
+                                    <button className="BackgroundChooseButton" onClick={background1}> 0 </button>
+                                    <button className="BackgroundChooseButton" onClick={background2}> 5 </button>
+                                    <button className="BackgroundChooseButton" onClick={background3}> 10 </button>
+                                    <button className="BackgroundChooseButton" onClick={background4}> 15 </button>
+                                    <button className="BackgroundChooseButton" onClick={background5}> 20 </button>
+                                    <button className="BackgroundChooseButton" onClick={background6}> 50 </button>
+                                    <button className="BackgroundChooseButton" onClick={background7}> 100 </button>
+                                    <button className="BackgroundChooseButton" onClick={background8}> 150 </button>
                                 </div>
 
 
