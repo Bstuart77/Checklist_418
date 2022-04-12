@@ -121,6 +121,20 @@ function ProfilePage() {
         }
     }
 
+    /*
+        POINT COUNTER FOR TESTING
+    */
+
+    const [count, setCount] = useState(0);          // NEED TO CHANGE THIS: MAKE SURE
+    const [quantity, setQuantity] = useState(0);
+
+    const handleAddOne = () => {
+        setCount(count + 10);
+     }
+
+
+    
+
     function DisplayStars() {
         if (document.getElementById("ShowStarModal").style.display === "block") {
             document.getElementById("ShowStarModal").style.display = "none";
@@ -193,7 +207,7 @@ function ProfilePage() {
                         <button className="ProfilePageButton" onClick={goToCheckList}> Your Checklist </button>
 
 
-                        <button className="ProfilePageButton" onClick={DisplayRewards}>Go To Rewards</button>
+                        <button className="ProfilePageButton" onClick={DisplayRewards}> Rewards </button>
                         <button className="ProfilePageButton" onClick={DisplaySettingModal}> Settings </button>
 
                         <div className="RewardModal" id="RewardsPageModal">
@@ -226,7 +240,8 @@ function ProfilePage() {
                                     <img src='/images/GoldShield.png' className='GoldShield' />
                                 </div>
 
-                                <div className='PointCounter'>Points: 0 </div>
+                                <div className='PointCounter'> {count} </div>
+                                <button onClick={handleAddOne}> +10 </button>
                             </div>
 
                         </div>
