@@ -359,7 +359,6 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .SettingsModalBody:hover {
   background-color: #508851;
-
 }
 
 .RewardModal {
@@ -383,7 +382,9 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* Black w/ opacity */
 }
 
-.RewardsModalBody {
+
+.RewardsModalBody{
+  align-content: center;
   overflow: auto;
 
   border: 3px solid #222222;
@@ -422,17 +423,10 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .UserSince {
   background-color: grey;
-  padding-bottom: 7%;
-  margin-top: -11%;
-  margin-left: 35%;
-  width: 25%;
+  margin-top: 1%;
+  margin: auto;
+  width: 30%;
   color: black;
-}
-
-.ProfileIcon {
-  background-color: grey;
-  padding-bottom: 11%;
-  width: 25%;
 }
 
 .BadgesDisplay {
@@ -446,7 +440,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: 508851;
   margin-top: 5%;
   /*align-content: center;*/
-  /*margin-left: 15%;*/
+  margin-left: 15%;
   font-size: 30px;
   width: 30%;
 }
@@ -455,7 +449,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   transform: translate(-50%, -50%);
   left: 35%;
-  bottom: 41.5%;
+  bottom: 49%;
   width: 3.5%;
   pointer-events: auto;
 }
@@ -464,7 +458,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   transform: translate(-50%, -50%);
   left: 40%;
-  bottom: 41.25%;
+  bottom: 49%;
   width: 2.75%;
   pointer-events: auto;
 }
@@ -479,7 +473,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: auto;
   /* Enable scroll if needed */
   display: none;
-  margin-left: 1.75%;
+  margin-left: 4.5%;
   background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
@@ -495,7 +489,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: auto;
   /* Enable scroll if needed */
   display: none;
-  margin-left: 1.75%;
+  margin-left: 4.5 %;
   background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
