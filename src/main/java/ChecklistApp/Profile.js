@@ -199,8 +199,11 @@ function ProfilePage() {
 
         } else if (event.target == document.getElementById("ShowStarModal")) {
             document.getElementById("ShowStarModal").style.display = "none";
-        }
+
+        }else if(event.target == document.getElementById("ShowShieldModal")) {
+            document.getElementById("ShowShieldModal").style.display = "none";
     }
+}
 
     /**
      * FUNCTION FOR GETTING USER'S FIRST NAME
@@ -263,8 +266,7 @@ function ProfilePage() {
                                 <br />
                                 <br />
 
-                                <div className='ProfileIcon'> Icon </div>
-                                <div className='UserSince'>User Since</div>
+                                <div className='UserSince'>Brian Stuart</div>
                                 <div className='BadgesDisplay'> Badges on display
                                     <img src='/images/InactiveStar.png' className='InactiveStarClass' onClick={DisplayStars} />
                                     <img src='/images/InactiveShield.png' className='InactiveShield' onClick={ShowShields} />
