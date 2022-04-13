@@ -526,6 +526,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translate(-50%, -50%);
   bottom: 25%;
   left: 25%;
+  font-size: 18px;
 }
 
 .UnlockSilverStar {
@@ -533,6 +534,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translate(-50%, -50%);
   bottom: 25%;
   left: 50%;
+  font-size: 18px;
 }
 
 .UnlockGoldStar {
@@ -540,6 +542,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translate(-50%, -50%);
   bottom: 25%;
   left: 76%;
+  font-size: 18px;
 }
 
 .BronzeShield {
@@ -549,6 +552,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   bottom: 30%;
   width: 10%;
   pointer-events: auto;
+  font-size: 18px;
 }
 
 .SilverShield {
@@ -558,6 +562,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   bottom: 30%;
   width: 10%;
   pointer-events: auto;
+  font-size: 18px;
 }
 
 .GoldShield {
@@ -567,6 +572,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   bottom: 30%;
   width: 10%;
   pointer-events: auto;
+  font-size: 18px;
 }
 
 .ProfileChange {

@@ -192,7 +192,7 @@ function ProfilePage() {
 
     function UnlockSilverStar() {
         if (count >= 3) {
-            console.log(11111);
+
         } else {
             alert("Insufficient Points")
         }
@@ -200,31 +200,31 @@ function ProfilePage() {
 
     function UnlockGoldStar() {
         if (count >= 5) {
-            console.log(11111);
+
         } else {
             alert("Insufficient Points")
         }
     }
 
-    function UnlockBronzeShield(){
+    function UnlockBronzeShield() {
         if (count >= 10) {
-            console.log(11111);
+
         } else {
             alert("Insufficient Points")
         }
     }
 
-    function UnlockSilverShield(){
+    function UnlockSilverShield() {
         if (count >= 20) {
-            console.log(11111);
+
         } else {
             alert("Insufficient Points")
         }
     }
 
-    function UnlockGoldShield(){
+    function UnlockGoldShield() {
         if (count >= 50) {
-            console.log(11111);
+
         } else {
             alert("Insufficient Points")
         }
@@ -323,24 +323,24 @@ function ProfilePage() {
 
                                 <div className='ShowStar' id="ShowStarModal">
                                     <img src='/images/BronzeStar.png' className='BronzeStar' />
-                                    <button className='UnlockBronzeStar' onClick={UnlockBronzeStar}>Unlock Bronze Star: 1 </button>
+                                    <div className='UnlockBronzeStar'> Unlock Bronze Star: 1 </div>
 
                                     <img src='/images/SilverStar.png' className='SilverStar' />
-                                    <button className='UnlockSilverStar' onClick={UnlockSilverStar}>Unlock Silver Star: 3 </button>
+                                    <div className='UnlockSilverStar'>Unlock Silver Star: 3 </div>
 
                                     <img src='/images/GoldStar.png' className='GoldStar' />
-                                    <button className='UnlockGoldStar' onClick={UnlockGoldStar}>Unlock Gold Star: 5 </button>
+                                    <div className='UnlockGoldStar'>Unlock Gold Star: 5 </div>
                                 </div>
 
                                 <div className='ShowShield' id='ShowShieldModal'>
                                     <img src='/images/BronzeShield.png' className='BronzeShield' />
-                                    <button className='UnlockBronzeStar' onClick={UnlockBronzeShield}>Unlock Bronze Shield: 10 </button>
+                                    <div className='UnlockBronzeStar'>Unlock Bronze Shield: 10 </div>
 
                                     <img src='/images/SilverShield.png' className='SilverShield' />
-                                    <button className='UnlockSilverStar' onClick={UnlockSilverShield}>Unlock Silver Shield: 20 </button>
+                                    <div className='UnlockSilverStar'>Unlock Silver Shield: 20 </div>
 
                                     <img src='/images/GoldShield.png' className='GoldShield' />
-                                    <button className='UnlockGoldStar' onClick={UnlockGoldShield}>Unlock Gold Shield: 50 </button>
+                                    <div className='UnlockGoldStar'>Unlock Gold Shield: 50 </div>
 
                                 </div>
 
