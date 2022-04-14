@@ -37,6 +37,14 @@ const events = [
 },
 ];
 
+function DisplayNewEventModal(){
+
+}
+
+function DisplayDeleteEventModal(){
+  
+}
+
 
 function MonthlyView() {
   const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""})
@@ -49,25 +57,32 @@ function MonthlyView() {
       <div className="MonthlyView">
         <h1>Calendar</h1>
 
-        <div className = 'NewEventModal'>
-          <h2>Add New Event</h2>
-          <div>
-            <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
-            <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />
-            <input type="text" placeholder="end" style={{ width: "20%", marginRight: "10px" }} value={newEvent.end} onChange={(e) => setNewEvent({ ...newEvent, end: e.target.value })} />
-            
-            <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
-              Add Event
-            </button>
-          </div>
+        <button className="MonthlyViewButton" onClick={DisplayNewEventModal}> Create New Event </button>
 
+        <div className = 'NewEventModal' id = "NewEventModalUpdate">
+            <div className = 'NewEventModalBody'>
+              <h2>Add New Event</h2>
+
+              <div>
+                <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+                <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />
+                <input type="text" placeholder="end" style={{ width: "20%", marginRight: "10px" }} value={newEvent.end} onChange={(e) => setNewEvent({ ...newEvent, end: e.target.value })} />
+                
+                <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
+                  Add Event
+                </button>
+              </div>
+
+
+
+            </div>
         </div>
 
         {/*
           A work in progress for the DeleteEventModal
         */}
         <div className = 'DeleteEventModal'>
-          <h2>Add New Event</h2>
+          <h2>Delete Event</h2>
           <div>
             <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
             <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />

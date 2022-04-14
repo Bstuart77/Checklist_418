@@ -14,4 +14,7 @@
         hsla(120, 30%, 71%, 0.789),
         hsla(120, 21%, 63%, 0.914)
       );
+
+      border-color: black;
+      border-radius: 2%;
 }

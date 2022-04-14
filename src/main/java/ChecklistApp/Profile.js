@@ -66,6 +66,7 @@ function ProfilePage() {
 
     const handleAddOne = () => {
         setCount(count + 5);
+        // NEED TO UPDATE THE COUNT FOR THE GIVEN USER BY 5
     }
 
     function background1() {
