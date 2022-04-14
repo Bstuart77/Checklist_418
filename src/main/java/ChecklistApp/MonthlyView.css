@@ -1,4 +1,17 @@
+.MonthlyView{
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: #676767;
+}
+
 .calendar{
     text-align: center;
-    background-color: green;
+    background-image: linear-gradient(
+        to top,
+    
+        hsla(120, 30%, 71%, 0.789),
+        hsla(120, 21%, 63%, 0.914)
+      );
 }

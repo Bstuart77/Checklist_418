@@ -48,16 +48,38 @@ function MonthlyView() {
     return (
       <div className="MonthlyView">
         <h1>Calendar</h1>
-        <h2>Add New Event</h2>
-        <div>
-          <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
-          <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />
-          <input type="text" placeholder="end" style={{ width: "20%", marginRight: "10px" }} value={newEvent.end} onChange={(e) => setNewEvent({ ...newEvent, end: e.target.value })} />
-          
-          <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
-            Add Event
-          </button>
+
+        <div className = 'NewEventModal'>
+          <h2>Add New Event</h2>
+          <div>
+            <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+            <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />
+            <input type="text" placeholder="end" style={{ width: "20%", marginRight: "10px" }} value={newEvent.end} onChange={(e) => setNewEvent({ ...newEvent, end: e.target.value })} />
+            
+            <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
+              Add Event
+            </button>
+          </div>
+
         </div>
+
+        {/*
+          A work in progress for the DeleteEventModal
+        */}
+        <div className = 'DeleteEventModal'>
+          <h2>Add New Event</h2>
+          <div>
+            <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+            <input type="text" placeholder="start" style={{ width: "20%", marginRight: "10px" }} value={newEvent.start} onChange={(e) => setNewEvent({ ...newEvent, start: e.target.value })} />
+            <input type="text" placeholder="end" style={{ width: "20%", marginRight: "10px" }} value={newEvent.end} onChange={(e) => setNewEvent({ ...newEvent, end: e.target.value })} />
+            
+            <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
+              Add Event
+            </button>
+          </div>
+
+        </div>
+
        <Calendar className="calendar" 
           localizer = {localizer} 
           events = {allEvents} 
