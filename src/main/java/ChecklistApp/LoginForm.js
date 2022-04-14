@@ -6,6 +6,7 @@ import "./LocateEmail.css";
 import "./SignUp";
 import "./Login.css";
 import "./Profile";
+import axios from "axios";
 
 let ResetPassword = "./ResetPassword";
 let LocateEmail = "./LocateEmail";
@@ -13,10 +14,11 @@ let SignUp = "./SignUp";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ email: "", password: "" });
+  // TODO make the variables have their separate consts.
 
   const submissionHandler = (e) => {
     e.preventDefault();
-    Login(details);
+    Login(details); // pass data
   };
 
   return (
