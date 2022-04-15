@@ -38,11 +38,22 @@ const events = [
 ];
 
 function DisplayNewEventModal(){
+    if(document.getElementById("NewEventModalUpdate").style.display === "block"){
+        document.getElementById("NewEventModalUpdate").style.display = "none";
+    } else {
+        document.getElementById("NewEventModalUpdate").style.display = "block";
+    }
 
 }
 
 function DisplayDeleteEventModal(){
   
+}
+
+window.onclick = function (event) {
+  if (event.target == document.getElementById("NewEventModalUpdate")) {
+      document.getElementById("NewEventModalUpdate").style.display = "none";
+  }
 }
 
 
