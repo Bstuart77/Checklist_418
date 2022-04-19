@@ -11,6 +11,8 @@ public class Account {
     private String userFirstName;
     private String userLastName;
 
+    private Integer userPoints;
+
     @Column(unique = true)
     private String userEmailAddress;
 
@@ -52,5 +54,13 @@ public class Account {
     public void setUserPass(String userPass) {
         this.userPass = userPass;
     }
+
+    public Integer getUserPoints() {
+        return userPoints;
+    }
+    public void setUserPoints(Integer userPoints) {
+        this.userPoints = userPoints;
+    }
+
 
 }

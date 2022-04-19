@@ -25,6 +25,7 @@ public class AccountRestController {
         newAccount.setUserLastName(lastName);
         newAccount.setUserEmailAddress(emailAddress);
         newAccount.setUserPass(password);
+        newAccount.setUserPoints(0);
         accountRepository.save(newAccount);
         Integer uID = newAccount.getUserID();
         return uID; //return successful code 200
@@ -42,6 +43,17 @@ public class AccountRestController {
         }
 
     }
+    @GetMapping(path = "/profile/points")
+    public @ResponseBody Integer retrieveUserPointsAmount(@ReqeustParam("emailAddress")String emailAddress){
+        Account getDBAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(getDBAccount.!getUserEmail().equals(emailAddress)){ //account does not exist.
+            return 401; // authorization failure.
+        }else{
+            return getDBAccount.getUserPoints();
+        }
+    }
+
+
 
 
 
