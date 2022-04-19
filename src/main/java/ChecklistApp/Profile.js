@@ -183,17 +183,65 @@ function ProfilePage() {
         }
     }
 
+    function UnlockBronzeStarIcon() {
+        if (document.getElementById("DisplayBronzeStar").style.display === "none") {
+            document.getElementById("DisplayBronzeStar").style.display = "block";
+        } else {
+            document.getElementById("DisplayBronzeStar").style.display = "block";
+        }
+    }
+
+    function UnlockSilverStarIcon() {
+        if (document.getElementById("DisplaySilverStar").style.display === "none") {
+            document.getElementById("DisplaySilverStar").style.display = "block";
+        } else {
+            document.getElementById("DisplaySilverStar").style.display = "block";
+        }
+    }
+
+    function UnlockGoldStarIcon() {
+        if (document.getElementById("DisplayGoldStar").style.display === "none") {
+            document.getElementById("DisplayGoldStar").style.display = "block";
+        } else {
+            document.getElementById("DisplayGoldStar").style.display = "block";
+        }
+    }
+
+    function UnlockBronzeShieldIcon() {
+        if (document.getElementById("DisplayBronzeShield").style.display === "none") {
+            document.getElementById("DisplayBronzeShield").style.display = "block";
+        } else {
+            document.getElementById("DisplayBronzeShield").style.display = "block";
+        }
+    }
+
+    function UnlockSilverShieldIcon() {
+        if (document.getElementById("DisplaySilverShield").style.display === "none") {
+            document.getElementById("DisplaySilverShield").style.display = "block";
+        } else {
+            document.getElementById("DisplaySilverShield").style.display = "block";
+        }
+    }
+
+    function UnlockGoldShieldIcon() {
+        if (document.getElementById("DisplayGoldShield").style.display === "none") {
+            document.getElementById("DisplayGoldShield").style.display = "block";
+        } else {
+            document.getElementById("DisplayGoldShield").style.display = "block";
+        }
+    }
     function UnlockBronzeStar() {
         if (count >= 1) {
-
+            UnlockBronzeStarIcon();
         } else {
             alert("Insufficient Points")
         }
     }
 
+
     function UnlockSilverStar() {
         if (count >= 3) {
-
+            UnlockSilverStarIcon();
         } else {
             alert("Insufficient Points")
         }
@@ -201,7 +249,7 @@ function ProfilePage() {
 
     function UnlockGoldStar() {
         if (count >= 5) {
-
+            UnlockGoldStarIcon();
         } else {
             alert("Insufficient Points")
         }
@@ -209,7 +257,7 @@ function ProfilePage() {
 
     function UnlockBronzeShield() {
         if (count >= 10) {
-
+            UnlockBronzeShieldIcon();
         } else {
             alert("Insufficient Points")
         }
@@ -217,7 +265,7 @@ function ProfilePage() {
 
     function UnlockSilverShield() {
         if (count >= 20) {
-
+            UnlockSilverShieldIcon();
         } else {
             alert("Insufficient Points")
         }
@@ -225,7 +273,7 @@ function ProfilePage() {
 
     function UnlockGoldShield() {
         if (count >= 50) {
-
+            UnlockGoldShieldIcon();
         } else {
             alert("Insufficient Points")
         }
@@ -320,28 +368,34 @@ function ProfilePage() {
                                 <div className='BadgesDisplay'> Badges on display
                                     <img src='/images/InactiveStar.png' className='InactiveStarClass' onClick={DisplayStars} />
                                     <img src='/images/InactiveShield.png' className='InactiveShield' onClick={ShowShields} />
+                                    <img src='/images/BronzeStar.png' className='BronzeStarBadgeDisplay' id='DisplayBronzeStar'/>
+                                    <img src='/images/SilverStar.png' className='SilverStarBadgeDisplay' id='DisplaySilverStar'/>
+                                    <img src='/images/GoldStar.png' className='GoldStarBadgeDisplay' id='DisplayGoldStar'/>
+                                    <img src='/images/BronzeShield.png' className='BronzeShieldBadgeDisplay' id='DisplayBronzeShield'/>
+                                    <img src='/images/SilverShield.png' className='SilverShieldBadgeDisplay' id='DisplaySilverShield'/>
+                                    <img src='/images/GoldShield.png' className='GoldShieldBadgeDisplay' id='DisplayGoldShield'/>
                                 </div>
 
                                 <div className='ShowStar' id="ShowStarModal">
                                     <img src='/images/BronzeStar.png' className='BronzeStar' />
-                                    <div className='UnlockBronzeStar'> Unlock Bronze Star: 1 </div>
+                                    <button className='UnlockBronzeStar' onClick={UnlockBronzeStar}> Unlock Bronze Star: 1 </button>
 
                                     <img src='/images/SilverStar.png' className='SilverStar' />
-                                    <div className='UnlockSilverStar'>Unlock Silver Star: 3 </div>
+                                    <button className='UnlockSilverStar' onClick={UnlockSilverStar}>Unlock Silver Star: 3 </button>
 
                                     <img src='/images/GoldStar.png' className='GoldStar' />
-                                    <div className='UnlockGoldStar'>Unlock Gold Star: 5 </div>
+                                    <button className='UnlockGoldStar' onClick={UnlockGoldStar}>Unlock Gold Star: 5 </button>
                                 </div>
 
                                 <div className='ShowShield' id='ShowShieldModal'>
                                     <img src='/images/BronzeShield.png' className='BronzeShield' />
-                                    <div className='UnlockBronzeStar'>Unlock Bronze Shield: 10 </div>
+                                    <button className='UnlockBronzeShield' onClick={UnlockBronzeShield}>Unlock Bronze Shield: 10 </button>
 
                                     <img src='/images/SilverShield.png' className='SilverShield' />
-                                    <div className='UnlockSilverStar'>Unlock Silver Shield: 20 </div>
+                                    <button className='UnlockSilverShield' onClick={UnlockSilverShield}>Unlock Silver Shield: 20 </button>
 
                                     <img src='/images/GoldShield.png' className='GoldShield' />
-                                    <div className='UnlockGoldStar'>Unlock Gold Shield: 50 </div>
+                                    <button className='UnlockGoldShield' onClick={UnlockGoldShield}>Unlock Gold Shield: 50 </button>
 
                                 </div>
 
