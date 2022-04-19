@@ -447,7 +447,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .InactiveStarClass {
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 35%;
+  left: 33%;
   bottom: 49%;
   width: 3.5%;
   pointer-events: auto;
@@ -456,7 +456,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .InactiveShield {
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 40%;
+  left: 38%;
   bottom: 49%;
   width: 2.75%;
   pointer-events: auto;
@@ -492,6 +492,102 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
+}
+
+.BronzeStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 41%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.SilverStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 46%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 51%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 66%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.SilverShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 61%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.BronzeShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 56%;
+  bottom: 51.5%;
+  width: 3.5%;
 }
 
 .BronzeStar {
