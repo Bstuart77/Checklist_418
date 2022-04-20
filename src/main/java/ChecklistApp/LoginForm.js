@@ -12,13 +12,15 @@ let ResetPassword = "./ResetPassword";
 let LocateEmail = "./LocateEmail";
 let SignUp = "./SignUp";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ email: "", password: "" });
+function LoginForm({ Login }) {
+  const [userEmailAddress, setEmail] = useState({ email: "" });
+  const [loginPassword, setPassword] = useState({ password: "" });
+
   // TODO make the variables have their separate consts.
 
   const submissionHandler = (e) => {
     e.preventDefault();
-    Login(details); // pass data
+    Login(userEmailAddress, loginPassword); // pass data
   };
 
   return (
@@ -36,8 +38,8 @@ function LoginForm({ Login, error }) {
           name="email"
           placeholder="email@domain.com"
           id="email"
-          onChange={(e) => setDetails({ ...details, email: e.target.value })}
-          value={details.email}
+          onChange={(e) => setEmail({ email: e.target.value })}
+          value={userEmailAddress.email}
         />
         <br></br>
         <div className="locate-email-link-lg">
@@ -57,8 +59,8 @@ function LoginForm({ Login, error }) {
           name="password"
           placeholder="password"
           id="password"
-          onChange={(e) => setDetails({ ...details, password: e.target.value })}
-          value={details.password}
+          onChange={(e) => setPassword({ password: e.target.value })}
+          value={loginPassword.password}
         />
 
         <div className="reset-password-link-lg">

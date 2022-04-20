@@ -6,16 +6,18 @@ import axios from "axios";
 
 function LoginMain() {
   const history = useNavigate();
-  const testUser = {
+
+  const user = {
     email: "test@test.com",
     password: "test",
   };
 
-  const [user, setUserData] = useState({ email: "", password: "" });
+  const [userEmailAddress, setEmail] = useState("");
+  const [loginPassword, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const Login = (details) => {
-    if (details.email === "" || details.password === "") {
+  const Login = (userEmailAddress, loginPassword) => {
+    if (userEmailAddress === "" || loginPassword === "") {
       console.log(
         "At least one of the fields is blank. Enter something for all the fields."
       );
@@ -26,39 +28,49 @@ function LoginMain() {
         "At least one of the fields is blank. Enter something for all the fields."
       );
     } else {
-      const url = "http://localhost:8080/account/login"; // this is the server's URL. the server uses port 8080.
+      const url = "http://localhost:8080/account/login";
       axios
-        .post(url, details)
+        .post(url, userEmailAddress, loginPassword)
         .then((response) => {
           console.log(response.data);
-          console.log("Successfully logged in.");
-          setUserData({
-            email: testUser.email,
-            // email: response.data.email,
-          }); // ? <not sure if this will work.> supposed to return a User object--ask for change to return statements from the BE
-          // DON'T RETURN THE PASSWORD. DON'T.
-          history("/profile");
+          setError(response);
+
+          if (response == 200) {
+            console.log("Successfully logged in.");
+            setEmail({
+              userEmailAddress: userEmailAddress,
+            }); // ?
+            history("/profile");
+          }
         })
-        .catch((er) => {
+        .catch((error) => {
+          // use error to handle specific errors:
+          alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
+
+          // when the response is 401:
           console.log(
             "Login details do not match any records. Please try again."
           );
-          alert("Login details do not match any records. Please try again.");
-          setError("Login details do not match any records. Please try again.");
+          alert(
+            "The login details do not match any records. Please try again."
+          );
+          setError(
+            "The login details do not match any records. Please try again."
+          );
         });
     }
   };
 
   const Logout = () => {
     console.log("Logged out.");
-    setUserData({ email: "" });
+    setEmail("");
   };
 
   // redirect the user to the profile page after they've logged in.
   return (
     <div className="LoginPageBody">
       <div className="LoginPage">
-        {user.email !== "" ? (
+        {userEmailAddress !== "" ? (
           <>
             <Navigate to="/profile" replace={true} />
           </>

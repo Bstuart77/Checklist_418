@@ -1,5 +1,5 @@
 import SignUp from "./SignUp";
-import Login from "./LoginMain";
+import LoginMain from "./LoginMain";
 import Profile from "./Profile";
 import Checklist from "./ChecklistPage";
 import ResetPassword from "./ResetPassword";
@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate replace to="/login" />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginMain />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
           <Route path="/locateemail" element={<LocateEmail />} />
           <Route path="/profile" element={<Profile />} />

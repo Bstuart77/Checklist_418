@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./LocateEmail.css";
 import "./ResetPassword";
 import "./SignUp";
 
 function LocateEmail() {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
 
   const submissionHandler = (e) => {
     e.preventDefault();
@@ -14,36 +16,49 @@ function LocateEmail() {
     const locateEmail = { email };
     if (!email.trim()) {
       alert("Please enter the email you think you registered with.");
-    } else if (email.length > 1) {
+    } else {
       if (emailFormat.test(email)) {
-        console.log(locateEmail);
+        console.log("The user looked up: ", locateEmail);
 
-        // TODO send the email to the backend and wait for its reponse.
+        const url = "http://localhost:8080/account/login"; // the server's URL.
+        axios
+          .post(url, locateEmail)
+          .then((response) => {
+            console.log(response.data);
+            setError(response);
 
-        if (email === "test@test.com") {
-          console.log(
-            locateEmail,
-            "The email entered has an account with this service."
-          );
-          alert(
-            "You have an account with our service. Please sign into your account or reset your password.\n"
-          );
-        } else {
-          console.log(
-            locateEmail,
-            "The email entered doesn't have an account with this service.\nTry entering another email or sign up using this email.\n"
-          );
-          alert(
-            "You do not have an account with our service. Please sign up or try searching for your account with another email.\n"
-          );
-        }
+            console.log("Sent email to locate.");
+            setEmail({
+              email: locateEmail,
+            });
+
+            if (response === 200) {
+              console.log(
+                locateEmail,
+                "The email entered has an account with this service."
+              );
+              alert(
+                "You have an account with our service. Please sign into your account or reset your password.\n"
+              );
+            }
+          })
+          .catch((error) => {
+            // use error code to specify error message:
+            alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
+
+            // The email wasn't used to register an account, so error 401 occurred.
+            console.log(
+              locateEmail,
+              "The email entered doesn't have an account with this service.\nTry entering another email or sign up using this email.\n"
+            );
+            alert(
+              "You do not have an account with our service. Please sign up or try searching for your account with another email.\n"
+            );
+          });
       } else {
-        console.log("Invalid email format entered.\nTry again.\n");
+        console.log("Invalid email format entered.");
         alert("Invalid email format entered. Try again.");
       }
-    } else {
-      console.log("Invalid email format entered.\nTry again.\n");
-      alert("Invalid email format entered. Try again.");
     }
   };
 
