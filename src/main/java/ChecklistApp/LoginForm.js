@@ -22,7 +22,7 @@ function LoginForm({ Login }) {
 
   return (
     <form className="login-form" onSubmit={submissionHandler}>
-      <h1 className="login-title">Log In to Planner</h1>
+      <h2 className="login-title">Log In to MyPlanner</h2>
 
       <div className="emailStuff">
         <label className="email-label-login-pg" htmlFor="email">
