@@ -6,7 +6,6 @@ import "./LocateEmail.css";
 import "./SignUp";
 import "./Login.css";
 import "./Profile";
-import axios from "axios";
 
 let ResetPassword = "./ResetPassword";
 let LocateEmail = "./LocateEmail";
@@ -15,8 +14,6 @@ let SignUp = "./SignUp";
 function LoginForm({ Login }) {
   const [userEmailAddress, setEmail] = useState({ email: "" });
   const [loginPassword, setPassword] = useState({ password: "" });
-
-  // TODO make the variables have their separate consts.
 
   const submissionHandler = (e) => {
     e.preventDefault();
@@ -41,14 +38,13 @@ function LoginForm({ Login }) {
           onChange={(e) => setEmail({ email: e.target.value })}
           value={userEmailAddress.email}
         />
-        <br></br>
+
         <div className="locate-email-link-lg">
           <a htmlFor="locate-email" href={LocateEmail}>
             Forgot Your Account Name?
           </a>
         </div>
       </div>
-      <br></br>
 
       <div className="passwordStuff">
         <label className="password-label-login-pg">Password:</label>
@@ -77,7 +73,7 @@ function LoginForm({ Login }) {
       </div>
       <div className="to-sign-up-pg">
         <a htmlFor="sign-up-lg" href={SignUp}>
-          Don't have an account? Sign up!
+          Sign Up for an Account
         </a>
       </div>
     </form>

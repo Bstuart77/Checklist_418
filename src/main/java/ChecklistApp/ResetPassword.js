@@ -117,7 +117,7 @@ function ResetPassword() {
       <span className="circle2">
         <br />
 
-        <h1 className="reset-password-title">Reset Password</h1>
+        <h2 className="reset-password-title">Reset Password</h2>
 
         <form className="reset-password-form">
           <label className="email-label">Email:</label>
