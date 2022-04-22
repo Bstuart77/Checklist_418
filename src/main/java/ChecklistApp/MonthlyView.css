@@ -19,6 +19,19 @@
       border-radius: 2%;
 }
 
+.CalendarTitle{
+  text-align: center;
+}
+
+.CreateEventButton{
+  top: 50%;
+  left: 50%;
+}
+
+.CompleteTask{
+  text-align: center;
+}
+
 /* The Modal (background) */
 .NewEventModal {
     display: none; /* Hidden by default */
