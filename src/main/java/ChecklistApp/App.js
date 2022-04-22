@@ -14,13 +14,13 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Your Planner</Navbar.Brand>
+          <Navbar.Brand href="/">📝MyPlanner</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/profile">Profile</Nav.Link>
-            <Nav.Link href="/monthlyview">Calendar View</Nav.Link>
-            <Nav.Link href="/checklist">Today's Tasks</Nav.Link>
+            {/* <Nav.Link href="/checklist">Today's Tasks</Nav.Link> */}
+            <Nav.Link href="/monthlyview">Calendar</Nav.Link>
             <Nav.Link href="/resetpassword">Reset Password</Nav.Link>
-            <Nav.Link href="/locateemail">Locate Your Account</Nav.Link>
+            <Nav.Link href="/locateemail">Locate Account</Nav.Link>
             <Nav.Link href="/login">Log Out</Nav.Link>
           </Nav>
         </Container>
