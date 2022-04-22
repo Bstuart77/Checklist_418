@@ -364,7 +364,6 @@ function ProfilePage() {
                                 <br />
                                 <br />
 
-                                <div className='UserSince'>Brian Stuart</div>
                                 <div className='BadgesDisplay'> Badges on display
                                     <img src='/images/InactiveStar.png' className='InactiveStarClass' onClick={DisplayStars} />
                                     <img src='/images/InactiveShield.png' className='InactiveShield' onClick={ShowShields} />
