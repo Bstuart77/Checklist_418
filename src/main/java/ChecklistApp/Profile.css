@@ -637,10 +637,33 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   transform: translate(-50%, -50%);
   bottom: 25%;
-  left: 76%;
+  left: 75%;
   font-size: 18px;
 }
 
+.UnlockBronzeShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 25%;
+  font-size: 18px;
+}
+
+.UnlockSilverShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 50%;
+  font-size: 18px;
+}
+
+.UnlockGoldShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 75%;
+  font-size: 18px;
+}
 .BronzeShield {
   position: absolute;
   transform: translate(-50%, -50%);
