@@ -15,7 +15,7 @@ public class AccountRestController {
     private AccountRepository accountRepository; //initialize the repository
 
     @PostMapping(path = "/register")
-    public @ResponseBody Integer registerNewUser (@RequestParam("emailAddress")String emailAddress,
+    public @ResponseBody Account registerNewUser (@RequestParam("emailAddress")String emailAddress,
                                                   @RequestParam("firstName") String firstName,
                                                   @RequestParam("lastName") String lastName,
                                                   @RequestParam("password") String password){
@@ -26,8 +26,7 @@ public class AccountRestController {
         newAccount.setUserEmailAddress(emailAddress);
         newAccount.setUserPass(password);
         accountRepository.save(newAccount);
-        Integer uID = newAccount.getUserID();
-        return uID; //return successful code 200
+        return newAccount;
     }
 
     @PostMapping(path = "/login")

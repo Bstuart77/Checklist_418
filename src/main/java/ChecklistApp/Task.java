@@ -3,31 +3,34 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer taskID;
 
+    @Column(unique = true)
     private String title;
     private String description;
-
     private Date startDate;
     private Date endDate;
 
     public String getTitle(){ 
-        return this.title;
+        return title;
     }
 
     public String getDescription(){
-        return this.description;
+        return description;
     }
 
     public Date getStartDate(){
-        return this.startDate;
+        return startDate;
     }
 
     public Date getEndDate(){
-        return this.endDate;
+        return endDate;
     }
 
 
@@ -39,12 +42,12 @@ public class Task {
         this.description = description;
     }
 
-    public void setStartDate(String startDate) throws ParseException{
-        this.startDate = new SimpleDateFormat("MM/dd/yy").parse(startDate);
+    public void setStartDate(Date startDate){
+        this.startDate = startDate;
     }
 
-    public void setEndDate(String endDate) throws ParseException{
-        this.endDate = new SimpleDateFormat("MM/dd/yy").parse(endDate);
+    public void setEndDate(Date endDate){
+        this.endDate = endDate;
     }
 
 }
