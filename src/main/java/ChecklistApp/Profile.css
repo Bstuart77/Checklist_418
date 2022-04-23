@@ -207,36 +207,6 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 */
 
-.RewardsPage {
-  width: 25%;
-  color: #F1E8FF;
-  /* color: rgb(229, 228, 214); */
-
-  border: 15px solid;
-  background-color: rgb(240, 255, 0);
-  /* background-color: transparent; */
-
-  padding: 2px;
-  margin: 2px;
-
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-
-  border-radius: 20px;
-
-  transition-duration: 0.3s;
-
-  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.RewardsPage:hover {
-  background-color: #16A085;
-  /* Green */
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
 .BackgroundChooseButton:hover {
   background-color: #16A085;
   /* Green */
@@ -420,6 +390,10 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.RewardsModalBody:hover{
+  background-color: #16A085;
+}
+
 .UserSince {
   background-color: grey;
   margin-top: 1%;
@@ -436,7 +410,6 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .PointCounter {
-  background-color: 508851;
   margin-top: 5%;
   /*align-content: center;*/
   margin-left: 15%;
@@ -447,7 +420,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .InactiveStarClass {
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 35%;
+  left: 33%;
   bottom: 49%;
   width: 3.5%;
   pointer-events: auto;
@@ -456,13 +429,14 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .InactiveShield {
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 40%;
+  left: 38%;
   bottom: 49%;
   width: 2.75%;
   pointer-events: auto;
 }
 
 .ShowStar {
+  margin-top: 4%;
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -476,9 +450,11 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
+  background-color: #d8d8d8;
 }
 
 .ShowShield {
+  margin-top: 4%;
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -489,9 +465,105 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* Enable scroll if needed */
   display: none;
   margin-left: 4.5%;
-  background-color: rgb(252, 252, 252);
   padding-bottom: 20%;
   width: 60%;
+  background-color: #d8d8d8;
+}
+
+.BronzeStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 41%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.SilverStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 46%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 51%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 66%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.SilverShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 61%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.BronzeShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 56%;
+  bottom: 51.5%;
+  width: 3.5%;
 }
 
 .BronzeStar {
@@ -541,10 +613,33 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   transform: translate(-50%, -50%);
   bottom: 25%;
-  left: 76%;
+  left: 75%;
   font-size: 18px;
 }
 
+.UnlockBronzeShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 25%;
+  font-size: 18px;
+}
+
+.UnlockSilverShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 50%;
+  font-size: 18px;
+}
+
+.UnlockGoldShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 75%;
+  font-size: 18px;
+}
 .BronzeShield {
   position: absolute;
   transform: translate(-50%, -50%);

@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "./ResetPassword.css";
+import axios from "axios";
+
 // TODO upon successfully obtaining a new password from the user, send it to the backend for recording, get the okay status from backend, and then take User to a new page.
 
 function ResetPassword() {
+  const user = {
+    email: "",
+    password: "",
+  };
+
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setNewPasswordConfirmation] = useState("");
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
 
   const submissionHandler = (e) => {
     e.preventDefault();
@@ -21,50 +29,78 @@ function ResetPassword() {
       alert("You have to input an email address in the correct format.");
     } else if (email.length > 1) {
       if (emailFormat.test(email)) {
-        console.log(email);
+        console.log("User entered: ", email);
         // TODO send the email to the backend and wait for its reponse.
         // if the user has an account with the service then change their password if the inputted new password is legal.
-        console.log("The account exists.\n");
-        if (email === "test@test.com") {
-          if (
-            newPassword.length === 1 ||
-            newPassword.length <= 6 ||
-            confirmNewPassword.length === 1 ||
-            confirmNewPassword.length <= 6
-          ) {
-            alert("Your password has to be at least 7 characters long.");
-            console.log(newPassword);
-            console.log(confirmNewPassword);
-          } else if (!newPassword.trim() || !confirmNewPassword.trim()) {
-            alert("Please enter a new password. Don't leave it blank.");
+
+        if (
+          newPassword.length === 1 ||
+          newPassword.length <= 6 ||
+          confirmNewPassword.length === 1 ||
+          confirmNewPassword.length <= 6
+        ) {
+          alert("Your password has to be at least 7 characters long.");
+          console.log(newPassword);
+          console.log(confirmNewPassword);
+        } else if (!newPassword.trim() || !confirmNewPassword.trim()) {
+          alert("Please enter a new password. Don't leave it blank.");
+          console.log(newPassword);
+          console.log(confirmNewPassword);
+        } else {
+          // password is in valid form and has to be checked against itself before being sent to backend.
+          if (confirmNewPassword !== newPassword) {
+            alert("Your passwords don't match.");
             console.log(newPassword);
             console.log(confirmNewPassword);
           } else {
-            if (confirmNewPassword !== newPassword) {
-              alert("Your passwords don't match.");
-              console.log(newPassword);
-              console.log(confirmNewPassword);
-            } else {
-              console.log(resetPassword);
-              console.log(resetPasswordConfirmation);
+            // passwords match and will be sent to backend.
+            console.log("User entered: ", resetPassword);
+            console.log("User confirmed: ", resetPasswordConfirmation);
+            // ! check if the bug persists once we host.
 
-              // TODO send password to backend.
+            // TODO send password to backend.
+            const url = "http://localhost:8080/account/login";
+            axios
+              .post(url, email, newPassword)
+              .then((response) => {
+                console.log(response.data);
+                setError(response);
+                console.log(
+                  "Sent the account (email) to locate + verify and the password to change."
+                );
+                setEmail({
+                  email: user.email,
+                });
 
-              console.log(
-                email,
-                "The password for the account was successfully changed.\n"
-              );
-              alert("Password was successfully changed for the account.\n");
-            }
+                if (response === 200) {
+                  // the email address is registered for an account and the password to it was successfully reset.
+                  console.log(
+                    email,
+                    "The email entered has an account with this service."
+                  );
+                  console.log(
+                    email,
+                    "The password for the account was successfully changed.\n"
+                  );
+                  alert(
+                    "The password was successfully changed for your account.\n"
+                  );
+                }
+              })
+              .catch((error) => {
+                // use the specific error code to separate error handling.
+                alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
+
+                // account isn't registered, so the response was 401.
+                console.log(
+                  email,
+                  "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
+                );
+                alert(
+                  "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
+                );
+              });
           }
-        } else {
-          console.log(
-            email,
-            "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
-          );
-          alert(
-            "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
-          );
         }
       } else {
         console.log("Invalid email format entered.\nTry again.\n");
@@ -81,7 +117,7 @@ function ResetPassword() {
       <span className="circle2">
         <br />
 
-        <h1 className="reset-password-title">Reset Password</h1>
+        <h2 className="reset-password-title">Reset Password</h2>
 
         <form className="reset-password-form">
           <label className="email-label">Email:</label>

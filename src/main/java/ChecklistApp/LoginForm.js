@@ -6,24 +6,23 @@ import "./LocateEmail.css";
 import "./SignUp";
 import "./Login.css";
 import "./Profile";
-import axios from "axios";
 
 let ResetPassword = "./ResetPassword";
 let LocateEmail = "./LocateEmail";
 let SignUp = "./SignUp";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ email: "", password: "" });
-  // TODO make the variables have their separate consts.
+function LoginForm({ Login }) {
+  const [userEmailAddress, setEmail] = useState({ email: "" });
+  const [loginPassword, setPassword] = useState({ password: "" });
 
   const submissionHandler = (e) => {
     e.preventDefault();
-    Login(details); // pass data
+    Login(userEmailAddress, loginPassword); // pass data
   };
 
   return (
     <form className="login-form" onSubmit={submissionHandler}>
-      <h1 className="login-title">Log In to Planner</h1>
+      <h2 className="login-title">Log In to MyPlanner</h2>
 
       <div className="emailStuff">
         <label className="email-label-login-pg" htmlFor="email">
@@ -36,17 +35,16 @@ function LoginForm({ Login, error }) {
           name="email"
           placeholder="email@domain.com"
           id="email"
-          onChange={(e) => setDetails({ ...details, email: e.target.value })}
-          value={details.email}
+          onChange={(e) => setEmail({ email: e.target.value })}
+          value={userEmailAddress.email}
         />
-        <br></br>
+
         <div className="locate-email-link-lg">
           <a htmlFor="locate-email" href={LocateEmail}>
             Forgot Your Account Name?
           </a>
         </div>
       </div>
-      <br></br>
 
       <div className="passwordStuff">
         <label className="password-label-login-pg">Password:</label>
@@ -57,8 +55,8 @@ function LoginForm({ Login, error }) {
           name="password"
           placeholder="password"
           id="password"
-          onChange={(e) => setDetails({ ...details, password: e.target.value })}
-          value={details.password}
+          onChange={(e) => setPassword({ password: e.target.value })}
+          value={loginPassword.password}
         />
 
         <div className="reset-password-link-lg">
@@ -75,7 +73,7 @@ function LoginForm({ Login, error }) {
       </div>
       <div className="to-sign-up-pg">
         <a htmlFor="sign-up-lg" href={SignUp}>
-          Don't have an account? Sign up!
+          Sign Up for an Account
         </a>
       </div>
     </form>

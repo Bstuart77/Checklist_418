@@ -2,10 +2,7 @@ package ChecklistApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path = "/account")
@@ -25,6 +22,7 @@ public class AccountRestController {
         newAccount.setUserLastName(lastName);
         newAccount.setUserEmailAddress(emailAddress);
         newAccount.setUserPass(password);
+        newAccount.setUserPoints(0);
         accountRepository.save(newAccount);
         return newAccount;
     }
@@ -41,6 +39,17 @@ public class AccountRestController {
         }
 
     }
+    @GetMapping(path = "/profile/points")
+    public @ResponseBody Integer retrieveUserPointsAmount(@RequestParam("emailAddress")String emailAddress){
+        Account getDBAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(!getDBAccount.getUserEmailAddress().equals(emailAddress)){ //account does not exist.
+            return 401; // authorization failure.
+        }else{
+            return getDBAccount.getUserPoints();
+        }
+    }
+
+
 
 
 
