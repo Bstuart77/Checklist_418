@@ -27,7 +27,7 @@ public class AccountRestController {
         return newAccount;
     }
 
-    @PostMapping(path = "/login")
+    @GetMapping(path = "/login")
     public @ResponseBody Integer loginToUserAccount(@RequestParam("emailAddress")String emailAddress,
                                                     @RequestParam("password") String password){
 
@@ -47,6 +47,28 @@ public class AccountRestController {
         }else{
             return getDBAccount.getUserPoints();
         }
+    }
+    @GetMapping(path = "/locateEmail")
+    public @ResponseBody Integer locateAccountByEmail(@RequestParam("emailAddress")String emailAddress){
+        Account findAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(!findAccount.getUserEmailAddress().equals(emailAddress)){ //account does not exist.
+            return 401; // authorization failure.
+        }else{
+            return 200; // account exists
+
+        }
+    }
+    @PostMapping(path = "/resetPassword")
+    public @ResponseBody Integer resetPassword(@RequestParam("emailAddress")String emailAddress,
+                                               @RequestParam("newPassword")String newPassword){
+        Account locateAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(!locateAccount.getUserEmailAddress().equals(emailAddress)){
+            return 401;
+        }else{
+            locateAccount.setUserPass(newPassword);
+            return 200;
+        }
+
     }
 
 
