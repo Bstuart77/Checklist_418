@@ -15,6 +15,7 @@ function LoginMain() {
   const [userEmailAddress, setEmail] = useState("");
   const [loginPassword, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [localStorage, setLocalStorage] = useState("");
 
   const Login = (userEmailAddress, loginPassword) => {
     if (userEmailAddress === "" || loginPassword === "") {
@@ -28,33 +29,46 @@ function LoginMain() {
         "At least one of the fields is blank. Enter something for all the fields."
       );
     } else {
-      const url =
-        "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
+      // put params into the URL.
+      const url = "100.24.37.156:8080/account/login";
+
       axios
-        .post(url, userEmailAddress, loginPassword)
+        .get(url, { emailAddress: userEmailAddress, password: loginPassword })
         .then((response) => {
           console.log(response.data);
           setError(response);
 
-          if (response == 200) {
+          if (response === 200) {
             console.log("Successfully logged in.");
             setEmail({
               userEmailAddress: userEmailAddress,
             }); // ?
+
+            // localStorage.setItem("navbar", "t");
+            // setLocalStorage("t");
             history("/profile");
           }
         })
         .catch((error) => {
           // when the response is 401:
-          console.log(
-            "Login details do not match any records. Please try again."
-          );
-          alert(
-            "The login details do not match any records. Please try again."
-          );
-          setError(
-            "The login details do not match any records. Please try again."
-          );
+          // localStorage.setItem("navbar", "f");
+          // setLocalStorage("f");
+          if (error === 401) {
+            console.log(
+              "Login details do not match any records. Please try again."
+            );
+            alert(
+              "The login details do not match any records. Please try again."
+            );
+            setError(
+              "The login details do not match any records. Please try again."
+            );
+          }
+          if (error === 404) {
+            console.log("Connecting failed.");
+            alert("Connecting failed.");
+            setError("Connecting failed.");
+          }
         });
     }
   };

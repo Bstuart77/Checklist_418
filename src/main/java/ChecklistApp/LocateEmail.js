@@ -14,16 +14,16 @@ function LocateEmail() {
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const locateEmail = { email };
+    const emailAddress = { locateEmail };
     if (!email.trim()) {
       alert("Please enter the email you think you registered with.");
     } else {
       if (emailFormat.test(email)) {
         console.log("The user looked up: ", locateEmail);
 
-        const url =
-          "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
+        const url = "100.24.37.156:8080/account/locateEmail";
         axios
-          .post(url, locateEmail)
+          .get(url, { emailAddress: emailAddress })
           .then((response) => {
             console.log(response.data);
             setError(response);
@@ -44,14 +44,21 @@ function LocateEmail() {
             }
           })
           .catch((error) => {
+            if (error === 404) {
+              console.log("Connecting failed.");
+              alert("Connecting failed.");
+              setError("Connecting failed.");
+            }
             // The email wasn't used to register an account, so error 401 occurred.
-            console.log(
-              locateEmail,
-              "The email entered doesn't have an account with this service.\nTry entering another email or sign up using this email.\n"
-            );
-            alert(
-              "You do not have an account with our service. Please sign up or try searching for your account with another email.\n"
-            );
+            if (error === 401) {
+              console.log(
+                locateEmail,
+                "The email entered doesn't have an account with this service. Try entering another email or sign up using this email."
+              );
+              alert(
+                "You do not have an account with our service. Please sign up or try searching for your account with another email.\n"
+              );
+            }
           });
       } else {
         console.log("Invalid email format entered.");
