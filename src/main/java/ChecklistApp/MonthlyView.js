@@ -5,7 +5,8 @@ import startOfWeek from "date-fns/startOfWeek";
 import React, { useState, useCallback, useMemo, Fragment } from "react";
 import { Calendar, dateFnsLocalizer, Views } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import axios from "axios";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -23,16 +24,17 @@ const events = [
 
 ];
 
+const url = '100.24.37.156:8080/account/tasks(email,events)'
+
+const pointCount = 0;
+const email = "test@test.com"
+
 function DisplayNewEventModal(){
   if(document.getElementById("NewEventModalUpdate").style.display === "block"){
       document.getElementById("NewEventModalUpdate").style.display = "none";
   } else {
       document.getElementById("NewEventModalUpdate").style.display = "block";
   }
-
-}
-
-function DisplayDeleteEventModal(){
 
 }
 
@@ -49,6 +51,8 @@ const [allEvents, setAllEvents] = useState(events)
 
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
+    axios
+        .post(url, events, email )
   }
 
   function handleAddPoint(){
