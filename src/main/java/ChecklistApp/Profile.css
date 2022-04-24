@@ -32,7 +32,7 @@
 
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 150px;
   max-width: 100%;
 
@@ -128,11 +128,17 @@
 }
 
 .Clock {
-  margin-top: 10px;
-  font-size: 80px;
+  margin-top: 25px;
+  font-size: 75px;
   font-weight: 700;
   color: #222222;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Clock p {
+  font-size: 2rem;
+  margin: -20px;
+
 }
 
 /**
@@ -159,18 +165,13 @@
 
 .ProfileFooter {
   /* background-color: antiquewhite; */
-  padding: 5px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
 /**
           BUTTON
   */
-
-.Clock p {
-  font-size: 2rem;
-
-}
 
 /* background-color: #16A085; */
 
@@ -221,7 +222,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 4px solid;
   background-color: transparent;
 
-  padding: 2px;
+  padding: 5px;
   margin: 2px;
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -264,6 +265,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .BackgroundModal {
   display: none;
   width: 70%;
+  padding: 10px;
 
 }
 
@@ -286,6 +288,10 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
+}
+
+.SettingsTitle {
+  font-size: 2rem;
 }
 
 .SettingsModalBody {
@@ -320,7 +326,7 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #222222;
   /* color: rgb(229, 228, 214); */
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
