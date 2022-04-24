@@ -28,7 +28,8 @@ function LoginMain() {
         "At least one of the fields is blank. Enter something for all the fields."
       );
     } else {
-      const url = "http://localhost:8080/account/login";
+      const url =
+        "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
       axios
         .post(url, userEmailAddress, loginPassword)
         .then((response) => {
@@ -44,9 +45,6 @@ function LoginMain() {
           }
         })
         .catch((error) => {
-          // use error to handle specific errors:
-          alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
-
           // when the response is 401:
           console.log(
             "Login details do not match any records. Please try again."
