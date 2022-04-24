@@ -56,10 +56,10 @@ function ResetPassword() {
             // passwords match and will be sent to backend.
             console.log("User entered: ", resetPassword);
             console.log("User confirmed: ", resetPasswordConfirmation);
-            // ! check if the bug persists once we host.
 
             // TODO send password to backend.
-            const url = "http://localhost:8080/account/login";
+            const url =
+              "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
             axios
               .post(url, email, newPassword)
               .then((response) => {
@@ -88,9 +88,6 @@ function ResetPassword() {
                 }
               })
               .catch((error) => {
-                // use the specific error code to separate error handling.
-                alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
-
                 // account isn't registered, so the response was 401.
                 console.log(
                   email,

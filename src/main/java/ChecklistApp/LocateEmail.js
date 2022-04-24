@@ -20,7 +20,8 @@ function LocateEmail() {
       if (emailFormat.test(email)) {
         console.log("The user looked up: ", locateEmail);
 
-        const url = "http://localhost:8080/account/login"; // the server's URL.
+        const url =
+          "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
         axios
           .post(url, locateEmail)
           .then((response) => {
@@ -43,9 +44,6 @@ function LocateEmail() {
             }
           })
           .catch((error) => {
-            // use error code to specify error message:
-            alert("MAYBE YOU'RE NOT EVEN ON THE INTERNET.");
-
             // The email wasn't used to register an account, so error 401 occurred.
             console.log(
               locateEmail,
