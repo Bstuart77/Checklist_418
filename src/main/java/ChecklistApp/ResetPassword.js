@@ -58,10 +58,13 @@ function ResetPassword() {
             console.log("User confirmed: ", resetPasswordConfirmation);
 
             // TODO send password to backend.
-            const url =
-              "http://ec2-54-88-23-228.compute-1.amazonaws.com/account/login";
+            const url = "100.24.37.156:8080/account/resetPassword";
             axios
-              .post(url, email, newPassword)
+              .post(url, {
+                emailAddress: email,
+                newPassword: newPassword,
+              })
+
               .then((response) => {
                 console.log(response.data);
                 setError(response);
@@ -88,14 +91,21 @@ function ResetPassword() {
                 }
               })
               .catch((error) => {
+                if (error === 404) {
+                  console.log("Connecting failed.");
+                  alert("Connecting failed.");
+                  setError("Connecting failed.");
+                }
                 // account isn't registered, so the response was 401.
-                console.log(
-                  email,
-                  "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
-                );
-                alert(
-                  "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
-                );
+                if (error === 401) {
+                  console.log(
+                    email,
+                    "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
+                  );
+                  alert(
+                    "Resetting your password failed. The email you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
+                  );
+                }
               });
           }
         }

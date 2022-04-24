@@ -8,10 +8,55 @@ import MonthlyView from "./MonthlyView";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router";
+import { useState } from "react";
 
 function App() {
+  // const [localStorage, setLocalStorage] = useState("");
+
+  // function displayNavbar() {
+  //   if (localStorage === "t") {
+  //     return (
+  //       <Navbar bg="dark" variant="dark">
+  //         <Container>
+  //           <Navbar.Brand href="/">📝MyPlanner</Navbar.Brand>
+  //           <Nav className="me-auto">
+  //             <Nav.Link href="/profile">Profile</Nav.Link>
+  //             <Nav.Link href="/monthlyview">Calendar</Nav.Link>
+  //             <Nav.Link href="/resetpassword">Reset Password</Nav.Link>
+  //             <Nav.Link href="/locateemail">Locate Account</Nav.Link>
+  //             <Nav.Link
+  //               href="/login"
+  //               onClick={
+  //                 (setLocalStorage("f"), localStorage.removeItem("navbar", "t"))
+  //               }
+  //             >
+  //               Log Out
+  //             </Nav.Link>
+  //           </Nav>
+  //         </Container>
+  //       </Navbar>
+  //     );
+  //   } else {
+  //     // localStorage is "f" or null:
+  //     return (
+  //       <Navbar bg="dark" variant="dark">
+  //         <Container>
+  //           <Navbar.Brand href="/">📝MyPlanner</Navbar.Brand>
+  //           <Nav className="me-auto">
+  //             <Nav.Link href="/login">Login</Nav.Link>
+  //             <Nav.Link href="/signup">Sign Up</Nav.Link>
+  //             <Nav.Link href="/resetpassword">Reset Password</Nav.Link>
+  //             <Nav.Link href="/locateemail">Locate Account</Nav.Link>
+  //           </Nav>
+  //         </Container>
+  //       </Navbar>
+  //     );
+  //   }
+  // }
+
   return (
     <div className="App">
+      {/* {displayNavbar()} */}
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">📝MyPlanner</Navbar.Brand>
