@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom"
+import axios from 'axios';
 
 function SignUp() {
 
     const [firstName, setFName] = useState('');
     const [lastName, setLName] = useState('');
-    const [email, setEmail] = useState('');
+    const [emailAddress, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -17,14 +18,14 @@ function SignUp() {
         e.preventDefault();
 
 
-        const signUpInfo = { firstName, lastName, email, password };
+        const signUpInfo = { emailAddress, firstName, lastName, password };
         if (!firstName.trim()) {
             alert('Please Enter Name');
             return;
         } else if (!lastName.trim()) {
             alert('Please Last Name');
             return;
-        } else if (!email.trim()) {
+        } else if (!emailAddress.trim()) {
             alert('Please Enter Email');
             return;
         } else if (!password.trim()) {
@@ -33,19 +34,21 @@ function SignUp() {
         } else if (confirmPassword != password) {
             alert('Passwords do not match');
             return;
-        } else if (!emailFormat.test(email)) {
+        } else if (!emailFormat.test(emailAddress)) {
             alert('Invalid Email');
         } else {
-            // fetch('http://localhost:3000/', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(signUpInfo)
-            // }).then(() => {
-            //     console.log(signUpInfo + " Added");
-            // })
+            axios.post('100.24.37.156:8080/account/register', signUpInfo)
+                .then((response) => {
+                    console.log(response.data);
+
+                    if (response == 200) {
+                        console.log("Successfully Signed Up.");
+                    }
+                })
             goToProfile();
         }
     }
+    
     const navigateProfile = useNavigate();
 
     function goToProfile() {
