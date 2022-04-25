@@ -37,14 +37,16 @@ function SignUp() {
         } else if (!emailFormat.test(emailAddress)) {
             alert('Invalid Email');
         } else {
-//            axios.post('100.24.37.156:8080/account/register', signUpInfo)
-//                .then((response) => {
-//                    console.log(response.data);
-//
-//                    if (response == 200) {
-//                        console.log("Successfully Signed Up.");
-//                    }
-//
+            axios.post('http://34.228.145.193:8080/account/register', signUpInfo)
+                .then((response) => {
+                    console.log(response.data);
+
+                    if (response == 200) {
+                        console.log("Successfully Signed Up.");
+                    }
+                })
+            goToProfile();
+        }
     }
     
     const navigateProfile = useNavigate();
