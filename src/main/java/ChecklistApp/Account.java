@@ -56,7 +56,7 @@ public class Account {
     }
 
     public Integer getUserPoints() {
-        return userPoints;
+        return this.userPoints;
     }
     public void setUserPoints(Integer userPoints) {
         this.userPoints = userPoints;

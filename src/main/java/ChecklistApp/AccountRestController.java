@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://34.228.145.193:8080" )
+@CrossOrigin(origins = "http://localhost:3000")
 @Controller
 @RequestMapping(path = "/account")
 public class AccountRestController {
@@ -12,6 +12,7 @@ public class AccountRestController {
 
     private AccountRepository accountRepository; //initialize the repository
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping(path = "/register")
     public @ResponseBody Account registerNewUser (@RequestParam("emailAddress")String emailAddress,
                                                   @RequestParam("firstName") String firstName,
