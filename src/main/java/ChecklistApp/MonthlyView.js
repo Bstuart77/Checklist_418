@@ -29,20 +29,9 @@ const url = '100.24.37.156:8080/account/tasks(email,events)'
 const pointCount = 0;
 const email = "test@test.com"
 
-function DisplayNewEventModal(){
-  if(document.getElementById("NewEventModalUpdate").style.display === "block"){
-      document.getElementById("NewEventModalUpdate").style.display = "none";
-  } else {
-      document.getElementById("NewEventModalUpdate").style.display = "block";
-  }
 
-}
 
-window.onclick = function (event) {
-if (event.target == document.getElementById("NewEventModalUpdate")) {
-    document.getElementById("NewEventModalUpdate").style.display = "none";
-}
-}
+
 
 
 function MonthlyView() {
@@ -64,10 +53,10 @@ const [allEvents, setAllEvents] = useState(events)
     <div className="MonthlyView">
        <h1 className="CalendarTitle">Calendar</h1>
 
-      <button className="CreateEventButton" onClick={DisplayNewEventModal}> Create New Event </button>
+      
 
-      <div className = 'NewEventModal' id = "NewEventModalUpdate">
-          <div className = 'NewEventModalBody'>
+      
+         
             <h2>Add New Event</h2>
             <div>
               <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
@@ -77,8 +66,8 @@ const [allEvents, setAllEvents] = useState(events)
               <button style={{marginTop: "10px"}} onClick = {handleAddEvent}>
                 Add Event
               </button>
-            </div>
-          </div>
+    
+
       </div>
 
      <Calendar className="calendar" 
