@@ -30,7 +30,7 @@ function LoginMain() {
       );
     } else {
       // put params into the URL.
-      const url = "100.24.37.156:8080/account/login";
+      const url = "http://34.228.145.193:8080/account/login";
 
       axios
         .get(url, { emailAddress: userEmailAddress, password: loginPassword })
