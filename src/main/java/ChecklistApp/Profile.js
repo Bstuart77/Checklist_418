@@ -462,6 +462,7 @@ function ProfilePage() {
     function UnlockBronzeStar() {
         if (count >= 1) {
             UnlockBronzeStarIcon();
+            setCount(count - 1);
         } else {
             alert("Insufficient Points")
         }
@@ -471,6 +472,7 @@ function ProfilePage() {
     function UnlockSilverStar() {
         if (count >= 3) {
             UnlockSilverStarIcon();
+            setCount(count - 3);
         } else {
             alert("Insufficient Points")
         }
@@ -479,6 +481,7 @@ function ProfilePage() {
     function UnlockGoldStar() {
         if (count >= 5) {
             UnlockGoldStarIcon();
+            setCount(count - 5);
         } else {
             alert("Insufficient Points")
         }
@@ -487,6 +490,7 @@ function ProfilePage() {
     function UnlockBronzeShield() {
         if (count >= 10) {
             UnlockBronzeShieldIcon();
+            setCount(count - 10);
         } else {
             alert("Insufficient Points")
         }
@@ -495,6 +499,7 @@ function ProfilePage() {
     function UnlockSilverShield() {
         if (count >= 20) {
             UnlockSilverShieldIcon();
+            setCount(count - 20);
         } else {
             alert("Insufficient Points")
         }
@@ -503,6 +508,7 @@ function ProfilePage() {
     function UnlockGoldShield() {
         if (count >= 50) {
             UnlockGoldShieldIcon();
+            setCount(count - 50);
         } else {
             alert("Insufficient Points")
         }
