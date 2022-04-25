@@ -4,6 +4,15 @@ import { useNavigate } from "react-router-dom"
 import BackgroundButton from './Component/BackgroundButton.js';
 import axios from 'axios';
 
+var firstTimeBackground1 = true;
+var firstTimeBackground2 = true;
+var firstTimeBackground3 = true;
+var firstTimeBackground4 = true;
+var firstTimeBackground5 = true;
+var firstTimeBackground6 = true;
+var firstTimeBackground7 = true;
+var firstTimeBackground8 = true;
+
 function ProfilePage() {
     const [clockState, setClockState] = useState();
 
@@ -110,20 +119,87 @@ function ProfilePage() {
     }
 
     function background2() {
-        if (count < 5) {
-            alert("Insufficient Points")
+        if(firstTimeBackground2 == true){
+            if(count < 5){
+              alert("Insufficient Points")
+
+            } else{
+              document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+              document.getElementById("profile-page").style.backgroundSize = "cover";
+              console.log("Button clicked");
+
+              setCount(count - 5);
+              firstTimeBackground2 = false;
+
+            }
 
         } else {
             document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
             document.getElementById("profile-page").style.backgroundSize = "cover";
             console.log("Button clicked");
+        }
+
+
+
+        /**
+         *         if (count < 5 && firstTimeBackground2 === true) {
+            alert("Insufficient Points")
+
+        } else if (firstTimeBackground2 === false){
+            document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+        
+        } else {
+            if((count - 5) < 0){
+              alert("Not enough points");
+
+            } else if (firstTimeBackground2) {
+              document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+              document.getElementById("profile-page").style.backgroundSize = "cover";
+              console.log("Button clicked");
+
+              setCount(count - 5);
+              firstTimeBackground2 = false;
+
+            } else {
+              document.getElementById("profile-page").style.background = "url('./images/mountain2.jpg') no-repeat center";
+              document.getElementById("profile-page").style.backgroundSize = "cover";
+              console.log("Button clicked");
+
+            }
 
         }
+ 
+
+
+         */
     }
 
     function background3() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
+        if(firstTimeBackground3 == true){
+          if(count < 10){
+            alert("Insufficient Points")
+
+          } else{
+            document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+            setCount(count - 10);
+            firstTimeBackground3 = false;
+
+          }
+
+      } else {
+          document.getElementById("profile-page").style.background = "url('./images/mountain3.jpg') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+      }
+
+      /*
         if (count < 10) {
             alert("Insufficient Points")
 
@@ -133,11 +209,35 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
     }
 
     function background4() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
+        if(firstTimeBackground4 == true){
+          if(count < 20){
+            alert("Insufficient Points")
+
+          } else{
+            document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+            setCount(count - 20);
+            firstTimeBackground4 = false;
+
+          }
+
+      } else {
+          document.getElementById("profile-page").style.background = "url('./images/mountain4.jpg') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+      }
+
+
+      /*
+
         if (count < 20) {
             alert("Insufficient Points")
 
@@ -147,11 +247,34 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
     }
 
     function background5() {
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
+
+        if(firstTimeBackground5 == true){
+          if(count < 40){
+            alert("Insufficient Points")
+
+          } else{
+            document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
+            document.getElementById("profile-page").style.backgroundSize = "cover";
+            console.log("Button clicked");
+
+            setCount(count - 40);
+            firstTimeBackground5 = false;
+
+          }
+
+      } else {
+          document.getElementById("profile-page").style.background = "url('./images/mountain5.jpg') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+      }
+
+        /*
         if (count < 40) {
             alert("Insufficient Points")
 
@@ -161,8 +284,29 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
     }
     function background6() {
+      if(firstTimeBackground6 == true){
+        if(count < 80){
+          alert("Insufficient Points")
+
+        } else{
+          document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+
+          setCount(count - 80);
+          firstTimeBackground6 = false;
+
+        }
+
+    } else {
+        document.getElementById("profile-page").style.background = "url('./images/mountain6.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+      /*
         if (count < 80) {
             alert("Insufficient Points")
 
@@ -172,10 +316,32 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
     }
     function background7() {
+      if(firstTimeBackground7 == true){
+        if(count < 150){
+          alert("Insufficient Points")
+
+        } else{
+          document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+
+          setCount(count - 150);
+          firstTimeBackground7 = false;
+
+        }
+
+    } else {
+        document.getElementById("profile-page").style.background = "url('./images/mountain7.jpg') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+
+      /*
         if (count < 150) {
             alert("Insufficient Points")
 
@@ -185,10 +351,31 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
     }
     function background8() {
+      if(firstTimeBackground8 == true){
+        if(count < 200){
+          alert("Insufficient Points")
+
+        } else{
+          document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
+          document.getElementById("profile-page").style.backgroundSize = "cover";
+          console.log("Button clicked");
+
+          setCount(count - 200);
+          firstTimeBackground8 = false;
+
+        }
+
+    } else {
+        document.getElementById("profile-page").style.background = "url('./images/mountain8.png') no-repeat center";
+        document.getElementById("profile-page").style.backgroundSize = "cover";
+        console.log("Button clicked");
+    }
+      /*
         if (count < 200) {
             alert("Insufficient Points")
 
@@ -198,6 +385,7 @@ function ProfilePage() {
             console.log("Button clicked");
 
         }
+        */
         //document.body.style.background = "url('./images/mountain3.jpg') no-repeat center";
         //document.body.style.backgroundSize = "cover";
     }
