@@ -15,7 +15,7 @@ function LoginMain() {
   const [userEmailAddress, setEmail] = useState("");
   const [loginPassword, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [localStorage, setLocalStorage] = useState("");
+  //  const [localStorage, setLocalStorage] = useState("");
 
   const Login = (userEmailAddress, loginPassword) => {
     if (userEmailAddress === "" || loginPassword === "") {
@@ -29,11 +29,15 @@ function LoginMain() {
         "At least one of the fields is blank. Enter something for all the fields."
       );
     } else {
-      // put params into the URL.
       const url = "http://34.228.145.193:8080/account/login";
 
       axios
-        .get(url, { emailAddress: userEmailAddress, password: loginPassword })
+        .get(url, {
+          params: {
+            emailAddress: userEmailAddress,
+            password: loginPassword,
+          },
+        })
         .then((response) => {
           console.log(response.data);
           setError(response);
@@ -42,8 +46,7 @@ function LoginMain() {
             console.log("Successfully logged in.");
             setEmail({
               userEmailAddress: userEmailAddress,
-            }); // ?
-
+            });
             // localStorage.setItem("navbar", "t");
             // setLocalStorage("t");
             history("/profile");
@@ -51,7 +54,7 @@ function LoginMain() {
         })
         .catch((error) => {
           // when the response is 401:
-          // localStorage.setItem("navbar", "f");
+          // localStorage.setItem("navbar", "f"); // don't show certain links when the user isn't logged in
           // setLocalStorage("f");
           if (error === 401) {
             console.log(
