@@ -13,29 +13,21 @@ function LocateEmail() {
     let emailFormat =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    const locateEmail = { email };
-    const emailAddress = { locateEmail };
+    const emailAddress = { email }; // send to the backend.
     if (!email.trim()) {
       alert("Please enter the email you think you registered with.");
     } else {
       if (emailFormat.test(email)) {
-        console.log("The user looked up: ", locateEmail);
-
-        const url = "100.24.37.156:8080/account/locateEmail";
+        console.log("The user looked up: ", emailAddress, ", which was sent.");
+        const url = "http://34.228.145.193:8080/account/locateEmail";
         axios
-          .get(url, { emailAddress: emailAddress })
+          .post(url, emailAddress)
           .then((response) => {
-            console.log(response.data);
+            console.log("request status was: ", response.data);
             setError(response);
-
-            console.log("Sent email to locate.");
-            setEmail({
-              email: locateEmail,
-            });
-
             if (response === 200) {
               console.log(
-                locateEmail,
+                emailAddress,
                 "The email entered has an account with this service."
               );
               alert(
@@ -52,7 +44,7 @@ function LocateEmail() {
             // The email wasn't used to register an account, so error 401 occurred.
             if (error === 401) {
               console.log(
-                locateEmail,
+                emailAddress,
                 "The email entered doesn't have an account with this service. Try entering another email or sign up using this email."
               );
               alert(

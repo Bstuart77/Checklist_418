@@ -19,8 +19,6 @@ function ResetPassword() {
     e.preventDefault();
 
     const resetPassword = { newPassword };
-    const resetPasswordConfirmation = { confirmNewPassword };
-    // keeping the consts to send the stored password to backend.
 
     let emailFormat =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -30,9 +28,7 @@ function ResetPassword() {
     } else if (email.length > 1) {
       if (emailFormat.test(email)) {
         console.log("User entered: ", email);
-        // TODO send the email to the backend and wait for its reponse.
-        // if the user has an account with the service then change their password if the inputted new password is legal.
-
+        // if the user has an account with the service, change their password if the inputted new password is legal.
         if (
           newPassword.length === 1 ||
           newPassword.length <= 6 ||
@@ -54,17 +50,17 @@ function ResetPassword() {
             console.log(confirmNewPassword);
           } else {
             // passwords match and will be sent to backend.
-            console.log("User entered: ", resetPassword);
-            console.log("User confirmed: ", resetPasswordConfirmation);
+            console.log("User entered: ", newPassword);
+            console.log("User confirmed: ", confirmNewPassword);
 
-            // TODO send password to backend.
-            const url = "100.24.37.156:8080/account/resetPassword";
+            const resetPasswordInfo = {
+              emailAddress: email,
+              newPassword: resetPassword,
+            };
+
+            const url = "http://34.228.145.193:8080/account/resetPassword";
             axios
-              .post(url, {
-                emailAddress: email,
-                newPassword: newPassword,
-              })
-
+              .post(url, resetPasswordInfo)
               .then((response) => {
                 console.log(response.data);
                 setError(response);
