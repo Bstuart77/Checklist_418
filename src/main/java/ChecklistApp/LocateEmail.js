@@ -21,7 +21,7 @@ function LocateEmail() {
         console.log("The user looked up: ", emailAddress, ", which was sent.");
         const url = "http://34.228.145.193:8080/account/locateEmail";
         axios
-          .post(url, emailAddress)
+          .get(url, { params: { emailAddress: emailAddress } })
           .then((response) => {
             console.log("request status was: ", response.data);
             setError(response);
