@@ -6,6 +6,9 @@ import axios from "axios";
 
 function LoginMain() {
   const history = useNavigate();
+  function goToProfile() {
+    history("/profile");
+  }
 
   const user = {
     email: "test@test.com",
@@ -31,18 +34,16 @@ function LoginMain() {
     } else {
       //const url = "http://34.228.145.193:8080/account/login";
       const url = "http://localhost:8080/account/login";
-      const {email: paramEmail} = userEmailAddress;
-      const {password: paramPassword} = loginPassword;
+      const { email: paramEmail } = userEmailAddress;
+      const { password: paramPassword } = loginPassword;
       axios
-//        .get(`${url}?emailAddress=${paramEmail}&password=${paramPassword}`,
-        .get(url,
-         {
+        //        .get(`${url}?emailAddress=${paramEmail}&password=${paramPassword}`,
+        .get(url, {
           params: {
             emailAddress: paramEmail,
             password: paramPassword,
           },
-        }
-        )
+        })
         .then((response) => {
           console.log(response.data);
           setError(response);
@@ -54,7 +55,8 @@ function LoginMain() {
             });
             // localStorage.setItem("navbar", "t");
             // setLocalStorage("t");
-            history("/profile");
+
+            goToProfile();
           }
         })
         .catch((error) => {
@@ -92,7 +94,7 @@ function LoginMain() {
       <div className="LoginPage">
         {userEmailAddress !== "" ? (
           <>
-            <Navigate to="/profile" replace={true} />
+            <Navigate replace to="/profile" />
           </>
         ) : (
           <LoginForm Login={Login} error={error} />
