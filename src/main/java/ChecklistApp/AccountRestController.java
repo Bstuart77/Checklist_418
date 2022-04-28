@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"*"})
 @Controller
 @RequestMapping(path = "/account")
 public class AccountRestController {
@@ -12,21 +12,23 @@ public class AccountRestController {
 
     private AccountRepository accountRepository; //initialize the repository
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping(path = "/register")
-    public @ResponseBody Account registerNewUser (@RequestParam("emailAddress")String emailAddress,
+    public @ResponseBody Integer registerNewUser (@RequestParam("emailAddress")String emailAddress,
                                                   @RequestParam("firstName") String firstName,
                                                   @RequestParam("lastName") String lastName,
                                                   @RequestParam("password") String password){
-
+    
         Account newAccount = new Account();
         newAccount.setUserFirstName(firstName);
         newAccount.setUserLastName(lastName);
         newAccount.setUserEmailAddress(emailAddress);
         newAccount.setUserPass(password);
         newAccount.setUserPoints(0);
+        if(checkIfEmailExists(emailAddress)){
+            return 400;
+        }
         accountRepository.save(newAccount);
-        return newAccount;
+        return 200;
     }
 
     @GetMapping(path = "/login")
@@ -71,6 +73,15 @@ public class AccountRestController {
             return 200;
         }
 
+    }
+    public boolean checkIfEmailExists(String emailAddress){
+        
+        Account checkingDB = accountRepository.findByUserEmailAddress(emailAddress);
+        if(checkingDB == null){
+            return false;
+        }else{
+            return true;
+        }
     }
 
 

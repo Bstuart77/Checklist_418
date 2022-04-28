@@ -1,0 +1,28 @@
+.ProfilePageButton:hover {
+    background-color: #16A085; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.ProfilePageButton{
+      width: 66%;
+      color: #F1E8FF;
+      /* color: rgb(229, 228, 214); */
+
+      border: 4px solid;
+      background-color: transparent;
+
+      padding: 6px;
+      margin: 8px;
+
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      border-radius: 12px;
+
+      transition-duration: 0.3s;
+
+      box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }

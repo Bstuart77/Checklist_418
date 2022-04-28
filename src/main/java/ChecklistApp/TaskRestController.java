@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.util.Date;
-@CrossOrigin
+@CrossOrigin(origins = {"*"})
 @Controller
 @RequestMapping(path = "/tasks")
 public class TaskRestController {
