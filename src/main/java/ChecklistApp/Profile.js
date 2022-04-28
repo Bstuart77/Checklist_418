@@ -37,7 +37,7 @@ function ProfilePage() {
 
     const emailAddress = 'test123@test.com';
 
-    axios.get('100.24.37.156:8080/account/profile/points', emailAddress)
+    axios.get('http://34.228.145.193:8080/account/profile/points', emailAddress)
                 .then((response) => {
                     console.log(response.data);
 
