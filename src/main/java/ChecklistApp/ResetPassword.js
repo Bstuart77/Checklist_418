@@ -58,9 +58,11 @@ function ResetPassword() {
               newPassword: resetPassword,
             };
 
-            const url = "http://34.228.145.193:8080/account/resetPassword";
+            const url = "http://localhost:8080/account/resetPassword";
             axios
-              .post(url, resetPasswordInfo)
+              .post(url, resetPasswordInfo, {
+                headers: { "Content-Type": "application/json" },
+              })
               .then((response) => {
                 console.log(response.data);
                 setError(response);
