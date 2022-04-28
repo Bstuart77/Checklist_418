@@ -29,15 +29,19 @@ function LoginMain() {
         "At least one of the fields is blank. Enter something for all the fields."
       );
     } else {
-      const url = "http://34.228.145.193:8080/account/login";
-
+      //const url = "http://34.228.145.193:8080/account/login";
+      const url = "http://localhost:8080/account/login";
+      const {email: paramEmail} = userEmailAddress;
+      const {password: paramPassword} = loginPassword;
       axios
-        .get(url, {
-          params: {
-            emailAddress: userEmailAddress,
-            password: loginPassword,
-          },
-        })
+        .get(`${url}?emailAddress=${paramEmail}&password=${paramPassword}`,
+//         {
+//          params: {
+//            emailAddress: userEmailAddress,
+//            password: loginPassword,
+//          },
+//        }
+        )
         .then((response) => {
           console.log(response.data);
           setError(response);

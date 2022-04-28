@@ -37,7 +37,8 @@ function SignUp() {
         } else if (!emailFormat.test(emailAddress)) {
             alert('Invalid Email');
         } else {
-            axios.post('http://34.228.145.193:8080/account/register', signUpInfo)
+            //axios.post('http://34.228.145.193:8080/account/register', signUpInfo)
+            axios.post('http://localhost:8080/account/register', signUpInfo, {headers: {"Content-Type": "application/json"}})
                 .then((response) => {
                     console.log(response.data);
 
