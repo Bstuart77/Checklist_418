@@ -24,7 +24,7 @@ const events = [
 
 ];
 
-const url = '100.24.37.156:8080/account/tasks(email,events)'
+const url = 'http://34.228.145.193::8080/account/tasks'
 
 const pointCount = 0;
 const email = "test@test.com"
@@ -40,8 +40,7 @@ const [allEvents, setAllEvents] = useState(events)
 
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
-    axios
-        .post(url, events, email )
+    axios.post(url, events, email )
   }
 
   function handleAddPoint(){
