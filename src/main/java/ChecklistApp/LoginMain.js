@@ -4,11 +4,8 @@ import LoginForm from "./LoginForm";
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 function LoginMain() {
-  const history = useNavigate();
-  function goToProfile() {
-    history("/profile");
-  }
 
   const user = {
     email: "test@test.com",
@@ -31,7 +28,7 @@ function LoginMain() {
       setError(
         "At least one of the fields is blank. Enter something for all the fields."
       );
-    } else {
+    } else{
       //const url = "http://34.228.145.193:8080/account/login";
       const url = "http://localhost:8080/account/login";
       const { email: paramEmail } = userEmailAddress;
@@ -48,22 +45,16 @@ function LoginMain() {
           console.log(response.data);
           setError(response);
 
-          if (response === 200) {
+          if (response.data === 200) {
+            goToProfile();
+
             console.log("Successfully logged in.");
             setEmail({
               userEmailAddress: userEmailAddress,
             });
             // localStorage.setItem("navbar", "t");
             // setLocalStorage("t");
-
-            goToProfile();
-          }
-        })
-        .catch((error) => {
-          // when the response is 401:
-          // localStorage.setItem("navbar", "f"); // don't show certain links when the user isn't logged in
-          // setLocalStorage("f");
-          if (error === 401) {
+          } else if (response.data === 401) {
             console.log(
               "Login details do not match any records. Please try again."
             );
@@ -82,6 +73,13 @@ function LoginMain() {
         });
     }
   };
+
+  const history = useNavigate();
+
+
+  function goToProfile() {
+    history("/profile");
+  }
 
   const Logout = () => {
     console.log("Logged out.");
