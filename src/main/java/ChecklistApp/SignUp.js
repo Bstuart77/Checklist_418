@@ -42,7 +42,7 @@ function SignUp() {
                 .then((response) => {
                     console.log(response.data);
 
-                    if (response == 200) {
+                    if (response.data == 200) {
                         console.log("Successfully Signed Up.");
                     }
                 })
