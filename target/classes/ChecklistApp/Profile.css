@@ -1,0 +1,700 @@
+/*
+    Color reference:
+    White: #E5E4D6
+    Light Green: #7CF002
+    Dark Green: #09D92B
+    Teal: #02F0B4
+    Blue: #029FE6
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  box-sizing: border-box;
+}
+
+.ProfileBody {
+  /* .. denotes one step backwards from the folder*/
+
+  /* background-image: url(../public/images/mountain2.jpg) no-repeat center; */
+  background: url('/public/images/mountain.jpg') no-repeat center;
+  /*background-color: #327362;*/
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 25px;
+  padding-bottom: 150px;
+  max-width: 100%;
+
+  text-align: center;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* justify-content: center; */
+}
+
+.ProfileCard {
+  background-image: linear-gradient(to top,
+
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
+
+  border: 3px solid #222222;
+  /*
+  border: solid 12px transparent;
+  border-image: linear-gradient(45deg, #92FFC0, #002661, 1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-color: rgb(229, 228, 214); 
+  background: linear-gradient(132deg, rgb(244, 208, 63, .90) 0%, rgb(22, 160, 133, .75) 100%);
+  */
+
+  width: 600px;
+  height: 610px;
+  overflow: auto;
+
+  border-radius: 4px;
+  box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+
+  transition-duration: 0.3s;
+
+}
+
+.ProfileCard:hover {
+  background-color: #16A085;
+}
+
+.ProfileHeader {
+  /* background-color: blue; */
+  padding-top: 20px;
+
+}
+
+.ProfilePicture {
+  /* color: transparent; */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+
+  margin: auto;
+  padding: 8px;
+  border-radius: 50%;
+  border-width: 100px;
+  background-position: center;
+  /* background-color: #F4D03F; */
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%); */
+  /*background: linear-gradient(132deg, rgb(240, 255, 0) 0%, rgb(88, 207, 251) 100%);*/
+  background: 3px solid #222222;
+
+}
+
+.ProfilePicture input {
+  display: none;
+}
+
+.ProfilePicture img {
+  display: block;
+  position: relative;
+  /* object-fit: cover; */
+
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+
+.Clock {
+  margin-top: 25px;
+  font-size: 75px;
+  font-weight: 700;
+  color: #222222;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Clock p {
+  font-size: 2rem;
+  margin: -20px;
+
+}
+
+/**
+      PROFILE GREETING
+*/
+
+.ProfileGreeting {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
+  /* color: rgb(229, 228, 214); */
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/**
+          PROFILE FOOTER
+  */
+
+.ProfileFooter {
+  /* background-color: antiquewhite; */
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/**
+          BUTTON
+  */
+
+/* background-color: #16A085; */
+
+/*
+.ProfilePageButton:hover {
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+*/
+
+/* background-color: rgb(240, 255, 0); */
+/* background-color: transparent; */
+/* color: rgb(229, 228, 214); */
+
+/*
+.ProfilePageButton{
+width: 25%;
+color: #222222;
+
+border: 15px solid;
+
+padding: 10px;
+margin: 2px;
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 1.4rem;
+font-weight: 900;
+
+border-radius: 20px;
+
+transition-duration: 0.3s;
+
+box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+*/
+
+.BackgroundChooseButton:hover {
+  background-color: #16A085;
+  /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.BackgroundChooseButton {
+  width: 18%;
+  color: white;
+
+  border: 4px solid;
+  background-color: transparent;
+
+  padding: 5px;
+  margin: 2px;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  border-radius: 12px;
+
+  transition-duration: 0.3s;
+
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+/**
+      MODAL
+*/
+
+.ProfileModal {
+  display: none;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  z-index: 1;
+  padding-top: 100px;
+
+  width: 68%;
+
+  background-color: rgb(22, 160, 133, .5);
+  padding: 2rem 4rem;
+
+  /* border-radius: 16px; */
+  /* border: 4px solid; */
+  /* color: #F1E8FF; */
+
+  box-sizing: border-box;
+}
+
+.BackgroundModal {
+  display: none;
+  width: 70%;
+  padding: 10px;
+
+}
+
+.SettingsModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.SettingsTitle {
+  font-size: 2rem;
+}
+
+.SettingsModalBody {
+  overflow: auto;
+
+  border: 3px solid #222222;
+
+  /* border-image: linear-gradient(45deg, #92FFC0, #002661, 1); */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  /* background: linear-gradient(132deg,#222222; 0%, #222222; 100%); */
+  background-image: linear-gradient(to top,
+
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
+  margin: 10% auto;
+  /* 15% from the top and centered */
+  /*padding: 10px;*/
+  width: 33%;
+  /* Could be more or less, depending on screen size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.3s;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
+  /* color: rgb(229, 228, 214); */
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.SettingsModalBody:hover {
+  background-color: #508851;
+}
+
+.RewardModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+
+.RewardsModalBody {
+  align-content: center;
+  overflow: auto;
+
+  border: 3px solid #222222;
+
+  /* border-image: linear-gradient(45deg, #92FFC0, #002661, 1); */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  /* background: linear-gradient(132deg,#222222; 0%, #222222; 100%); */
+  background-image: linear-gradient(to top,
+
+      hsla(120, 30%, 71%, 0.789),
+      hsla(120, 21%, 63%, 0.914));
+  margin: 5% auto;
+  /* 15% from the top and centered */
+  /*padding: 10px;*/
+  width: 70%;
+  /* Could be more or less, depending on screen size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.3s;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
+  /* color: rgb(229, 228, 214); */
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.RewardsModalBody:hover{
+  background-color: #16A085;
+}
+
+.UserSince {
+  background-color: grey;
+  margin-top: 1%;
+  margin: auto;
+  width: 30%;
+  color: black;
+}
+
+.BadgesDisplay {
+  background-color: grey;
+  padding-bottom: 13%;
+  margin-top: 5%;
+  width: 60%;
+}
+
+.PointCounter {
+  margin-top: 5%;
+  /*align-content: center;*/
+  margin-left: 15%;
+  font-size: 30px;
+  width: 30%;
+}
+
+.InactiveStarClass {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 33%;
+  bottom: 49%;
+  width: 3.5%;
+  pointer-events: auto;
+}
+
+.InactiveShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 38%;
+  bottom: 49%;
+  width: 2.75%;
+  pointer-events: auto;
+}
+
+.ShowStar {
+  margin-top: 4%;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  margin-left: 4.5%;
+  background-color: rgb(252, 252, 252);
+  padding-bottom: 20%;
+  width: 60%;
+  background-color: #d8d8d8;
+}
+
+.ShowShield {
+  margin-top: 4%;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  margin-left: 4.5%;
+  padding-bottom: 20%;
+  width: 60%;
+  background-color: #d8d8d8;
+}
+
+.BronzeStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 41%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.SilverStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 46%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldStarBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 51%;
+  bottom: 52%;
+  width: 4%;
+}
+
+.GoldShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 66%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.SilverShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 61%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.BronzeShieldBadgeDisplay{
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto;
+  /* Enable scroll if needed */
+  display: none;
+  position: absolute;
+  left: 56%;
+  bottom: 51.5%;
+  width: 3.5%;
+}
+
+.BronzeStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
+}
+
+.SilverStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
+}
+
+.GoldStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  bottom: 40%;
+  width: 10%;
+  pointer-events: auto;
+}
+
+.UnlockBronzeStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 25%;
+  font-size: 18px;
+}
+
+.UnlockSilverStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 50%;
+  font-size: 18px;
+}
+
+.UnlockGoldStar {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 75%;
+  font-size: 18px;
+}
+
+.UnlockBronzeShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 25%;
+  font-size: 18px;
+}
+
+.UnlockSilverShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 50%;
+  font-size: 18px;
+}
+
+.UnlockGoldShield{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 25%;
+  left: 75%;
+  font-size: 18px;
+}
+.BronzeShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
+  font-size: 18px;
+}
+
+.SilverShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
+  font-size: 18px;
+}
+
+.GoldShield {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  bottom: 30%;
+  width: 10%;
+  pointer-events: auto;
+  font-size: 18px;
+}
+
+.ProfileChange {
+  opacity: 1;
+  /* position: absolute; */
+}
+
+/**
+      RESPONSIVENESS
+*/
+
+/*
+@media (max-width: 1500px){
+    .ProfileCard{
+        width: calc(100%);
+    }
+}
+
+@media (max-width: 1500px){
+  .ProfileModal{
+      width: calc(100%);
+  }
+}
+*/
