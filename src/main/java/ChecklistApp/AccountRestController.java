@@ -3,6 +3,7 @@ package ChecklistApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import java.util.Map;
 
 @CrossOrigin(origins = {"*"})
 @Controller
@@ -13,18 +14,19 @@ public class AccountRestController {
     private AccountRepository accountRepository; //initialize the repository
 
     @PostMapping(path = "/register")
-    public @ResponseBody Integer registerNewUser (@RequestParam("emailAddress")String emailAddress,
-                                                  @RequestParam("firstName") String firstName,
-                                                  @RequestParam("lastName") String lastName,
-                                                  @RequestParam("password") String password){
+    public @ResponseBody Integer registerNewUser (@RequestBody Map<String, String> requestBody){
+//        ("emailAddress")String emailAddress,
+//        @RequestParam("firstName") String firstName,
+//        @RequestParam("lastName") String lastName,
+//        @RequestParam("password") String password){
     
         Account newAccount = new Account();
-        newAccount.setUserFirstName(firstName);
-        newAccount.setUserLastName(lastName);
-        newAccount.setUserEmailAddress(emailAddress);
-        newAccount.setUserPass(password);
+        newAccount.setUserFirstName(requestBody.get("firstName"));
+        newAccount.setUserLastName(requestBody.get("lastName"));
+        newAccount.setUserEmailAddress(requestBody.get("emailAddress"));
+        newAccount.setUserPass(requestBody.get("password"));
         newAccount.setUserPoints(0);
-        if(checkIfEmailExists(emailAddress)){
+        if(checkIfEmailExists(requestBody.get("emailAddress"))){
             return 400;
         }
         accountRepository.save(newAccount);
@@ -36,6 +38,9 @@ public class AccountRestController {
                                                     @RequestParam("password") String password){
 
         Account DBAccount = accountRepository.findByUserEmailAddress(emailAddress);
+        if(DBAccount == null){
+            return 400;
+        }
         if(DBAccount.getUserPass().equals(password)){
             return 200; // successful login
         }else{
