@@ -34,13 +34,14 @@ function LoginMain() {
       const {email: paramEmail} = userEmailAddress;
       const {password: paramPassword} = loginPassword;
       axios
-        .get(`${url}?emailAddress=${paramEmail}&password=${paramPassword}`,
-//         {
-//          params: {
-//            emailAddress: userEmailAddress,
-//            password: loginPassword,
-//          },
-//        }
+//        .get(`${url}?emailAddress=${paramEmail}&password=${paramPassword}`,
+        .get(url,
+         {
+          params: {
+            emailAddress: paramEmail,
+            password: paramPassword,
+          },
+        }
         )
         .then((response) => {
           console.log(response.data);
