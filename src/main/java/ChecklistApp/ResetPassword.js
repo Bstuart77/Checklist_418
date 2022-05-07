@@ -56,13 +56,13 @@ function ResetPassword() {
                 console.log(response.data);
                 setError(response);
                 console.log(
-                  "Sent the account (emailAddress) to locate + verify and the password to change."
+                  "Sent the account (email address) to locate + verify and the password to change."
                 );
                 if (response.data === 200) {
-                  // the emailAddress address is registered for an account and the password to it was successfully reset.
+                  // the emailAddress is registered for an account and the password to it was successfully reset.
                   console.log(
                     emailAddress,
-                    "The emailAddress entered has an account with this service."
+                    "The email address entered has an account with this service."
                   );
                   console.log(
                     emailAddress,
@@ -78,22 +78,22 @@ function ResetPassword() {
                 }else if (response.data === 401) {
                   console.log(
                     emailAddress,
-                    "Resetting your password failed. The emailAddress you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your emailAddress or use our locate your account/emailAddress feature. You can also sign up for an account.\n"
+                    "Resetting your password failed. The email address you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
                   );
                   alert(
-                    "Resetting your password failed. The emailAddress you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your emailAddress or use our locate your account/emailAddress feature. You can also sign up for an account.\n"
+                    "Resetting your password failed. The email address you entered doesn't have an account with this service.\n\nMake sure you didn't make a typo in your email or use our locate your account/email feature. You can also sign up for an account.\n"
                   );
                 }
               });  
             }
           }    
       } else {
-        console.log("Invalid emailAddress format entered.\nTry again.\n");
-        alert("Invalid emailAddress format entered. Try again.");
+        console.log("Invalid email address format entered.\nTry again.\n");
+        alert("Invalid email address format entered. Try again.");
       }
     } else {
-      console.log("Invalid emailAddress format entered.\nTry again.\n");
-      alert("Invalid emailAddress format entered. Try again.");
+      console.log("Invalid email address format entered.\nTry again.\n");
+      alert("Invalid email address format entered. Try again.");
     }
   };
 
@@ -105,7 +105,7 @@ function ResetPassword() {
         <h2 className="reset-password-title">Reset Password</h2>
 
         <form className="reset-password-form">
-          <label className="emailAddress-label">emailAddress:</label>
+          <label className="emailAddress-label">Email Address:</label>
 
           <br />
 
@@ -113,7 +113,7 @@ function ResetPassword() {
             className="emailAddress-input-reset-page"
             type="emailAddress"
             required
-            placeholder="emailAddress@domain.com"
+            placeholder="email@domain.com"
             onChange={(g) => setemailAddress(g.target.value)}
           />
 
