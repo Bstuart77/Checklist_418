@@ -8,4 +8,5 @@ In the project directory, you can run:
 
 ### `npm start`
 
+http://35.170.80.66/login (does not support logging in as database is ran on as a seperate program)
 
